@@ -673,6 +673,31 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .c56 .r-pbar{height:12px;border-radius:6px;background:#efe6d0;overflow:hidden}
 .c56 .r-pbar i{display:block;height:100%;background:var(--gold);border-radius:6px;transition:width .5s}
 .c56 .r-wait{font-style:italic}
+.c56 .r-msvg{display:block;width:100%;height:auto}
+.c56 .r-mkl{font:800 12px Inter;fill:#b8432f;paint-order:stroke;stroke:#fbf5e6;stroke-width:5px;stroke-linejoin:round}
+.c56 .r-mkt{display:grid;grid-template-columns:minmax(0,1.35fr) 1fr;gap:16px;align-items:start}
+.c56 .r-mfills{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px;max-height:330px;overflow:auto;font-size:12.5px;color:var(--muted)}
+.c56 .r-mfills li{padding:5px 8px;border:1px solid #e2d5b6;border-radius:8px;background:#fffaf0;line-height:1.4}
+.c56 .r-mfills li.out{opacity:.45}
+.c56 .r-mfills b{color:var(--ink)}
+.c56 .r-k{display:inline-block;font:800 9.5px Inter;letter-spacing:.12em;border-radius:5px;padding:1px 6px;color:#fff;margin-right:6px}
+.c56 .r-k.b{background:#2668a8}
+.c56 .r-k.s{background:#2f8545}
+.c56 .r-mid3{display:grid;grid-template-columns:.85fr .95fr 1.5fr;gap:12px;margin-top:10px}
+.c56 .r-mid3>section{background:#fffaf0;border:1px solid #e2d5b6;border-radius:12px;padding:10px 12px;min-width:0}
+.c56 .r-mid3 h4{display:flex;align-items:center;gap:6px;margin:0 0 6px;font:800 10.5px Inter;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.c56 .r-mid3 h4 span{margin-left:auto;font:900 13px Merriweather,serif;letter-spacing:0;color:var(--ink);text-transform:none}
+.c56 .r-agenda{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.c56 .r-agenda li{border:1px solid #e2d5b6;border-radius:8px;padding:6px 8px;background:var(--paper)}
+.c56 .r-agenda b{display:block;font:italic 900 13.5px Merriweather,serif}
+.c56 .r-agenda small{font-size:11.5px;color:#8a7d60}
+.c56 .r-feed{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:var(--muted)}
+.c56 .r-feed li{display:flex;align-items:center;gap:6px;padding:4px 6px;border-bottom:1px dashed #e6dcc4;animation:rin .4s both}
+.c56 .r-sealed{font-size:11.5px;color:#8a7d60;margin-top:4px}
+.c56 .r-card:has(.r-mid3){width:min(1240px,100%)}
+.c56 .r-card:has(.r-mkt){width:min(1100px,100%)}
+.c56 .r-mid3 .r-ct{font-size:12px}
+.c56 .r-mid3 .r-ax{font-size:10px}
 .c56-slide{padding:0;background:#f3ecdc;}
 .c56{--ink:#3b3222;--gold:#8a6a2f;--paper:#fbf5e6;--bg:#f3ecdc;--muted:#5e5340;--red:#a8483f;--grn:#3f6f3a;--blu:#2f5f84;
   position:absolute;inset:0;display:flex;flex-direction:column;gap:6px;padding:.55rem clamp(3.6rem,4.6vw,4.6rem) .5rem;color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:15px;
@@ -778,6 +803,40 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .c56 .c56-polls{border-top:1px solid #e6dcc4;padding-top:8px;display:flex;flex-direction:column;gap:6px}
 .c56 .c56-pr b{display:block;font:italic 700 12.5px/1.35 Merriweather,serif}
 .c56 .c56-pr span{font-size:11.5px;color:var(--muted)}
+.c56 .c56-opts{border-top:1px solid #e6dcc4;padding-top:10px;display:flex;flex-direction:column;gap:6px}
+.c56 .c56-opt{display:flex;gap:9px;align-items:flex-start;cursor:pointer}
+.c56 .c56-opt input{margin-top:3px;accent-color:var(--ink);width:16px;height:16px}
+.c56 .c56-opt b{display:block;font:700 13px Inter}
+.c56 .c56-opt small{display:block;font-size:11.5px;line-height:1.4;color:#8a7d60}
+.c56 .c56-trade{display:grid;grid-template-columns:1fr 1.05fr;gap:16px;max-width:1150px;margin:0 auto;padding:4px}
+.c56 .c56-tcard{background:var(--paper);border:1px solid var(--gold);border-radius:14px;padding:16px 18px;box-shadow:inset 0 0 0 4px var(--paper),inset 0 0 0 5px #e6d8b8}
+.c56 .c56-tcard h3{margin:.15rem 0 .5rem;font:italic 900 24px Merriweather,serif}
+.c56 .c56-pos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:.5rem 0}
+.c56 .c56-pos div{background:#fffaf0;border:1px solid #e2d5b6;border-radius:10px;padding:8px 10px}
+.c56 .c56-pos small{display:block;font:800 9.5px Inter;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.c56 .c56-pos b{font:900 20px Merriweather,serif}
+.c56 .c56-pos span{display:block;font-size:11.5px;color:#8a7d60}
+.c56 .c56-gauge{margin:.6rem 0}
+.c56 .c56-gt{position:relative;height:18px;border-radius:9px;background:#efe6d0;overflow:hidden}
+.c56 .c56-gt i{position:absolute;top:0;bottom:0;left:0;border-radius:9px}
+.c56 .c56-gt .al{background:#cfe0d4}
+.c56 .c56-gt .em{background:repeating-linear-gradient(135deg,#b8432f 0 6px,#c86a5a 6px 12px);opacity:.85}
+.c56 .c56-gl{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-top:4px}
+.c56 .c56-mac{background:#fffaf0;border:1px dashed #cdb98d;border-radius:10px;padding:8px 10px;margin-top:.6rem;font-size:12.5px;line-height:1.45;color:var(--muted)}
+.c56 .c56-mac b,.c56 .c56-gsub b{color:var(--ink)}
+.c56 .c56-side{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:.4rem}
+.c56 .c56-buy,.c56 .c56-sell{font:italic 900 19px Merriweather,serif;padding:13px;border-radius:12px;border:2px solid;background:#fffaf0;cursor:pointer}
+.c56 .c56-buy{color:#2668a8;border-color:#2668a8}
+.c56 .c56-sell{color:#2f8545;border-color:#2f8545}
+.c56 .c56-buy.on{background:#2668a8;color:#fff}
+.c56 .c56-sell.on{background:#2f8545;color:#fff}
+.c56 .c56-field{margin:.9rem 0 .2rem}
+.c56 .c56-fl{display:flex;justify-content:space-between;align-items:baseline;font:700 13px Inter}
+.c56 .c56-fl b{font:900 22px Merriweather,serif}
+.c56 .c56-field input[type=range]{width:100%;accent-color:var(--ink);margin:.35rem 0 .1rem}
+.c56 .c56-hint{font-size:11.5px;color:#8a7d60;line-height:1.4}
+.c56 .c56-skip{background:none;border:0;padding:0;margin-top:.6rem;font:600 12px Inter;color:#8a7d60;text-decoration:underline;cursor:pointer}
+@media (max-width:900px){.c56 .c56-trade{grid-template-columns:1fr}}
 
 .slide.poll{background:linear-gradient(160deg,#f4f8f6,#e8f1ec);}
 .poll-root{position:absolute; inset:0; display:flex; flex-direction:column;
@@ -2545,6 +2604,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
       <div class="c56-screen" data-screen="business" hidden><div id="business"></div></div>
       <div class="c56-screen" data-screen="gov" hidden></div>
       <div class="c56-screen" data-screen="ballot" hidden></div>
+      <div class="c56-screen" data-screen="trade" hidden></div>
       <div class="c56-screen" data-screen="run" hidden><div id="run"></div></div>
       <div hidden><div class="v-wrap"><div id="valley"></div></div></div>
       <div class="c56-lobbyov" data-lobby hidden></div>
@@ -2931,7 +2991,11 @@ const SIM = (function () {
     const abFrac = abMax * clamp(cprice / 120);
     const abated = taxable * abFrac, abCost = abated * Math.min(cprice, 120) / 2 / 1000;
     const emitTaxed = taxable - abated;
-    const taxCost = emitTaxed * W.tax / 1000, permitCost = W.pol.cap ? emitTaxed * W.permit / 1000 : 0;
+    // with free permits (from the first midterm trading window on) a company pays only for what it emits beyond its
+    // allowance (its share of the cap) plus what it bought at the midterm, and earns for any permits it has spare
+    const alloc = W.pol.cap && W.free && b.share ? b.share * W.capNow + (b.tq || 0) : 0;
+    const taxCost = emitTaxed * W.tax / 1000, permitCost = W.pol.cap ? (emitTaxed - alloc) * W.permit / 1000 : 0;
+    if (W.pol.cap && b.tq) cost += b.tq * (b.tqP || 0) / 1000;            // the midterm trade, paid (or earned) every year
     const air = clamp(((proc + siteKt) / 900) * (b.filt === 'yes' ? .25 : 1) + (b.fleet === 'diesel' ? .05 * S.fleet : 0));
     const kt = { proc: procNet * (1 - (b.sec === 'farm' && !W.pol.methane ? 0 : abFrac)), site: siteKt * (1 - abFrac), fleet: fleetKt * (1 - abFrac), scope2: siteGrid * W.grid };
     kt.scope1 = kt.proc + kt.site + kt.fleet;
@@ -2974,7 +3038,7 @@ const SIM = (function () {
     return ks.map((pk, i) => i < nGov ? { pk, role: 'gov' } : i < nGov + nBiz ? { pk, role: 'biz', sec: order[(i - nGov) % order.length] } : { pk, role: 'hh' });
   }
   function classFrom(members, seed) {
-    const C = { seed, r: rng(hash(seed + ':seq')), year: Y0, hh: [], biz: [], gov: [], pol: emptyPolicy(), hist: [], news: [], votes: [], elections: [], taken: new Set(), cum: 0, logs: {} };
+    const C = { seed, r: rng(hash(seed + ':seq')), year: Y0, hh: [], biz: [], gov: [], pol: emptyPolicy(), hist: [], news: [], votes: [], elections: [], taken: new Set(), cum: 0, logs: {}, opts: {}, free: false };
     const hTaken = new Set();
     let ih = 0, ib = 0, ig = 0;
     for (const m of members) {
@@ -3060,7 +3124,7 @@ const SIM = (function () {
     const meanFuel = pw.length ? pw.reduce((a, b) => a + POWER_FUEL[b.prod], 0) / pw.length : .03;
     const wholesale = .6 * (meanFuel + meanInt * cprice / 1000) + .4 * .03 + .028;    // $M per GWh
     return {
-      year, T, pol, grid, permit, tax, wholesale,
+      year, T, pol, grid, permit, tax, wholesale, free: !!C.free, capNow: pol.cap ? pol.capStart * Math.pow(.97, year - pol.capYear) : 0,
       elec: .105 + wholesale,                                                           // $/kWh to households: wires + energy ($1M/GWh = $1/kWh)
       indElec: wholesale + .02,                                                         // $M per GWh to businesses
       gas: 1.5 + .0053 * tax, fuel: 3.4 + .00889 * tax, heatEvent: false
@@ -3260,7 +3324,16 @@ const SIM = (function () {
   function applyLaw(C, id, v) {
     const pol = C.pol;
     if (id === 'tax') { if (v !== pol.tax) { pol.taxFrom = effTax(C, C.year); pol.taxYear = C.year; } pol.tax = v; return; }
-    if (id === 'cap') { if (v && !pol.cap) { pol.capYear = C.year; pol.capStart = C.biz.filter(b => b.open).reduce((a, b) => a + (b.last ? b.last.covered : bizYear(b, worldFor(C, C.year), market(C, worldFor(C, C.year))).covered), 0); } pol.cap = !!v; return; }
+    if (id === 'cap') {
+      if (v && !pol.cap) {
+        pol.capYear = C.year;
+        const W = worldFor(C, C.year), M = market(C, W);
+        // each company's emissions when the cap began: free permits are later shared out in proportion to these
+        for (const b of C.biz) b.capBase = b.open ? (b.last ? b.last.covered : bizYear(b, W, M).covered) : 0;
+        pol.capStart = C.biz.reduce((a, b) => a + (b.capBase || 0), 0);
+      }
+      pol.cap = !!v; return;
+    }
     pol[id] = v;
   }
 
@@ -3472,17 +3545,74 @@ const SIM = (function () {
   const DEFAULT_AGENDA = ['tax', 'evRebate', 'cap'];
   function agendaOf(str) { const a = String(str || '').split(',').filter(k => VOTE_IDS.includes(k)); return a.length ? [...new Set(a)].slice(0, 3) : DEFAULT_AGENDA; }
   function oneChange(cur, ch, keys) { const diff = keys.filter(k => ch[k] !== cur[k]); if (diff.length <= 1) return ch; const out = { ...cur }; out[diff[0]] = ch[diff[0]]; return out; }
-  function midterm(C, agenda, votes, adj) {
+  // is there a trading window at this midterm? only if the class switched it on and cap-and-trade is law right now
+  const tradingNow = C => !!(C.opts && C.opts.trade && C.pol.cap);
+  function midterm(C, agenda, votes, adj, orders) {
+    const trading = tradingNow(C);                 // decided before the vote: the window ran while the government voted
+    const market = trading ? permitMarket(C, orders) : null;
     const vote = govVote(C, false, votes, agendaOf(agenda));
     const log = { hh: [], biz: [] };
     for (const h of C.hh) { const ch = adj && parseHH(adj[h.id]); if (ch) log.hh.push([h, applyHH(C, h, oneChange(pickH(h), ch, CHOICE_KEYS_HH)), 1]); }
-    for (const b of C.biz) { const ch = adj && parseB(adj[b.id], b.sec, C.pol); if (ch && b.open) log.biz.push([b, applyB(C, b, oneChange(pickB(b), ch, CHOICE_KEYS_B)), 1]); }
-    vote.adj = log;
+    if (!trading) for (const b of C.biz) { const ch = adj && parseB(adj[b.id], b.sec, C.pol); if (ch && b.open) log.biz.push([b, applyB(C, b, oneChange(pickB(b), ch, CHOICE_KEYS_B)), 1]); }
+    vote.adj = log; vote.market = market;
     return vote;
   }
+
+  // ───────────────────────── the midterm permit market ─────────────────────────
+  // Every covered company gets free permits for the next five years: its share of the cap. Each places ONE sealed order
+  // (buy or sell, how many kt a year, a price limit); the market clears at the single price where the most permits change
+  // hands. Orders arrive as 'b,150,70' / 's,220,32' / 'n' (skip). Companies that don't order are played by stand-ins.
+  function positions(C) {
+    const year = C.year, last = C.hist[C.hist.length - 1];
+    const capNow = C.pol.capStart * Math.pow(.97, year - C.pol.capYear);
+    // free permits follow history ("grandfathering"): each company's share of the cap is its share of emissions when the
+    // cap began, so companies that have cleaned up since then have permits to spare and the rest are short
+    const cov = C.biz.filter(b => b.open && b.last && (b.last.covered > 0 || b.capBase > 0));
+    const total = cov.reduce((a, b) => a + (b.capBase || 0), 0) || 1;
+    return { capNow, lastP: last ? last.permit : 0, list: cov.map(b => { const share = (b.capBase || 0) / total, alloc = capNow * share; return { b, share, alloc, emits: b.last.covered, short: b.last.covered - alloc }; }) };
+  }
+  function parseOrder(str) {
+    const m = /^([bsn])(?:,(\d{1,4}),(\d{1,3}))?$/.exec(String(str || '')); if (!m) return null;
+    if (m[1] === 'n') return { side: 'n', q: 0, p: 0 };
+    const q = Math.min(2000, +m[2] || 0), p = Math.max(1, Math.min(150, +m[3] || 0));
+    return q > 0 ? { side: m[1], q, p } : null;
+  }
+  function clearMarket(orders) {
+    const buys = orders.filter(o => o.side === 'b'), sells = orders.filter(o => o.side === 's');
+    let best = { price: 0, vol: 0, dem: 0, sup: 0 };
+    for (let price = 1; price <= 150; price++) {
+      const dem = buys.filter(o => o.p >= price).reduce((a, o) => a + o.q, 0), sup = sells.filter(o => o.p <= price).reduce((a, o) => a + o.q, 0), vol = Math.min(dem, sup);
+      if (vol > best.vol || (vol === best.vol && vol > 0 && Math.abs(dem - sup) < Math.abs(best.dem - best.sup))) best = { price, vol, dem, sup };
+    }
+    // fill in price order; the last order in may be filled only in part
+    const fill = (list, cmp) => { let left = best.vol; return list.filter(o => cmp(o)).sort((a, b) => a.side === 'b' ? b.p - a.p : a.p - b.p).map(o => { const f = Math.min(o.q, left); left -= f; return [o.id, f]; }).filter(x => x[1] > 0); };
+    const fills = Object.fromEntries([...fill(buys, o => o.p >= best.price), ...fill(sells, o => o.p <= best.price)]);
+    return { ...best, fills };
+  }
+  function permitMarket(C, given) {
+    const P = positions(C), guess = Math.max(25, P.lastP || 40), orders = [];
+    for (const x of P.list) {
+      const b = x.b, real = given && parseOrder(given[b.id]);
+      let o = real;
+      if (!o) {                                     // a stand-in bids its own cost of cutting
+        const r = rk(C, 'trade:' + C.year + ':' + b.id);
+        if (Math.abs(x.short) < 5) o = { side: 'n', q: 0, p: 0 };
+        else if (x.short > 0) o = { side: 'b', q: Math.max(10, Math.round(x.short * (.6 + .4 * r()) / 10) * 10), p: Math.min(150, Math.round(guess * (1.05 + .45 * r()) + 15 * b.concern)) };
+        else o = { side: 's', q: Math.max(10, Math.round(-x.short * (.6 + .4 * r()) / 10) * 10), p: Math.max(5, Math.round(guess * (.55 + .35 * r()))) };
+      }
+      orders.push({ id: b.id, name: b.name, side: o.side, q: o.q, p: o.p, real: real ? 1 : 0, alloc: x.alloc, emits: x.emits });
+    }
+    const res = clearMarket(orders.filter(o => o.side !== 'n'));
+    C.free = true;
+    for (const x of P.list) { const b = x.b, f = res.fills[b.id] || 0, o = orders.find(z => z.id === b.id); b.share = x.share; b.tq = o && o.side === 's' ? -f : f; b.tqP = res.price; }
+    return { year: C.year, capNow: P.capNow, price: res.price, vol: res.vol, orders, fills: res.fills };
+  }
+  // game options (host's lobby menu): mid = midterm sessions, trade = permit trading window, polls = yearly polls
+  const optsOf = o => ({ mid: !o || o.mid !== 0, trade: !o || o.trade !== 0, polls: !o || o.polls !== 0 });
   const STAGES = ['init', 'vote0', 'adj0', 'runA1', 'mid1', 'runB1', 'elect1', 'revote1', 'adj1', 'runA2', 'mid2', 'runB2', 'elect2', 'revote2', 'adj2', 'runA3', 'mid3', 'runB3'];
   function replay(I, stage, yr) {
     const C = classFrom(I.members, I.seed), upto = STAGES.indexOf(stage);
+    C.opts = optsOf(I.opts);
     for (let i = 0; i <= upto; i++) {
       const s = STAGES[i];
       if (s === 'init') initialChoices(C, I.D);
@@ -3492,7 +3622,7 @@ const SIM = (function () {
         const d = +s[4], end = 10 * (d - 1) + (s[3] === 'A' ? 5 : 10), lim = Y0 + Math.min(end, i === upto && yr != null ? yr : 99);
         while (C.year < lim && C.year < YN) stepYear(C);
       }
-      else if (s.startsWith('mid')) C.logs[s] = midterm(C, I['AG' + s[3]], I['MV' + s[3]], I['MA' + s[3]]);
+      else if (s.startsWith('mid')) { if (C.opts.mid !== false) C.logs[s] = midterm(C, I['AG' + s[3]], I['MV' + s[3]], I['MA' + s[3]], I['MT' + s[3]]); }
       else if (s.startsWith('elect')) C.logs[s] = election(C, I['B' + s[5]]);
       else if (s.startsWith('revote')) { const e = C.logs['elect' + s[6]]; if (e && !e.keep) C.logs['vote' + s[6]] = govVote(C, true, I['V' + s[6]]); }
       else if (s.startsWith('adj')) C.logs[s] = adjustAll(C, I['A' + s[3]]);
@@ -3509,7 +3639,7 @@ const SIM = (function () {
   ];
   const at = (pts, y) => { for (let i = 1; i < pts.length; i++) if (y <= pts[i][0]) return lerp(pts[i - 1][1], pts[i][1], (y - pts[i - 1][0]) / (pts[i][0] - pts[i - 1][0])); return pts[pts.length - 1][1]; };
 
-  return { deal, classFrom, replay, STAGES, agendaOf, DEFAULT_AGENDA, VOTE_IDS, packHH, parseHH, packB, parseB, packVote, parseVote, parseBallot, REASONS, applyHH, applyB, AS_BUILT_HH, asBuiltBiz, pickH, pickB, hash, effTax, carPrice, costF, Y0, YN, ELECTIONS, HHSCALE, SECT, BILLS, SSP, at, HH_OPTS, POWER_INT, hhYear, hhUpfront, bizYear, bizCapex, newClass, initialChoices, govVote, stepYear, election, adjustAll, worldFor, market, emptyPolicy };
+  return { tradingNow, positions, parseOrder, clearMarket, optsOf, deal, classFrom, replay, STAGES, agendaOf, DEFAULT_AGENDA, VOTE_IDS, packHH, parseHH, packB, parseB, packVote, parseVote, parseBallot, REASONS, applyHH, applyB, AS_BUILT_HH, asBuiltBiz, pickH, pickB, hash, effTax, carPrice, costF, Y0, YN, ELECTIONS, HHSCALE, SECT, BILLS, SSP, at, HH_OPTS, POWER_INT, hhYear, hhUpfront, bizYear, bizCapex, newClass, initialChoices, govVote, stepYear, election, adjustAll, worldFor, market, emptyPolicy };
 })();
 
 // THE VALLEY: the shared living world. Everything visible is driven by the class's state:
@@ -5457,12 +5587,48 @@ const SIM = (function () {
     $('#rLook').onclick = closeOv;
   }
 
+
+  // ── the permit market: buyers' and sellers' staircases, and where they cross ──
+  function marketSvg(orders, cleared, W = 640, H = 300) {
+    const L = 46, Rm = 16, T = 22, B = 34;
+    const buys = orders.filter(o => o.side === 'b').sort((a, b) => b.p - a.p), sells = orders.filter(o => o.side === 's').sort((a, b) => a.p - b.p);
+    const qb = buys.reduce((a, o) => a + o.q, 0), qs = sells.reduce((a, o) => a + o.q, 0);
+    const QMAX = Math.max(100, Math.ceil(Math.max(qb, qs) * 1.05 / 100) * 100), PMAX = Math.max(40, Math.ceil(Math.max(0, ...orders.map(o => o.p), cleared ? cleared.price : 0) * 1.1 / 40) * 40);   // ticks on round numbers
+    const X = v => L + v / QMAX * (W - L - Rm), Y = v => T + (1 - v / PMAX) * (H - T - B);
+    const steps = list => { let q0 = 0, d = ''; for (const o of list) { d += (d ? ` L${X(q0)},${Y(o.p)}` : `M${X(q0)},${Y(o.p)}`) + ` L${X(q0 + o.q)},${Y(o.p)}`; q0 += o.q; } return d; };
+    let g = `<text x="${L}" y="13" class="r-ct">Price per tonne against permits (kt a year)</text>`;
+    for (let k = 0; k <= 4; k++) { const v = PMAX * k / 4; g += `<path d="M${L},${Y(v)} H${W - Rm}" stroke="#e8dcc0"/><text x="${L - 6}" y="${Y(v) + 3}" class="r-ax" text-anchor="end">$${Math.round(v)}</text>`; }
+    for (let k = 0; k <= 4; k++) { const v = QMAX * k / 4; g += `<text x="${X(v)}" y="${H - B + 15}" class="r-ax" text-anchor="middle">${Math.round(v)}</text>`; }
+    g += `<path d="M${L},${T} V${H - B} H${W - Rm}" stroke="#3b3222" fill="none"/>`;
+    if (buys.length) g += `<path d="${steps(buys)}" stroke="#2668a8" stroke-width="3" fill="none" stroke-linejoin="round"/>`;
+    if (sells.length) g += `<path d="${steps(sells)}" stroke="#2f8545" stroke-width="3" fill="none" stroke-linejoin="round"/>`;
+    if (!orders.length) g += `<text x="${(L + W) / 2}" y="${H / 2}" class="r-empty" text-anchor="middle">Orders will appear here as they come in</text>`;
+    if (cleared && cleared.vol > 0) {
+      const cx = X(cleared.vol), cy = Y(cleared.price);
+      g += `<path d="M${L},${cy} H${cx} V${H - B}" stroke="#b8432f" stroke-width="1.5" stroke-dasharray="5 4" fill="none"/><circle cx="${cx}" cy="${cy}" r="7" fill="#b8432f" stroke="#fbf5e6" stroke-width="2.5"/>` +
+        `<text x="${Math.min(cx + 12, W - 150)}" y="${cy + 22}" class="r-mkl">$${cleared.price} a tonne · ${Math.round(cleared.vol)} kt</text>`;
+    }
+    return `<svg class="r-msvg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Supply and demand for permits">${g}</svg>`;
+  }
+  function showTrade(m, o) {
+    const orders = m.orders.filter(x => x.side !== 'n'), fill = id => m.fills[id] || 0;
+    const rows = orders.slice().sort((a, b) => (fill(b.id) > 0) - (fill(a.id) > 0) || (a.side < b.side ? 1 : -1)).map(x => {
+      const f = fill(x.id), money = (f * m.price / 1000).toFixed(1);
+      const what = !f ? `didn’t trade: its limit was ${x.side === 'b' ? 'below' : 'above'} $${m.price}` : x.side === 's' ? `sells ${Math.round(f)} kt and earns <b>$${money}M</b> a year` : `buys ${Math.round(f)} kt${f < x.q ? ` (of the ${x.q} it wanted)` : ''} and pays <b>$${money}M</b> a year`;
+      return `<li class="${f ? '' : 'out'}"><span class="r-k ${x.side}">${x.side === 'b' ? 'BUY' : 'SELL'}</span><b>${x.name}</b> ${what}</li>`;
+    }).join('');
+    overlay(head(`YEAR ${m.year} · THE PERMIT MARKET`, m.vol > 0 ? `The market cleared at $${m.price} a tonne` : 'Nobody traded',
+      m.vol > 0 ? `${Math.round(m.vol)} kt of permits a year change hands for the next five years. Companies that cleaned up earn money for the cuts they made; the ones that didn’t pay for them.` : 'The buyers’ highest prices never reached the sellers’ lowest. Everyone keeps the permits they were given.') +
+      `<div class="r-mkt"><div class="r-fchart">${marketSvg(orders, m)}</div><ul class="r-mfills">${rows || '<li class="out">No company placed an order.</li>'}</ul></div>` + act(o, 'Show what households changed ▸'));
+    wire(o);
+  }
+
   // a timed round in progress: counts update in place, no re-animation
   function showProgress(o) {
     const same = $('#rCard').dataset.prog === o.id && !$('#rOv').hidden;
     const rows = o.rows.map(([g, l, n, of]) => `<div class="r-prow">${glyph(g, 20)}<span>${l}</span><div class="r-pbar"><i style="width:${of ? n / of * 100 : 0}%"></i></div><b>${n} of ${of}</b></div>`).join('');
-    if (same) { $('#rProws').innerHTML = rows; $('#rPclock').textContent = o.clock || ''; $('#rPclock').classList.toggle('low', !!o.low); return; }
-    overlay(head(o.eb, o.title, o.sub) + `<div class="r-prog"><div class="r-pclock${o.low ? ' low' : ''}" id="rPclock">${o.clock || ''}</div><div class="r-prows" id="rProws">${rows}</div>${o.body || ''}</div>` + act(o, o.goLabel || 'Close the round ▸'));
+    if (same) { $('#rProws').innerHTML = rows; $('#rPclock').textContent = o.clock || ''; $('#rPclock').classList.toggle('low', !!o.low); const pb = $('#rPbody'); if (pb && o.body != null && pb.dataset.sig !== o.bodySig) { pb.innerHTML = o.body; pb.dataset.sig = o.bodySig || ''; } return; }
+    overlay(head(o.eb, o.title, o.sub) + `<div class="r-prog"><div class="r-pclock${o.low ? ' low' : ''}" id="rPclock">${o.clock || ''}</div><div class="r-prows" id="rProws">${rows}</div></div><div id="rPbody" data-sig="${o.bodySig || ''}">${o.body || ''}</div>` + act(o, o.goLabel || 'Close the round ▸'));
     $('#rCard').dataset.prog = o.id; wire(o);
   }
 
@@ -5519,7 +5685,7 @@ const SIM = (function () {
     arrive(rec) { for (const e of rec.events) window.VALLEY.event(e); milestones(rec); },
     setStep(st) { R.step = st; paintSteps(); }, setPhase(t) { $('#rPhase').textContent = t; },
     setYou(html) { const y = $('#rYou'); y.hidden = !html; if (html) y.innerHTML = html; },
-    news, show: { deal: showDeal, vote: showVote, react: showReact, election: showElection, final: showFinal, progress: showProgress, close: closeOv },
+    marketSvg, news, show: { trade: showTrade, deal: showDeal, vote: showVote, react: showReact, election: showElection, final: showFinal, progress: showProgress, close: closeOv },
     isOpen: () => !$('#rOv').hidden, glyph, fmt$, lawLine: p => lawLine(p), hhSummary: h => hhSummary(h), bizSummary: b => bizSummary(b), SECN,
     state: R, tick: tickYear, finishDecade() { while (R.step.startsWith('y') && !SIM.ELECTIONS.includes(R.C.year) && R.C.year <= SIM.YN - 1) { tickYear(); if (!R.step.startsWith('y')) break; } }
   };
@@ -5575,7 +5741,8 @@ const SIM = (function () {
 
   // ── the class, replayed from the frozen inputs ──
   const F = () => state.F || {};
-  function inputs() { return { ...F(), seed: seed(), members: members() }; }
+  function inputs() { return { ...F(), seed: seed(), members: members(), opts: state.opts }; }
+  const OPT = () => SIM.optsOf(state.opts);
   // the furthest stage this phase has frozen inputs for
   function stageNow() {
     const ph = phase(), w = win();
@@ -5584,7 +5751,7 @@ const SIM = (function () {
     if (ph === 'reacted') return ['adj' + w, null];
     if (ph === 'run') return [(yr() < 10 * w + 5 ? 'runA' : 'runB') + (w + 1), yr()];
     if (ph === 'mid') return ['runA' + (w + 1), null];
-    if (ph === 'midlaws' || ph === 'midreact') return ['mid' + (w + 1), null];
+    if (ph === 'midlaws' || ph === 'midtrade' || ph === 'midreact') return ['mid' + (w + 1), null];
     if (ph === 'elect') return ['runB' + w, null];
     if (ph === 'elected' || ph === 'revote') return ['elect' + w, null];
     if (ph === 'final') return ['runB3', 30];
@@ -5603,7 +5770,8 @@ const SIM = (function () {
   const myAgent = C => C && (C.hh.find(h => h.id === PK) || C.biz.find(b => b.id === PK) || C.gov.find(g => g.id === PK)) || null;
 
   // ── this student's draft for the open round (kept in localStorage so a refresh keeps it) ──
-  const roundKey = () => { const ph = phase(), w = win(); return ph === 'build' ? 'D' : ph === 'react' ? 'A' + w : ph === 'elect' ? 'B' + w : ph === 'revote' ? 'V' + w : ph === 'mid' ? 'MA' + (w + 1) : null; };
+  const roundKey = () => { const ph = phase(), w = win(); return ph === 'build' ? 'D' : ph === 'react' ? 'A' + w : ph === 'elect' ? 'B' + w : ph === 'revote' ? 'V' + w : ph === 'mid' ? (role() === 'biz' && tradingOpen() ? 'MT' : 'MA') + (w + 1) : null; };
+  const tradingOpen = () => phase() === 'mid' && cMemo.C && SIM.tradingNow(cMemo.C);
   const govKey = () => { const ph = phase(), w = win(); return ph === 'build' ? 'V0' : ph === 'revote' ? 'V' + w : ph === 'mid' ? 'MV' + (w + 1) : null; };
   const mineKey = k => 'c56:' + GID + ':' + gid() + ':' + PK + ':' + k;
   function mine(k) { try { return JSON.parse(localStorage.getItem(mineKey(k)) || 'null'); } catch (e) { return null; } }
@@ -5641,19 +5809,20 @@ const SIM = (function () {
       if (n > 10 * (w + 1)) n = 10 * (w + 1);
       const PR = tallyPolls(n);
       if (n >= 10 * (w + 1)) { const PRall = tallyPolls(n + 3); if (w < 2) setPhase('elect', SECS.elect, { yr: n, win: w + 1, PR: PRall }); else setPhase('final', null, { yr: 30, PR: PRall }); }
-      else if (n === 10 * w + 5) setPhase('mid', SECS.mid, { yr: n, PR: tallyPolls(n + 3), F: { ['AG' + (w + 1)]: agendaFromPolls(w, tallyPolls(n + 3)) } });
+      else if (n === 10 * w + 5 && OPT().mid) setPhase('mid', SECS.mid, { yr: n, PR: tallyPolls(n + 3), F: { ['AG' + (w + 1)]: agendaFromPolls(w, tallyPolls(n + 3)) } });
       else setPhase('run', state.held ? null : pace(), { yr: n, PR });
     }
     else if (ph === 'elect') setPhase('elected', null, { F: { ['B' + w]: collect('B' + w, ['hh', 'biz']) } });
     else if (ph === 'revote') setPhase('laws', null, { F: { ['V' + w]: collect('V' + w, ['gov']) } });
-    else if (ph === 'mid') setPhase('midlaws', null, { F: { ['MV' + (w + 1)]: collect('MV' + (w + 1), ['gov']), ['MA' + (w + 1)]: collect('MA' + (w + 1), ['hh', 'biz']) } });
+    else if (ph === 'mid') setPhase('midlaws', null, { F: { ['MV' + (w + 1)]: collect('MV' + (w + 1), ['gov']), ['MA' + (w + 1)]: collect('MA' + (w + 1), ['hh', 'biz']), ['MT' + (w + 1)]: collect('MT' + (w + 1), ['biz']) } });
   }
   // the overlay buttons on the projector
   const go = {
     laws: () => setPhase('react', SECS.react, {}),
     reacted: () => setPhase('run', pace(), { yr: 10 * win() }),
     elected: keep => keep ? setPhase('react', SECS.react, {}) : setPhase('revote', SECS.revote, {}),
-    midlaws: () => setPhase('midreact', null, {}),
+    midlaws: () => { const m = cMemo.C && cMemo.C.logs['mid' + (win() + 1)]; setPhase(m && m.market ? 'midtrade' : 'midreact', null, {}); },
+    midtrade: () => setPhase('midreact', null, {}),
     midreact: () => setPhase('run', pace(), {}),
   };
   function hostBar() {
@@ -5688,7 +5857,7 @@ const SIM = (function () {
     const bar = q('[data-hostbar]'), ph = phase(), n = Object.keys(state.players || {}).length;
     const show = (sel, on) => { const el = bar.querySelector(sel); if (el) el.hidden = !on; };
     show('[data-open]', ph === 'idle' || ph === 'final'); show('[data-start]', ph === 'lobby');
-    show('[data-skip]', ['build', 'react', 'elect', 'revote', 'run', 'mid'].includes(ph)); show('[data-pacewrap]', ['run', 'reacted', 'midlaws', 'midreact'].includes(ph)); show('[data-pause]', ph === 'run');
+    show('[data-skip]', ['build', 'react', 'elect', 'revote', 'run', 'mid'].includes(ph)); show('[data-pacewrap]', ['run', 'reacted', 'midlaws', 'midtrade', 'midreact'].includes(ph)); show('[data-pause]', ph === 'run');
     bar.querySelector('[data-pause]').textContent = state.paused ? 'Resume' : 'Pause';
     const ps = bar.querySelector('[data-pace]'); if (state.pace && ps.value !== String(state.pace)) ps.value = String(state.pace);
     show('[data-take]', !clockMine() && ph !== 'idle');
@@ -5736,8 +5905,8 @@ const SIM = (function () {
     if (ph === 'elect') return r === 'gov' ? 'The voters are deciding your fate.' : (m && m.locked ? 'Ballot cast.' : 'Do you approve of the government? Vote now.');
     if (ph === 'elected') return 'The votes are counted.';
     if (ph === 'revote') return r === 'gov' ? (m && m.locked ? 'Votes cast.' : 'You were voted out. Re-vote, with new options.') : 'The government is re-voting.';
-    if (ph === 'mid') return r === 'gov' ? (mine(govKey()) && mine(govKey()).locked ? 'Votes cast.' : 'Midterm session: reopen the laws on the agenda.') : (m && m.locked ? 'Change locked in.' : 'Midterm: you may make one change.');
-    if (ph === 'midlaws' || ph === 'midreact') return 'The midterm results are in.';
+    if (ph === 'mid') return r === 'gov' ? (mine(govKey()) && mine(govKey()).locked ? 'Votes cast.' : 'Midterm session: reopen the laws on the agenda.') : (r === 'biz' && tradingOpen() ? (m && m.locked ? 'Order placed. You can change it until time runs out.' : 'The permit market is open: place one order.') : (m && m.locked ? 'Change locked in.' : 'Midterm: you may make one change.'));
+    if (ph === 'midlaws' || ph === 'midtrade' || ph === 'midreact') return 'The midterm results are in.';
     if (ph === 'final') return 'Thirty years are done.';
     return '';
   }
@@ -5753,11 +5922,19 @@ const SIM = (function () {
         <p>When the game starts, every student is dealt a role: <b>a household</b>, <b>a company</b>, or <b>a seat in government</b>. Households and companies build while the government writes the first laws. Then the years run, and the class votes on the government at years 10 and 20.</p>
         <div class="c56-roles">${['hh', 'biz', 'gov'].map(k => `<div>${RUN.glyph(ROLE[k].g, 26)}<b>${ROLE[k].t}</b><span>${ROLE[k].d}</span></div>`).join('')}</div></div>
       <div class="c56-lr"><div class="c56-count"><b>${n}</b><span>${n === 1 ? 'student' : 'students'} joined</span></div><div class="c56-dots">${dots}</div>
+        ${HOST ? optsPanel() : ''}
         ${!HOST && ph === 'lobby' ? (joined() ? '<div class="c56-in">You are in.</div>' : '<button class="c56-b go big" data-join>Join the game</button>') : ''}</div></div>`;
+    box.querySelectorAll('[data-opt]').forEach(c => c.onchange = () => { const o = { ...OPT() }; o[c.dataset.opt] = c.checked; backend.mergeDoc('polls', GID, { opts: { mid: o.mid ? 1 : 0, trade: o.trade ? 1 : 0, polls: o.polls ? 1 : 0 } }); });
     const j = box.querySelector('[data-join]');
     if (j) j.onclick = () => { if (!backend) return; backend.mergeDocShard('polls', GID, { players: { [PK]: { t: Date.now() } } }); j.disabled = true; j.textContent = 'Joining…'; };
   }
 
+  function optsPanel() {
+    const o = OPT(), row = (k, t, d) => `<label class="c56-opt"><input type="checkbox" data-opt="${k}"${o[k] ? ' checked' : ''}><span><b>${t}</b><small>${d}</small></span></label>`;
+    return `<div class="c56-opts"><div class="c56-eb">GAME OPTIONS</div>${row('mid', 'Midterm sessions', 'At years 5, 15 and 25: the government reopens three laws, and everyone else makes one change.')}
+      ${row('trade', 'Permit trading at the midterm', 'If cap-and-trade is law, companies get free permits and trade them in a two-minute market while the government votes.')}
+      ${row('polls', 'Yearly polls', 'About 10% of households and companies get a quick, optional poll each year; results go to the news.')}</div>`;
+  }
   // ── role card (first time a student sees their role) ──
   function roleIntro(C) {
     const r = role(), a = myAgent(C), seenK = 'intro';
@@ -5927,6 +6104,7 @@ const SIM = (function () {
     return order[c % order.length];
   }
   function pollees(c) {
+    if (!OPT().polls) return [];
     const cit = members().filter(m => m.role !== 'gov'), n = Math.max(1, Math.round(members().length * .1));
     return cit.map(m => m.pk).sort((a, b) => SIM.hash(gid() + ':poll:' + c + ':' + a) - SIM.hash(gid() + ':poll:' + c + ':' + b)).slice(0, n);
   }
@@ -5985,6 +6163,73 @@ const SIM = (function () {
     box.querySelector('[data-pno]').onclick = () => { setMine('poll' + c, 'skip'); box.hidden = true; pollShown = ''; };
   }
 
+
+  // ── a company's trading screen (midterm, when the window is open) ──
+  let tradeSig = '';
+  function paintTrade(C) {
+    screen('trade');
+    const d = win() + 1, k = 'MT' + d, m = mine(k) || {}, a = myAgent(C);
+    const P = SIM.positions(C), me2 = P.list.find(x => x.b.id === PK);
+    const box = q('[data-screen=trade]');
+    if (!me2) { box.innerHTML = `<div class="c56-ballot"><div class="c56-eb">YEAR ${C.year} · THE PERMIT MARKET</div><h3>Your company isn’t under the cap</h3><p class="c56-gsub">${a && !a.open ? 'Your company has closed.' : 'You don’t emit any covered CO₂, so you have nothing to buy or sell. Watch the market on the big screen.'}</p></div>`; return; }
+    const short = Math.round(me2.short), last = P.lastP || 0, guess = Math.max(25, last || 40);
+    const def = short > 0 ? `b,${Math.max(10, Math.round(short / 10) * 10)},${Math.round(guess)}` : short < 0 ? `s,${Math.max(10, Math.round(-short / 10) * 10)},${Math.round(guess)}` : 'n';
+    const cur = SIM.parseOrder(m.draft || m.v || def) || SIM.parseOrder(def);
+    const sig = gid() + k + (m.locked ? 1 : 0) + (m.draft || m.v || ''); if (sig === tradeSig) return; tradeSig = sig;
+    const abMax = .12 + .012 * (C.year - 2026), f = short > 0 ? short / Math.max(1, me2.emits) : 0;
+    const mac = f <= 0 ? '' : f <= abMax ? `Cutting the ${short} kt yourself costs about <b>$${Math.round(120 * f / abMax)} a tonne</b> (running cleaner, burning less). If permits clear below that, buying is cheaper.`
+      : `You can only trim about ${Math.round(abMax * 100)}% by running cleaner (up to <b>$120 a tonne</b>). Closing the rest of the gap would take a bigger change, like a new way of making your product.`;
+    const qMax = Math.max(100, Math.ceil(Math.abs(short) * 2 / 50) * 50), pct = Math.min(100, me2.alloc / Math.max(me2.alloc, me2.emits) * 100);
+    box.innerHTML = `<div class="c56-trade"><div class="c56-tl1 c56-tcard">
+        <div class="c56-eb">YOUR PERMITS, ${C.year}–${C.year + 4}</div>
+        <h3>${short > 0 ? `You are short ${short} kt a year` : short < 0 ? `You have ${-short} kt a year to spare` : 'You are exactly covered'}</h3>
+        <div class="c56-pos"><div><small>Permits you got</small><b>${Math.round(me2.alloc)} kt</b><span>a year, free, from the cap</span></div><div><small>You emit</small><b>${Math.round(me2.emits)} kt</b><span>a year, as you run now</span></div><div><small>Last price</small><b>$${last}</b><span>per tonne, ${C.year - 1}</span></div></div>
+        <div class="c56-gauge"><div class="c56-gt"><i class="em" style="width:${me2.emits >= me2.alloc ? 100 : me2.emits / me2.alloc * 100}%"></i><i class="al" style="width:${pct}%"></i></div><div class="c56-gl"><span>Your permits ${Math.round(me2.alloc)} kt</span><span>Your emissions ${Math.round(me2.emits)} kt</span></div></div>
+        <p class="c56-gsub">Every tonne you emit needs a permit. Short companies <b>buy</b> from classmates with spare ones; companies with spare permits <b>sell</b> them. Anything still uncovered each year is bought from the government at the year’s permit price, up to <b>$150</b>.</p>
+        ${mac ? `<div class="c56-mac">${mac}</div>` : ''}</div>
+      <div class="c56-tcard"><div class="c56-eb">YOUR ONE ORDER</div>
+        <div class="c56-side"><button class="c56-buy${cur.side === 'b' ? ' on' : ''}" data-ts="b">Buy permits</button><button class="c56-sell${cur.side === 's' ? ' on' : ''}" data-ts="s">Sell permits</button></div>
+        ${cur.side === 'n' ? '<p class="c56-gsub" style="margin-top:.8rem">You’re sitting this one out.</p>' : `
+        <div class="c56-field"><div class="c56-fl"><span>${cur.side === 'b' ? 'How many to buy' : 'How many to sell'}, per year</span><b>${cur.q} kt</b></div><input type="range" data-tq min="10" max="${qMax}" step="10" value="${cur.q}"></div>
+        <div class="c56-field"><div class="c56-fl"><span>${cur.side === 'b' ? 'The most you’ll pay' : 'The least you’ll accept'} per tonne</span><b>$${cur.p}</b></div><input type="range" data-tp min="1" max="150" step="1" value="${cur.p}">
+          <div class="c56-hint">${cur.side === 'b' ? `You only trade if the market clears at or below $${cur.p}.` : `You only trade if the market clears at or above $${cur.p}.`} Everyone trades at the same price, so set what permits are really worth to you.</div></div>`}
+        <button class="c56-skip" data-tskip>${cur.side === 'n' ? 'Place an order after all' : 'Skip the market this time'}</button>
+        <div class="c56-glock"><div class="h-lockst">${m.locked ? 'Order placed. You can change it until time runs out.' : ''}</div><button class="c56-b go big" data-tgo>${m.locked ? 'Change my order' : 'Place my order'}</button></div></div></div>`;
+    const save = o => { setMine(k, { ...(mine(k) || {}), draft: o.side === 'n' ? 'n' : `${o.side},${o.q},${o.p}`, touched: 1, locked: 0 }); tradeSig = ''; paintTrade(C); };
+    const lockedNow = () => (mine(k) || {}).locked;
+    box.querySelectorAll('[data-ts]').forEach(b => b.onclick = () => { if (lockedNow()) return; save({ ...cur, side: b.dataset.ts, q: cur.q || 10, p: cur.p || Math.round(guess) }); });
+    const tq = box.querySelector('[data-tq]'), tp = box.querySelector('[data-tp]');
+    if (tq) tq.oninput = () => { if (lockedNow()) return; tq.closest('.c56-field').querySelector('b').textContent = tq.value + ' kt'; }; if (tq) tq.onchange = () => { if (!lockedNow()) save({ ...cur, q: +tq.value }); };
+    if (tp) tp.oninput = () => { if (lockedNow()) return; tp.closest('.c56-field').querySelector('b').textContent = '$' + tp.value; }; if (tp) tp.onchange = () => { if (!lockedNow()) save({ ...cur, p: +tp.value }); };
+    box.querySelector('[data-tskip]').onclick = () => { if (lockedNow()) return; save(cur.side === 'n' ? SIM.parseOrder(def.startsWith('n') ? 'b,10,' + Math.round(guess) : def) : { side: 'n', q: 0, p: 0 }); };
+    box.querySelector('[data-tgo]').onclick = () => { const c = mine(k) || {}; if (c.locked) { setMine(k, { ...c, locked: 0, draft: c.v }); tradeSig = ''; paintTrade(C); return; } const o = SIM.parseOrder(c.draft || def); submit(k, o.side === 'n' ? 'n' : `${o.side},${o.q},${o.p}`); tradeSig = ''; paintTrade(C); };
+  }
+
+  // ── the projector during the midterm: the government, the households and the companies, side by side ──
+  const CHG = { loc: { sub: 'moved to the suburbs', city: 'moved to the city', flood: 'moved to the riverside' }, heat: { gas: 'went back to a gas furnace', hp: 'installed a heat pump' }, ins: { basic: 'skipped insulation', up: 'insulated the house' },
+    sol: { none: 'took the solar off', pv: 'added rooftop solar', pvb: 'added solar and a battery' }, car: { none: 'sold the car', sedan: 'bought a gas sedan', suv: 'bought an SUV', hyb: 'bought a hybrid', ev: 'bought an electric car' },
+    diet: { meat: 'eats more meat', mixed: 'eats some meat', veg: 'went vegetarian', vegan: 'went vegan' }, th: { 68: 'turned the heat down', 72: 'set the heat to 72°F', 76: 'turned the heat up' }, fly: { 0: 'stopped flying', 1: 'flies once a year', 3: 'flies more' } };
+  function midBody(C, w) {
+    const d = w + 1, ins = state.in || {}, mem = members();
+    const ag = SIM.agendaOf(F()['AG' + d]), nv = mem.filter(m => m.role === 'gov' && ins['MV' + d] && ins['MV' + d][m.pk]).length, ng = mem.filter(m => m.role === 'gov').length;
+    const lawNow = id => { const p = C.pol; return id === 'tax' ? `now $${p.tax}/t` : id === 'use' ? `now: ${p.use}` : p[id] ? 'now in force' : 'not law now'; };
+    const gov = `<section><h4>${RUN.glyph('capitol', 15)} Government<span>${nv} of ${ng} voted</span></h4><ul class="r-agenda">${ag.map(id => `<li><b>${SIM.BILLS[id].title}</b><small>${lawNow(id)}</small></li>`).join('')}</ul><div class="r-sealed">Votes stay secret until the reveal.</div></section>`;
+    const feed = [];
+    for (const h of C.hh) { const ch = ins['MA' + d] && SIM.parseHH(ins['MA' + d][h.id]); if (!ch) continue; const k = SIM.HH_OPTS && Object.keys(CHG).find(kk => ch[kk] !== h[kk]); if (k) feed.push(`<li>${RUN.glyph('home', 14)}A household ${CHG[k][ch[k]] || 'made a change'}</li>`); }
+    const nh = C.hh.filter(h => ins['MA' + d] && ins['MA' + d][h.id]).length;
+    const hh = `<section><h4>${RUN.glyph('home', 15)} Households<span>${nh} of ${C.hh.length}</span></h4><ul class="r-feed">${feed.slice(-7).reverse().join('') || '<li>Each household may make one change.</li>'}</ul></section>`;
+    let biz;
+    if (SIM.tradingNow(C)) {
+      const orders = []; for (const b of C.biz) { const o = ins['MT' + d] && SIM.parseOrder(ins['MT' + d][b.id]); if (o && o.side !== 'n') orders.push(o); }
+      const nb = C.biz.filter(b => ins['MT' + d] && ins['MT' + d][b.id]).length;
+      biz = `<section><h4>${RUN.glyph('factory', 15)} The permit market<span>${nb} of ${C.biz.filter(b => b.open).length} orders</span></h4>${RUN.marketSvg(orders, null, 420, 230)}<div class="r-sealed">Blue: what buyers will pay. Green: what sellers will take. Names stay sealed until the market clears.</div></section>`;
+    } else {
+      const fb = []; for (const b of C.biz) { const ch = ins['MA' + d] && SIM.parseB(ins['MA' + d][b.id], b.sec, C.pol); if (ch) fb.push(`<li>${RUN.glyph('factory', 14)}A company changed its ${Object.keys(ch).find(k => ch[k] !== b[k]) === 'prod' ? 'product' : 'operations'}</li>`); }
+      biz = `<section><h4>${RUN.glyph('factory', 15)} Companies<span>one change each</span></h4><ul class="r-feed">${fb.slice(-7).reverse().join('') || '<li>Each company may make one change.</li>'}</ul><div class="r-sealed">${C.pol.cap ? 'The permit market is switched off in this game’s options.' : 'No permit market: cap-and-trade isn’t law.'}</div></section>`;
+    }
+    return { html: `<div class="r-mid3">${gov}${hh}${biz}</div>`, sig: JSON.stringify([ins['MV' + d], ins['MA' + d], ins['MT' + d]]) };
+  }
+
   // ── the run screen, its overlays, and the student's own panel ──
   let ovSig = '';
   function paintRun(C) {
@@ -5992,7 +6237,7 @@ const SIM = (function () {
     if (!C) return;
     RUN.setClass(C);
     const ph = phase(), w = win();
-    RUN.setStep(ph === 'lobby' || ph === 'idle' ? 'deal' : ph === 'build' ? 'deal' : ph === 'laws' && w === 0 ? 'laws' : ['run', 'reacted', 'react', 'mid', 'midlaws', 'midreact'].includes(ph) ? ['y1', 'y2', 'y3'][w] : ph === 'elect' || ph === 'elected' || ph === 'revote' || ph === 'laws' ? ['laws', 'e1', 'e2'][w] : 'end');
+    RUN.setStep(ph === 'lobby' || ph === 'idle' ? 'deal' : ph === 'build' ? 'deal' : ph === 'laws' && w === 0 ? 'laws' : ['run', 'reacted', 'react', 'mid', 'midlaws', 'midtrade', 'midreact'].includes(ph) ? ['y1', 'y2', 'y3'][w] : ph === 'elect' || ph === 'elected' || ph === 'revote' || ph === 'laws' ? ['laws', 'e1', 'e2'][w] : 'end');
     RUN.setPhase(ph === 'run' ? (state.paused ? 'Paused' : state.held ? 'Waiting…' : 'Years passing…') : ph === 'final' ? 'Thirty years later' : '');
     RUN.setYou(youPanel(C));
     const sig = ph + w + (ph === 'run' ? '' : JSON.stringify(F()).length) + (HOST ? 'h' : 's');
@@ -6007,6 +6252,7 @@ const SIM = (function () {
     if (ph === 'final') { if (first) { RUN.news(`2056: the class finishes at +${C.hist[29].T.toFixed(2)} °C`, 2056); RUN.show.final(HOST ? { onGo: () => backend.setDoc('polls', GID, { phase: 'idle' }), goLabel: 'Close the game' } : { note: 'Thanks for playing.' }); } return; }
     if (ph === 'mid') return progress(C, first);
     if (ph === 'midlaws') { if (first) { const rec = C.logs['mid' + (w + 1)]; RUN.news('Midterm: ' + RUN.lawLine(C.pol), C.year); RUN.show.vote(rec, HOST ? { onGo: go.midlaws, goLabel: 'Show what the class changed ▸' } : {}); } return; }
+    if (ph === 'midtrade') { if (first) { const m = C.logs['mid' + (w + 1)].market; RUN.news(m.vol > 0 ? `Permit market: ${Math.round(m.vol)} kt a year trade at $${m.price} a tonne` : 'Permit market: no trades this time', C.year); RUN.show.trade(m, HOST ? { onGo: go.midtrade, goLabel: 'Show what households changed ▸' } : {}); } return; }
     if (ph === 'midreact') { if (first) RUN.show.react(C.logs['mid' + (w + 1)].adj, 'mid', HOST ? { onGo: go.midreact, goLabel: 'Continue the years ▶' } : {}); return; }
     if (ph === 'run') { if (RUN.isOpen()) RUN.show.close(); return; }
   }
@@ -6030,8 +6276,9 @@ const SIM = (function () {
     else if (ph === 'elect') o = { id: 'e' + w + gid(), eb: `YEAR ${C.year} · ELECTION`, title: 'Voting is open', sub: 'Households and companies vote: do you approve of the government? Ballots are secret until the count.',
       rows: [['home', 'Households', has('B' + w, ['hh']), cnt('hh')], ['factory', 'Companies', has('B' + w, ['biz']), cnt('biz')]] };
     else if (ph === 'mid') o = { id: 'm' + w + gid(), eb: `YEAR ${C.year} · MIDTERM`, title: 'The midterm session', sub: `The government reopens three laws: ${SIM.agendaOf(F()['AG' + (w + 1)]).map(id => SIM.BILLS[id].title.replace(/^[A-Z][a-z]/, m => m.toLowerCase())).join(', ')}. Households and companies may make one change each.`,
-      rows: [['capitol', 'Government votes', has('MV' + (w + 1), ['gov']), cnt('gov')], ['home', 'Households', has('MA' + (w + 1), ['hh']), cnt('hh')], ['factory', 'Companies', has('MA' + (w + 1), ['biz']), cnt('biz')]] };
+      rows: [['capitol', 'Government votes', has('MV' + (w + 1), ['gov']), cnt('gov')], ['home', 'Households', has('MA' + (w + 1), ['hh']), cnt('hh')], ['factory', SIM.tradingNow(C) ? 'Company orders' : 'Companies', has((SIM.tradingNow(C) ? 'MT' : 'MA') + (w + 1), ['biz']), cnt('biz')]] };
     else o = { id: 'v' + w + gid(), eb: `YEAR ${C.year} · A NEW VOTE`, title: 'The government re-votes', sub: 'The government lost the election. It votes again, with six more bills on the table.', rows: [['capitol', 'Government votes', has('V' + w, ['gov']), cnt('gov')]] };
+    if (ph === 'mid' && HOST) { const mb = midBody(C, w); o.body = mb.html; o.bodySig = mb.sig; }
     const left = state.deadline ? state.deadline - Date.now() : null;
     o.clock = left != null ? CG.clock(Math.max(0, left)) : (state.paused ? 'Paused' : '');
     o.low = left != null && left < 30000;
@@ -6058,7 +6305,7 @@ const SIM = (function () {
     if (r === 'biz') {
       if (!a.open) return `<h4>You · ${last.year}</h4><b class="nm">${esc(a.name)}</b><div class="r-yev">Your company went bankrupt. ${a.workers} workers lost their jobs.</div>`;
       const L = a.last; if (!L) return '';
-      return `<h4>You · ${last.year}</h4><b class="nm">${esc(a.name)}</b>${row('Profit this year', RUN.fmt$(L.profit), L.profit < 0 ? 'neg' : '')}${row('Carbon costs', RUN.fmt$(L.taxCost + L.permitCost))}${row('Emissions', Math.round(L.kt.total) + ' kt CO₂')}${row('Cash', RUN.fmt$(a.cash), a.cash < 0 ? 'neg' : '')}${L.accident ? '<div class="r-yev">An accident at your plant cost $40M.</div>' : ''}`;
+      return `<h4>You · ${last.year}</h4><b class="nm">${esc(a.name)}</b>${row('Profit this year', RUN.fmt$(L.profit), L.profit < 0 ? 'neg' : '')}${row('Carbon costs', RUN.fmt$(L.taxCost + L.permitCost))}${row('Emissions', Math.round(L.kt.total) + ' kt CO₂')}${a.share && C.pol.cap && C.free ? row('Permits, free', Math.round(a.share * C.pol.capStart * Math.pow(.97, last.year - C.pol.capYear) + (a.tq || 0)) + ' kt') : ''}${row('Cash', RUN.fmt$(a.cash), a.cash < 0 ? 'neg' : '')}${L.accident ? '<div class="r-yev">An accident at your plant cost $40M.</div>' : ''}`;
     }
     const e = C.elections[C.elections.length - 1];
     return `<h4>You · ${last.year}</h4><b class="nm">${esc(a.name)}, government</b>${row('Your laws', esc(RUN.lawLine(C.pol)))}${row('Budget this year', RUN.fmt$(last.govIn - last.govOut), last.govIn < last.govOut ? 'neg' : '')}${e ? row('Last election', Math.round(e.pct * 100) + '% approved') : ''}`;
@@ -6088,7 +6335,7 @@ const SIM = (function () {
     if (ph === 'react' && r !== 'gov') return paintBuilder(C);
     if (ph === 'elect' && r !== 'gov') return paintBallot(C);
     if (ph === 'revote' && r === 'gov') return paintGov(C);
-    if (ph === 'mid') return r === 'gov' ? paintGov(C) : paintBuilder(C);
+    if (ph === 'mid') return r === 'gov' ? paintGov(C) : r === 'biz' && SIM.tradingNow(C) ? paintTrade(C) : paintBuilder(C);
     paintRun(C);
   }
 
