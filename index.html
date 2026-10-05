@@ -838,7 +838,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .c56 .c56-hint{font-size:11.5px;color:#8a7d60;line-height:1.4}
 .c56 .c56-skip{background:none;border:0;padding:0;margin-top:.6rem;font:600 12px Inter;color:#8a7d60;text-decoration:underline;cursor:pointer}
 @media (max-width:900px){.c56 .c56-trade{grid-template-columns:1fr}}
-.c56 .c56-demobar{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:10px;max-width:min(1100px,94%);
+.c56 .c56-demobar{position:absolute;left:16px;right:16px;bottom:8px;margin:0 auto;width:max-content;z-index:60;display:flex;align-items:center;gap:10px;max-width:min(1180px,calc(100% - 32px));
   background:rgba(59,50,34,.94);color:#fbf5e6;border-radius:12px;padding:7px 12px;box-shadow:0 10px 26px rgba(30,20,8,.35);font:600 13px Inter}
 .c56 .c56-demotag{font:800 10px Inter;letter-spacing:.16em;text-transform:uppercase;background:#a8483f;border-radius:5px;padding:2px 7px}
 .c56 .c56-demotxt{flex:1;font:italic 600 14px Merriweather,serif;min-width:0}
@@ -860,6 +860,10 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .c56 .c56-scap{flex:1;margin:0;font:400 14.5px/1.5 Merriweather,serif;color:#3b3222;min-height:3em}
 .c56 .c56-snav{display:flex;align-items:center;gap:8px}
 .c56 .c56-snum{font:700 12px Inter;color:#8a8069;min-width:4.5em;text-align:center}
+.c56 .c56-demobar .c56-replay{color:#fbf5e6;text-decoration:none;font:700 11.5px Inter;margin-left:4px;white-space:nowrap}
+.c56.c56-demo #rGo,.c56.c56-demo .r-cact .btn{pointer-events:none}
+.c56.c56-demobarOn{padding-bottom:52px}
+.c56 .c56-demobar .c56-dpause{background:none;border:1px solid rgba(251,245,230,.5);color:#fbf5e6;border-radius:999px;font:700 11.5px Inter;padding:3px 10px;cursor:pointer;white-space:nowrap}
 
 .slide.poll{background:linear-gradient(160deg,#f4f8f6,#e8f1ec);}
 .poll-root{position:absolute; inset:0; display:flex; flex-direction:column;
@@ -5486,10 +5490,10 @@ const SIM = (function () {
   // ── overlays ──
   function overlay(html, onOpen) {
     if (R.iv) { clearInterval(R.iv); R.iv = null; }
-    $('#rCard').innerHTML = html; $('#rOv').hidden = false; $('#rCard').scrollTop = 0;
+    clearTimeout(R.closeT); $('#rCard').innerHTML = html; $('#rOv').hidden = false; $('#rCard').scrollTop = 0;
     void $('#rOv').offsetWidth; $('#rOv').classList.add('on'); onOpen && onOpen();
   }
-  function closeOv() { $('#rOv').classList.remove('on'); setTimeout(() => $('#rOv').hidden = true, 250); }
+  function closeOv() { $('#rOv').classList.remove('on'); clearTimeout(R.closeT); R.closeT = setTimeout(() => $('#rOv').hidden = true, 250); }   // a card opened within 250 ms cancels this
   // a card's footer: a button for whoever runs the class (the projector), a note for everyone else
   const act = (o, label, extra = '') => `<div class="r-cact">${extra}${o && o.onGo ? `<button class="btn" id="rGo"${o.wait ? ' disabled' : ''}>${o.goLabel || label}</button>` : `<span class="r-note r-wait">${(o && o.note) || 'The instructor will move the class on.'}</span>`}</div>`;
   const wire = o => { const b = $('#rGo'); if (b && o && o.onGo) b.onclick = () => o.onGo(); };
@@ -6535,7 +6539,7 @@ const SIM = (function () {
       [400, () => backend.setDoc('polls', GID, { phase: 'lobby', players: {}, gameId: SEED, pace: 999, opts: { mid: 1, trade: 1, polls: 1 }, hostId: HOSTID }), `2056, one hypothetical class played out. ${who}. A real class will play differently.`],
       [1800, () => doc({ players: Object.fromEntries(all.map((k, i) => [k, { t: i + 1 }])) }), '24 students open the slide and join.'],
       [2200, () => setPhase('build', 360, { roster: all.slice().sort().join(','), win: 0, yr: 0 }), 'Everyone is dealt a role: about a fifth go to the government, the rest are households and companies.'],
-      [2600, () => draft('D'), want === 'gov' ? 'The government votes on the first laws. The carbon tax is set by the middle vote.' : want === 'host' ? 'While students build, the projector counts who has finished.' : 'Each household and company builds before anyone knows the laws.'],
+      [3600, () => draft('D'), want === 'gov' ? 'The government votes on the first laws. The carbon tax is set by the middle vote.' : want === 'host' ? 'While students build, the projector counts who has finished.' : 'Each household and company builds before anyone knows the laws.'],
       [2200, () => { lock('D'); botsVote('V0', { cap: 1, evRebate: 1, hpRebate: 1, solarCredit: 0, use: 0 }); }, 'Plans lock in. Anyone who doesn’t finish is played by a stand-in.'],
       [2600, () => advance(), 'The laws are announced, vote by vote.'],
       [3800, () => { go.laws(); draft('A'); }, 'Everyone gets one chance to react to the laws, at today’s prices.'],
@@ -6558,7 +6562,8 @@ const SIM = (function () {
       [3000, () => toEnd(), '2056: where did the class land?'],
     ];
     const bar = document.createElement('div'); bar.className = 'c56-demobar';
-    bar.innerHTML = `<span class="c56-demotag">Demo</span><span class="c56-demotxt"></span><span class="c56-demoroles">${[['projector', 'Projector'], ['household', 'Household'], ['company', 'Company'], ['government', 'Government']].map(([k, l]) => `<a href="?demo=1&role=${k}" class="${(DQ.get('role') || 'projector') === k ? 'on' : ''}">${l}</a>`).join('')}</span>`;
+    bar.innerHTML = `<span class="c56-demotag">Demo</span><span class="c56-demotxt"></span><span class="c56-demoroles">${[['projector', 'Projector'], ['household', 'Household'], ['company', 'Company'], ['government', 'Government']].map(([k, l]) => `<a href="?demo=1&role=${k}" class="${(DQ.get('role') || 'projector') === k ? 'on' : ''}">${l}</a>`).join('')}</span><button class="c56-dpause" data-dpause>❚❚ Pause</button><a href="${location.search}" class="c56-replay">↻ Replay</a>`;
+    root.classList.add('c56-demo');
     root.appendChild(bar);
     const txt = bar.querySelector('.c56-demotxt');
     DEMO_POLL = false;
@@ -6568,7 +6573,20 @@ const SIM = (function () {
       for (let i = 0; i <= Math.min(FREEZE, S.length - 1); i++) { try { S[i][1](); } catch (e) { console.error(e); } }
       return;
     }
-    (function play() { if (step >= S.length) return; const st = S[step++]; setTimeout(() => { txt.textContent = st[2]; try { st[1](); } catch (e) { console.error(e); } play(); }, st[0]); })();
+    root.classList.add('c56-demobarOn');
+    // each step stays up long enough to read its caption and look at the screen: 2.6x the old gap, and never
+    // less than ~2.6 s plus 70 ms a character. The Pause button stops the clock between steps.
+    const dwell = i => Math.max((S[i + 1] ? S[i + 1][0] : 6000) * 2.6, 2600 + 70 * S[i][2].length);
+    let left = 1200, paused = false;
+    const pb = bar.querySelector('[data-dpause]');
+    pb.onclick = () => { paused = !paused; pb.textContent = paused ? '▶ Play' : '❚❚ Pause'; };
+    const iv = setInterval(() => {
+      if (paused || (left -= 100) > 0) return;
+      if (step >= S.length) { clearInterval(iv); pb.hidden = true; return; }
+      const i = step++; txt.textContent = S[i][2];
+      try { S[i][1](); } catch (e) { console.error(e); }
+      left = dwell(i);
+    }, 100);
   }
 
   // a handle for testing from the console
