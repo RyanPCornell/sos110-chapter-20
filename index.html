@@ -730,7 +730,8 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .c56 .c56-screen{position:absolute;inset:0;overflow:auto}
 .c56 .c56-screen[hidden]{display:none}
 .c56 .c56-eb{font:800 10.5px Inter;letter-spacing:.17em;color:var(--gold);text-transform:uppercase}
-.c56 .h-wrap{height:100%;grid-template-columns:minmax(0,1fr) 350px}
+.c56 #house,.c56 #business{height:100%}
+.c56 .h-wrap{height:100%;grid-template-columns:minmax(0,1fr) 350px;grid-template-rows:minmax(0,100%)}
 .c56 .h-stage{align-self:center}
 .c56 .h-panel{max-height:100%;height:100%}
 .c56 .r-wrap{grid-template-columns:minmax(0,1fr) 380px}
@@ -753,7 +754,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .c56 .c56-dots i{width:14px;height:14px;border-radius:50%;background:var(--ink);border:2px solid var(--paper);box-shadow:0 0 0 1px var(--ink);animation:c56pop .4s both}
 @keyframes c56pop{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:none}}
 .c56 .c56-in{font:italic 900 20px Merriweather,serif;color:var(--grn)}
-.c56 .c56-intro{position:absolute;inset:0;z-index:40;display:grid;place-items:center;background:rgba(40,30,15,.45);backdrop-filter:blur(3px)}
+.c56 .c56-intro{position:absolute;inset:0;z-index:56;display:grid;place-items:center;background:rgba(40,30,15,.45);backdrop-filter:blur(3px)}
 .c56 .c56-intro[hidden]{display:none}
 .c56 .c56-card{width:min(520px,92%);background:var(--paper);border:1px solid var(--gold);border-radius:18px;padding:26px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;
   box-shadow:inset 0 0 0 6px var(--paper),inset 0 0 0 7px #d9c9a3,0 24px 60px rgba(30,20,8,.35)}
@@ -837,6 +838,28 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .c56 .c56-hint{font-size:11.5px;color:#8a7d60;line-height:1.4}
 .c56 .c56-skip{background:none;border:0;padding:0;margin-top:.6rem;font:600 12px Inter;color:#8a7d60;text-decoration:underline;cursor:pointer}
 @media (max-width:900px){.c56 .c56-trade{grid-template-columns:1fr}}
+.c56 .c56-demobar{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:10px;max-width:min(1100px,94%);
+  background:rgba(59,50,34,.94);color:#fbf5e6;border-radius:12px;padding:7px 12px;box-shadow:0 10px 26px rgba(30,20,8,.35);font:600 13px Inter}
+.c56 .c56-demotag{font:800 10px Inter;letter-spacing:.16em;text-transform:uppercase;background:#a8483f;border-radius:5px;padding:2px 7px}
+.c56 .c56-demotxt{flex:1;font:italic 600 14px Merriweather,serif;min-width:0}
+.c56 .c56-demoroles{display:flex;gap:4px}
+.c56 .c56-demoroles a{color:#e6d8b8;text-decoration:none;font:700 11.5px Inter;border:1px solid rgba(251,245,230,.35);border-radius:999px;padding:3px 9px}
+.c56 .c56-demoroles a.on{background:#fbf5e6;color:#3b3222}
+.c56 .c56-sample{position:absolute;inset:0;z-index:70;display:flex;align-items:center;justify-content:center;background:rgba(59,50,34,.38);backdrop-filter:blur(2px)}
+.c56 .c56-sample[hidden]{display:none}
+.c56 .c56-scard{width:min(1180px,96%);max-height:97%;display:flex;flex-direction:column;gap:8px;background:#fffdf6;border:1px solid rgba(120,100,60,.4);border-radius:16px;padding:12px 14px;box-shadow:0 18px 50px rgba(40,30,10,.32)}
+.c56 .c56-shead{display:flex;align-items:center;gap:16px}
+.c56 .c56-shead>div:first-child{flex:0 0 auto}
+.c56 .c56-stitle{font:italic 900 21px Merriweather,serif;color:#3b3222}
+.c56 .c56-sroles{flex:1;display:flex;justify-content:center;gap:6px}
+.c56 .c56-sroles .c56-seg{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;padding:6px 14px}
+.c56 .c56-ssteps{display:flex;flex-wrap:wrap;gap:5px}
+.c56 .c56-sframe{position:relative;height:min(58vh,560px);aspect-ratio:16/9;max-width:100%;align-self:center;overflow:hidden;border:1px solid rgba(120,100,60,.3);border-radius:10px;background:#f4ecda;flex:0 0 auto}
+.c56 .c56-sframe iframe{position:absolute;left:0;top:0;width:1440px;height:810px;border:0;transform-origin:0 0;pointer-events:none}
+.c56 .c56-sfoot{display:flex;align-items:center;gap:16px}
+.c56 .c56-scap{flex:1;margin:0;font:400 14.5px/1.5 Merriweather,serif;color:#3b3222;min-height:3em}
+.c56 .c56-snav{display:flex;align-items:center;gap:8px}
+.c56 .c56-snum{font:700 12px Inter;color:#8a8069;min-width:4.5em;text-align:center}
 
 .slide.poll{background:linear-gradient(160deg,#f4f8f6,#e8f1ec);}
 .poll-root{position:absolute; inset:0; display:flex; flex-direction:column;
@@ -5705,12 +5728,14 @@ const SIM = (function () {
   const root = document.querySelector('[data-c56]');
   if (!root || root.dataset.wired) return; root.dataset.wired = '1';
   const slide = root.closest('.slide') || root;
-  const GID = slide.dataset.gameId || 'c56-test';
+  let GID = slide.dataset.gameId || 'c56-test';
   const CG = window.__cg;
   CG.trapKeys(root);
   // ?as=NAME plays as a named student (testing several students in one browser); otherwise one key per browser
   const AS = new URLSearchParams(location.search).get('as');
-  const PK = AS ? 'as-' + AS.replace(/[^a-z0-9]/gi, '').slice(0, 16) : CG.pid(GID);
+  let PK = AS ? 'as-' + AS.replace(/[^a-z0-9]/gi, '').slice(0, 16) : CG.pid(GID);
+  // ?demo plays a scripted class on the local (no-Firebase) backend; ?role=household|company|government|projector picks the screen
+  const DQ = new URLSearchParams(location.search), DEMO = DQ.has('demo');
   const q = s => root.querySelector(s);
   const esc = t => String(t == null ? '' : t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const visible = () => slide.classList.contains('active') || !slide.classList.contains('slide');
@@ -5835,8 +5860,10 @@ const SIM = (function () {
       <label class="c56-set" data-pacewrap hidden>Pace <select data-pace><option value="12">Slow · 12 s a year</option><option value="8" selected>Normal · 8 s a year</option><option value="5">Fast · 5 s a year</option></select></label>
       <button class="c56-b" data-pause hidden>Pause</button>
       <button class="c56-b" data-take hidden>Run the clock from this screen</button>
+      <button class="c56-b" data-samplebtn hidden>Sample student screen</button>
       <span class="c56-hs" data-hs></span>
       <button class="c56-b ghost" data-reset>Reset</button>`;
+    bar.querySelector('[data-samplebtn]').onclick = () => sampleOpen('hh');
     bar.querySelector('[data-open]').onclick = () => backend.setDoc('polls', GID, { phase: 'lobby', players: {}, gameId: Date.now() % 100000 + 1, pace: 8, hostId: HOSTID });
     bar.querySelector('[data-start]').onclick = () => {
       const pks = Object.keys(state.players || {});
@@ -5853,10 +5880,92 @@ const SIM = (function () {
     bar.querySelector('[data-take]').onclick = () => backend.mergeDoc('polls', GID, { hostId: HOSTID });
     bar.querySelector('[data-reset]').onclick = () => { if (confirm('Reset the game for everyone?')) backend.setDoc('polls', GID, { phase: 'idle' }); };
   }
+  // ═════════════ the sample student screen: real frames of the self-running demo, one tab per role ═════════════
+  const SAMPLE = {
+    hh: { t: 'Household', steps: [
+      { t: 'The deal', b: 2, cap: 'After the lobby every student is dealt a role. A household gets a family, an income and some savings.' },
+      { t: 'Build a home', b: 3, cap: 'Before anyone knows the laws, households choose where they live, how they heat, insulation, solar, the car and the diet. Every option shows its price, and you can only spend what you have.' },
+      { t: 'React to the laws', b: 6, cap: 'Once the first laws are announced, everyone gets one chance to change their plan at the new prices and rebates.' },
+      { t: 'The years', b: 12, cap: 'Then the years run. The valley follows the class’s emissions, and the panel tracks your own bills, savings and footprint.' },
+      { t: 'A quick poll', b: 13, cap: 'Each year about one student in ten gets a short poll in the corner. It is optional. The results go into the news and to the government.' },
+      { t: 'The midterm', b: 15, cap: 'In year 5 of each decade, every household can make one change.' },
+      { t: 'The election', b: 25, cap: 'In years 10 and 20, households and companies vote on whether to keep the government, and give their main reason.' }] },
+    biz: { t: 'Company', steps: [
+      { t: 'The deal', b: 2, cap: 'Each company gets a random name, one of five sectors (power, steel and cement, farming, cars, data centers), a workforce and a budget to invest.' },
+      { t: 'Build a company', b: 3, cap: 'Companies choose how they make their product, where their power comes from, filters, carbon capture, trucks and safety. The ledger shows profit and carbon costs before they commit.' },
+      { t: 'React to the laws', b: 6, cap: 'Once the laws are known, companies can rebuild at the new prices. A carbon tax or a permit price changes which choices pay off.' },
+      { t: 'The years', b: 12, cap: 'The years run. Profits, carbon costs and the company’s emissions are tracked every year, and a company that runs out of cash closes.' },
+      { t: 'Permit trading', b: 15, cap: 'If cap-and-trade passed and trading is on, the midterm opens a two-minute permit market. Companies with spare permits sell, the rest buy, and one price clears the market. Otherwise companies make one change instead.' },
+      { t: 'The election', b: 25, cap: 'Companies vote in the elections too, with their own reasons: profits, carbon costs, or the climate.' }] },
+    gov: { t: 'Government', steps: [
+      { t: 'The deal', b: 2, cap: 'About a fifth of the class is the government.' },
+      { t: 'The first laws', b: 3, cap: 'The government votes on every bill. The carbon tax is set by the middle vote and every other bill needs a majority. The panel on the right previews what the laws would do to a typical household.' },
+      { t: 'The years', b: 12, cap: 'The government watches the same years as everyone else: warming, emissions, bills, and the polls.' },
+      { t: 'The midterm', b: 15, cap: 'In year 5 of each decade three laws reopen: the carbon tax, plus the two the polls asked about most.' },
+      { t: 'The re-vote', b: 27, cap: 'If the class votes the government out in year 10 or 20, it re-votes on every law, with six more bills on the table.' }] },
+    host: { t: 'Projector', steps: [
+      { t: 'The lobby', b: 1, cap: 'Students join from the slide. The options menu turns the midterms, permit trading and the polls on or off.' },
+      { t: 'Building', b: 3, cap: 'While students build, the projector counts who has finished in each role.' },
+      { t: 'The laws', b: 5, cap: 'The laws are revealed vote by vote.' },
+      { t: 'The years', b: 12, cap: 'The years run on the projector: the valley, the class’s CO₂, warming, clean power, company sales, and the news.' },
+      { t: 'The midterm', b: 15, cap: 'During the midterm the projector shows all three groups at once: the government’s vote count, household changes, and the permit market as orders come in.' },
+      { t: 'The market clears', b: 17, cap: 'The permit market clears at a single price, and the projector shows who bought and who sold.' },
+      { t: 'The election', b: 26, cap: 'The ballots are counted, with the main reasons people gave.' },
+      { t: 'In 2056', b: 30, cap: 'Thirty years later: where the class landed, against the world’s standard climate pathways.' }] },
+  };
+  const sampleBase = () => /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? '/game-demos-web/2056/' : 'https://ryanpcornell.github.io/sos110-game-demos/2056/';
+  const DEMO_ROLE = { hh: 'household', biz: 'company', gov: 'government', host: 'projector' };
+  let sampleR = 'hh', sampleAt = 0;
+  function sampleBox() {
+    let box = q('[data-sample]');
+    if (box) return box;
+    box = document.createElement('div'); box.className = 'c56-sample'; box.dataset.sample = ''; box.hidden = true;
+    box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Sample student screen');
+    box.innerHTML = `<div class="c56-scard"><div class="c56-shead"><div><div class="c56-eb">Sample student screen</div><div class="c56-stitle">What students will see</div></div>
+        <div class="c56-sroles" data-sroles>${Object.entries(SAMPLE).map(([k, v]) => `<button class="c56-seg" data-srole="${k}">${RUN.glyph(k === 'host' ? 'chart' : ROLE[k].g, 14)}${v.t}</button>`).join('')}</div>
+        <button class="c56-b ghost" data-sclose>Close ×</button></div>
+      <div class="c56-ssteps" data-ssteps></div><div class="c56-sframe" data-sframe></div>
+      <div class="c56-sfoot"><p class="c56-scap" data-scap></p><div class="c56-snav"><button class="c56-b ghost" data-sprev>◀ Back</button><span class="c56-snum" data-snum></span><button class="c56-b go" data-snext>Next ▶</button></div></div></div>`;
+    root.appendChild(box);
+    box.addEventListener('click', ev => {
+      const b = ev.target.closest('button'); if (!b) { if (ev.target === box) sampleClose(); return; }
+      if (b.hasAttribute('data-sclose')) sampleClose();
+      else if (b.hasAttribute('data-snext')) sampleShow(sampleAt + 1);
+      else if (b.hasAttribute('data-sprev')) sampleShow(sampleAt - 1);
+      else if (b.dataset.srole) sampleOpen(b.dataset.srole);
+      else if (b.dataset.sgo != null) sampleShow(+b.dataset.sgo);
+    });
+    document.addEventListener('keydown', ev => {
+      if (box.hidden) return;
+      if (ev.key === 'Escape') sampleClose();
+      else if (ev.key === 'ArrowRight') { ev.preventDefault(); ev.stopPropagation(); sampleShow(sampleAt + 1); }
+      else if (ev.key === 'ArrowLeft') { ev.preventDefault(); ev.stopPropagation(); sampleShow(sampleAt - 1); }
+    }, true);
+    window.addEventListener('resize', sampleScale);
+    return box;
+  }
+  function sampleScale() { const f = q('[data-sframe]'), fr = f && f.querySelector('iframe'); if (fr) fr.style.transform = 'scale(' + (f.clientWidth / 1440).toFixed(4) + ')'; }
+  function sampleOpen(r) {
+    const box = sampleBox(); sampleR = r;
+    box.querySelectorAll('[data-srole]').forEach(b => b.classList.toggle('on', b.dataset.srole === r));
+    q('[data-ssteps]').innerHTML = SAMPLE[r].steps.map((st, j) => `<button class="c56-seg" data-sgo="${j}">${j + 1} · ${esc(st.t)}</button>`).join('');
+    box.hidden = false; sampleShow(0);
+  }
+  function sampleShow(i) {
+    const steps = SAMPLE[sampleR].steps; sampleAt = (i + steps.length) % steps.length;
+    const st = steps[sampleAt];
+    q('[data-sframe]').innerHTML = `<iframe title="A sample screen" loading="eager" src="${sampleBase()}?demo=1&role=${DEMO_ROLE[sampleR]}&freeze=${st.b}&seed=2056"></iframe>`;
+    sampleScale();
+    q('[data-scap]').textContent = st.cap;
+    q('[data-snum]').textContent = (sampleAt + 1) + ' of ' + steps.length;
+    q('[data-ssteps]').querySelectorAll('button').forEach((b, j) => b.classList.toggle('on', j === sampleAt));
+  }
+  function sampleClose() { const box = q('[data-sample]'); if (box) { box.hidden = true; q('[data-sframe]').innerHTML = ''; } }
+
   function paintHostBar() {
     const bar = q('[data-hostbar]'), ph = phase(), n = Object.keys(state.players || {}).length;
     const show = (sel, on) => { const el = bar.querySelector(sel); if (el) el.hidden = !on; };
-    show('[data-open]', ph === 'idle' || ph === 'final'); show('[data-start]', ph === 'lobby');
+    show('[data-open]', ph === 'idle' || ph === 'final'); show('[data-start]', ph === 'lobby'); show('[data-samplebtn]', ph === 'idle' || ph === 'lobby');
     show('[data-skip]', ['build', 'react', 'elect', 'revote', 'run', 'mid'].includes(ph)); show('[data-pacewrap]', ['run', 'reacted', 'midlaws', 'midtrade', 'midreact'].includes(ph)); show('[data-pause]', ph === 'run');
     bar.querySelector('[data-pause]').textContent = state.paused ? 'Resume' : 'Pause';
     const ps = bar.querySelector('[data-pace]'); if (state.pace && ps.value !== String(state.pace)) ps.value = String(state.pace);
@@ -5874,7 +5983,7 @@ const SIM = (function () {
   const isOn = name => root.dataset.on === name && visible();
 
   function clockText() {
-    if (!state.deadline || state.paused) return '';
+    if (!state.deadline || state.paused || (DEMO_ON && phase() === 'run')) return '';
     const left = state.deadline - Date.now(); return CG.clock(Math.max(0, left));
   }
   const ROLE = {
@@ -6105,6 +6214,7 @@ const SIM = (function () {
   }
   function pollees(c) {
     if (!OPT().polls) return [];
+    if (DEMO && DEMO_POLL && c === 4) return role() === 'gov' || !me() ? [] : [PK];     // the demo shows the viewer a poll
     const cit = members().filter(m => m.role !== 'gov'), n = Math.max(1, Math.round(members().length * .1));
     return cit.map(m => m.pk).sort((a, b) => SIM.hash(gid() + ':poll:' + c + ':' + a) - SIM.hash(gid() + ':poll:' + c + ':' + b)).slice(0, n);
   }
@@ -6314,7 +6424,7 @@ const SIM = (function () {
   // ═════════════ render ═════════════
   function render() {
     const ph = phase();
-    if (HOST) paintHostBar();
+    if (HOST && !DEMO_ON) paintHostBar();
     q('[data-intro]').hidden = true;
     q('[data-lobby]').hidden = true;
     if (ph === 'idle' || ph === 'lobby') {
@@ -6344,7 +6454,7 @@ const SIM = (function () {
   function tick() {
     if (!backend) return;
     const ph = phase(), left = state.deadline ? state.deadline - Date.now() : null;
-    if (HOST && clockMine() && left != null && left <= (ph === 'run' ? 0 : -2500) && !state.paused) { state.deadline = null; advance(); }
+    if (HOST && !DEMO_ON && clockMine() && left != null && left <= (ph === 'run' ? 0 : -2500) && !state.paused) { state.deadline = null; advance(); }
     // a student who started but never locked in is locked in automatically just before time runs out
     if (!HOST && me() && left != null && left < 4000) {
       const k = role() === 'gov' ? govKey() : roundKey();
@@ -6358,6 +6468,109 @@ const SIM = (function () {
   }
   setInterval(tick, 250);
 
+
+  // ═════════════ the self-running demo (game-demos site and the "Sample student screen") ═════════════
+  // A class of 23 bots plus one viewer plays a whole game on the browser-local backend: it never touches Firestore.
+  // Every beat calls the same host functions a real projector uses. ?freeze=N jumps straight to beat N.
+  let DEMO_POLL = true, DEMO_ON = false;     // DEMO_ON: the script owns the clock
+  function demoRun() {
+    const want = ({ household: 'hh', hh: 'hh', company: 'biz', business: 'biz', biz: 'biz', government: 'gov', gov: 'gov', projector: 'host', host: 'host' })[DQ.get('role') || 'projector'] || 'host';
+    const SEED = +(DQ.get('seed') || 2056), FREEZE = DQ.has('freeze') ? +DQ.get('freeze') : -1;
+    const bots = Array.from({ length: 23 }, (_, i) => 'bot' + String(i).padStart(2, '0'));
+    if (want === 'host') { HOST = true; PK = 'demo-projector'; }
+    else for (let i = 0; i < 23; i++) { const pk = bots[i] + 'v',      // sorts into a different seat each try
+      m = SIM.deal([...bots, pk], SEED).find(x => x.pk === pk); if (m.role === want) { PK = pk; break; } }
+    const all = want === 'host' ? [...bots, 'bot23'] : [...bots, PK];
+    const doc = o => backend.mergeDoc('polls', GID, o), shard = o => backend.mergeDocShard('polls', GID, o);
+    const mem = () => members(), byRole = r => mem().filter(m => m.role === r && m.pk !== PK);
+    const C = () => classNow();
+    const mineDraft = (k, v) => setMine(k, { draft: v, touched: 1 });
+    const mineSubmit = (k, v) => { setMine('intro', 1); submit(k, v); };
+    const viewerRole = () => role();
+    // the viewer's own choices for each round, by role
+    function viewerPlan(round) {
+      const r = viewerRole(), a = C() && myAgent(C());
+      if (!a) return null;
+      if (r === 'gov') return round === 'D' ? ['V0', SIM.packVote({ tax: 75, cap: 1, evRebate: 1, hpRebate: 1, solarCredit: 0, use: 0 })]
+        : round === 'M' ? ['MV' + (win() + 1), SIM.packVote({ ...lawsAsVote(C().pol), tax: 100, evRebate: 1 })]
+        : round === 'R' ? ['V' + win(), SIM.packVote({ tax: 75, cap: 1, evRebate: 1, hpRebate: 1, solarCredit: 1, use: 0, cleanStd: 1, fuelStd: 0, border: 1, methane: 0, seaWall: 1, nuclear: 0 })] : null;
+      if (r === 'hh') {
+        const h = SIM.pickH(a);
+        if (round === 'D') return ['D', SIM.packHH({ ...SIM.AS_BUILT_HH, loc: a.loc, fly: a.fly, heat: 'hp', car: 'hyb', diet: 'veg', th: '68' })];
+        if (round === 'A') return ['A' + win(), SIM.packHH({ ...h, ins: 'up' })];
+        if (round === 'M') return ['MA' + (win() + 1), SIM.packHH({ ...h, sol: h.sol === 'none' ? 'pv' : h.sol, ...(h.sol !== 'none' ? { car: 'ev' } : {}) })];
+        if (round === 'B') return ['B' + win(), 'n0'];
+      }
+      if (r === 'biz') {
+        const b = SIM.pickB(a), prods = Object.keys(SIM.SECT[a.sec].prods).filter(p => p !== 'nuc'), green = prods[Math.min(1, prods.length - 1)];
+        if (round === 'D') return ['D', SIM.packB({ ...b, prod: green, filt: 'yes', fleet: 'ev' })];
+        if (round === 'A') return ['A' + win(), SIM.packB({ ...b, energy: a.sec === 'power' ? 'grid' : 'ppa' })];
+        if (round === 'M') {
+          if (SIM.tradingNow(C())) { const x = SIM.positions(C()).list.find(z => z.b.id === PK); if (!x) return ['MT' + (win() + 1), 'n'];
+            return ['MT' + (win() + 1), x.short > 0 ? `b,${Math.max(10, Math.round(x.short / 10) * 10)},60` : `s,${Math.max(10, Math.round(-x.short / 10) * 10)},30`]; }
+          return ['MA' + (win() + 1), SIM.packB({ ...b, safe: 'plus' })];
+        }
+        if (round === 'B') return ['B' + win(), 'y5'];
+      }
+      return null;
+    }
+    const draft = round => { const p = viewerPlan(round); if (p) { setMine('intro', 1); mineDraft(p[0], p[1]); lastBuilderSig = govSig = ballotSig = tradeSig = ''; render(); } };
+    const lock = round => { const p = viewerPlan(round); if (p) mineSubmit(p[0], p[1]); };
+    // the bots: votes that pass a cap, a few plans and ballots, and orders for the permit market
+    function botsVote(key, v) { const o = {}; byRole('gov').forEach((m, i) => o[m.pk] = SIM.packVote({ ...v, tax: [50, 75, 100, 25, 150][i % 5] })); shard({ in: { [key]: o } }); }
+    function botsMarket() {
+      const P = SIM.positions(C()), o = {};
+      for (const x of P.list) { if (x.b.id === PK) continue; const sh = Math.round(x.short / 10) * 10; o[x.b.id] = Math.abs(sh) < 10 ? 'n' : sh > 0 ? `b,${sh},${40 + (x.b.id.charCodeAt(4) % 5) * 9}` : `s,${-sh},${18 + (x.b.id.charCodeAt(4) % 5) * 6}`; }
+      shard({ in: { ['MT' + (win() + 1)]: o } });
+    }
+    function botsHouseholds(key, mod) { const o = {}; byRole('hh').slice(0, 4).forEach(m => { const h = C().hh.find(x => x.id === m.pk); if (h) o[m.pk] = SIM.packHH({ ...SIM.pickH(h), ...mod }); }); shard({ in: { [key]: o } }); }
+    function botsBallots(key, no) { const o = {}; [...byRole('hh'), ...byRole('biz')].forEach((m, i) => o[m.pk] = i % 10 < no ? ['n0', 'n1', 'n2'][i % 3] : 'y3'); shard({ in: { [key]: o } }); }
+    const years = (n, cap) => { const out = []; for (let i = 0; i < n; i++) out.push([1300, () => advance(), cap]); return out; };
+    const toEnd = () => { for (let k = 0; k < 200; k++) { const ph = phase(); if (ph === 'final') return;
+      if (ph === 'run' || ph === 'mid' || ph === 'elect' || ph === 'revote' || ph === 'react') advance();
+      else if (ph === 'laws') go.laws(); else if (ph === 'reacted') go.reacted(); else if (ph === 'midlaws') go.midlaws(); else if (ph === 'midtrade') go.midtrade(); else if (ph === 'midreact') go.midreact();
+      else if (ph === 'elected') go.elected(C().logs['elect' + win()].keep); } };
+    const who = { hh: 'You are a household', biz: 'You run a company', gov: 'You are in the government', host: 'This is the projector' }[want];
+    const S = [
+      [400, () => backend.setDoc('polls', GID, { phase: 'lobby', players: {}, gameId: SEED, pace: 999, opts: { mid: 1, trade: 1, polls: 1 }, hostId: HOSTID }), `2056, one hypothetical class played out. ${who}. A real class will play differently.`],
+      [1800, () => doc({ players: Object.fromEntries(all.map((k, i) => [k, { t: i + 1 }])) }), '24 students open the slide and join.'],
+      [2200, () => setPhase('build', 360, { roster: all.slice().sort().join(','), win: 0, yr: 0 }), 'Everyone is dealt a role: about a fifth go to the government, the rest are households and companies.'],
+      [2600, () => draft('D'), want === 'gov' ? 'The government votes on the first laws. The carbon tax is set by the middle vote.' : want === 'host' ? 'While students build, the projector counts who has finished.' : 'Each household and company builds before anyone knows the laws.'],
+      [2200, () => { lock('D'); botsVote('V0', { cap: 1, evRebate: 1, hpRebate: 1, solarCredit: 0, use: 0 }); }, 'Plans lock in. Anyone who doesn’t finish is played by a stand-in.'],
+      [2600, () => advance(), 'The laws are announced, vote by vote.'],
+      [3800, () => { go.laws(); draft('A'); }, 'Everyone gets one chance to react to the laws, at today’s prices.'],
+      [2600, () => { lock('A'); advance(); }, 'What the class changed.'],
+      [3000, () => go.reacted(), 'The years begin. The valley changes with the class’s emissions.'],
+      ...years(4, 'A year passes.'),
+      [2600, () => { DEMO_POLL = true; render(); }, want === 'gov' || want === 'host' ? 'Each year about 10% of students get a short, optional poll.' : 'A quick poll pops up in the corner. It’s optional.'],
+      [2400, () => advance(), 'Year 5: the midterm. Three laws reopen; households make one change; companies trade permits.'],
+      [2600, () => { draft('M'); botsVote('MV1', { ...lawsAsVote(C().pol), evRebate: 1 }); botsHouseholds('MA1', { car: 'ev' }); if (SIM.tradingNow(C())) botsMarket(); }, want === 'host' ? 'The projector shows all three at once: the vote count, household changes, and the permit market.' : 'Your midterm move.'],
+      [2600, () => { lock('M'); advance(); }, 'The midterm laws.'],
+      [3800, () => go.midlaws(), 'The permit market clears at one price.'],
+      [3800, () => { if (phase() === 'midtrade') go.midtrade(); }, 'Who changed what at the midterm.'],
+      [2600, () => go.midreact(), 'The years continue.'],
+      ...years(5, 'A year passes.'),
+      [2400, () => { draft('B'); botsBallots('B1', 6); }, 'Year 10: the election. Households and companies vote on the government.'],
+      [2600, () => { lock('B'); advance(); }, 'The ballots are counted.'],
+      [4200, () => { go.elected(C().logs.elect1.keep); draft('R'); botsVote('V1', { cap: 1, evRebate: 1, hpRebate: 1, solarCredit: 1, use: 0, cleanStd: 1, border: 1, seaWall: 1 }); }, 'Voted out: the government re-votes, with six more bills on the table.'],
+      [2600, () => { lock('R'); advance(); }, 'The new laws.'],
+      [3800, () => { go.laws(); advance(); go.reacted(); }, 'Everyone adjusts, and the second decade runs.'],
+      [3000, () => toEnd(), '2056: where did the class land?'],
+    ];
+    const bar = document.createElement('div'); bar.className = 'c56-demobar';
+    bar.innerHTML = `<span class="c56-demotag">Demo</span><span class="c56-demotxt"></span><span class="c56-demoroles">${[['projector', 'Projector'], ['household', 'Household'], ['company', 'Company'], ['government', 'Government']].map(([k, l]) => `<a href="?demo=1&role=${k}" class="${(DQ.get('role') || 'projector') === k ? 'on' : ''}">${l}</a>`).join('')}</span>`;
+    root.appendChild(bar);
+    const txt = bar.querySelector('.c56-demotxt');
+    DEMO_POLL = false;
+    let step = 0;
+    if (FREEZE >= 0) {
+      bar.hidden = true;
+      for (let i = 0; i <= Math.min(FREEZE, S.length - 1); i++) { try { S[i][1](); } catch (e) { console.error(e); } }
+      return;
+    }
+    (function play() { if (step >= S.length) return; const st = S[step++]; setTimeout(() => { txt.textContent = st[2]; try { st[1](); } catch (e) { console.error(e); } play(); }, st[0]); })();
+  }
+
   // a handle for testing from the console
   window.__c56 = { SIM, RUN, state: () => state, members, classNow, PK, pollees, pollQ, POLLS };
 
@@ -6367,7 +6580,13 @@ const SIM = (function () {
   VALLEY.setVisible && VALLEY.setVisible(() => isOn('run'));
   window.__deckLiveReady.then(live => {
     backend = live.backend; HOST = live.HOST;
-    if (HOST) hostBar();
+    const demo = DEMO && backend.kind === 'local';          // never script a class on the real database
+    DEMO_ON = demo;
+    if (demo) {    // a private game per demo page (two demo tabs must not talk), and the leftovers of earlier demos cleared
+      try { Object.keys(localStorage).filter(k => k.startsWith('iv:polls:' + GID + '-') || k.startsWith('c56:' + GID + '-')).forEach(k => localStorage.removeItem(k)); } catch (e) { }
+      GID += '-' + Math.random().toString(36).slice(2, 8);
+    }
+    if (HOST && !demo) hostBar();
     const wantMode = () => (!HOST && state.roster && !['idle', 'lobby'].includes(phase())) ? 'main' : 'full';
     let keepPlayers = {};
     function onSnap(mode, d) {
@@ -6375,7 +6594,7 @@ const SIM = (function () {
       d = d || {};
       if (mode === 'full') keepPlayers = d.players || {}; else d.players = { ...keepPlayers, ...(d.players || {}) };
       const was = gid(); state = d;
-      if (gid() !== was) { cMemo = { sig: '', C: null }; lastBuilderSig = govSig = ballotSig = ovSig = ''; lastYear = -1; }
+      if (gid() !== was) { cMemo = { sig: '', C: null }; lastBuilderSig = govSig = ballotSig = ovSig = tradeSig = ''; lastYear = -1; }
       render();
       const m = wantMode(); if (m !== subMode) listen(m);
     }
@@ -6385,6 +6604,7 @@ const SIM = (function () {
       unsub = (m === 'main' ? backend.subscribeMain : backend.subscribeDoc).call(backend, 'polls', GID, d => onSnap(m, d));
     }
     listen('full');
+    if (demo) demoRun();
   });
 })();
 
