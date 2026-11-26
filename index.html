@@ -1723,6 +1723,77 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .iv2-chn{margin:.2rem 0 0; font:italic 400 .82rem/1.4 'Merriweather',serif; color:#4f5563;}
 
 
+/* ═══ Ch20: Looking to the Future (avf-) ═══ */
+.avf-slide{background:#2a2c45; overflow:hidden;}
+.avf-stage{position:absolute; inset:0; transition:filter 1.1s ease;}
+.avf-stage .t3-cv{display:block; width:100%; height:100%; cursor:grab; touch-action:none;}
+.avf-slide.no3d .avf-stage{background:radial-gradient(ellipse at 40% 60%, #f3a56b 0%, #8a7896 45%, #24346a 100%);}
+.avf-slide[data-phase="blur"] .avf-stage{filter:blur(16px) saturate(.85) brightness(.85);}
+.avf-vig{position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse at 35% 50%, transparent 55%, rgba(20,20,40,.35) 100%);}
+.avf-ui{position:absolute; inset:0; pointer-events:none;}
+.avf-ui > *{pointer-events:auto; position:absolute;}
+.avf-glass{background:rgba(251,248,240,.92); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border:1px solid rgba(154,123,60,.45); border-radius:12px; box-shadow:0 10px 30px rgba(10,10,30,.3);}
+.avf-title{top:clamp(.8rem,2vh,1.3rem); left:clamp(1rem,2vw,1.6rem); padding:.55rem 1rem .6rem;}
+.avf-title .heading{margin:0; font-size:clamp(1.2rem,2.1vw,1.7rem);}
+.avf-title p{margin:.1rem 0 0; font:italic 400 clamp(.74rem,1vw,.88rem) 'Merriweather',serif; color:#4f5563;}
+.avf-hud{top:clamp(6rem,15vh,7.6rem); left:clamp(1rem,2vw,1.6rem); display:flex; flex-direction:column; gap:.2rem; padding:.45rem .8rem; font:700 .74rem 'Inter',sans-serif; color:#1b2640;}
+.avf-hud b{font:900 1.05rem 'Merriweather',serif; margin-right:.3rem;}
+.avf-hud i{display:inline-block; width:.7rem; height:.7rem; border-radius:50%; margin-right:.4rem; vertical-align:middle;} .avf-hud i.r{background:#e0392e;} .avf-hud i.g{background:#3d6b4f;}
+.avf-panel{top:clamp(.8rem,2vh,1.3rem); right:clamp(1rem,2vw,1.6rem); bottom:clamp(5rem,12vh,6.4rem); width:min(37%,34rem); padding:.85rem 1rem; overflow:auto;}
+.avf-pk{font:800 .6rem 'Inter',sans-serif; letter-spacing:.18em; color:var(--accent); margin-bottom:.35rem;}
+.avf-panel h3{margin:0 0 .5rem; font:italic 900 clamp(1.05rem,1.6vw,1.35rem) 'Merriweather',serif; color:#1b2640;}
+.avf-facts{display:grid; grid-template-columns:1fr 1fr; gap:6px;}
+.avf-facts div{padding:.45rem .55rem; background:#fff; border:1px solid #e2d5b6; border-radius:8px; animation:avfIn .5s ease both;}
+.avf-facts div:nth-child(2){animation-delay:.12s} .avf-facts div:nth-child(3){animation-delay:.24s} .avf-facts div:nth-child(4){animation-delay:.36s}
+.avf-facts b{display:block; font:900 clamp(1.2rem,2vw,1.6rem) 'Merriweather',serif; color:#8e2f2a;}
+.avf-facts span{display:block; font:400 .74rem/1.4 'Merriweather',serif; color:#262c3a;} .avf-facts em{display:block; margin-top:.15rem; font:700 .6rem 'Inter',sans-serif; font-style:normal; color:#9a7b3c;}
+@keyframes avfIn{from{opacity:0; transform:translateY(8px);}}
+.avf-mets{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px;}
+.avf-mets.two{grid-template-columns:repeat(2,minmax(0,1fr));}
+.avf-met{padding:.4rem .5rem; background:#fff; border:1px solid #e2d5b6; border-radius:8px;}
+.avf-met small{display:block; font:800 .54rem 'Inter',sans-serif; letter-spacing:.08em; text-transform:uppercase; color:#6b7080; line-height:1.25;}
+.avf-met b{display:block; font:900 clamp(1rem,1.5vw,1.25rem) 'Merriweather',serif; color:#1b2640;}
+.avf-met em{display:block; font:800 .66rem 'Inter',sans-serif; font-style:normal;} .avf-met em.gd{color:#2f8545;} .avf-met em.bd{color:#b8432f;}
+.avf-met span{display:block; font:500 .6rem 'Inter',sans-serif; color:#8a7d60;}
+.avf-note{margin:.5rem 0 0; font:italic 400 .76rem 'Merriweather',serif; color:#4f5563;}
+.avf-real{margin:.5rem 0 0; padding:.45rem .6rem; border-left:3px solid #9a7b3c; background:rgba(154,123,60,.08); font:400 .76rem/1.45 'Merriweather',serif; color:#262c3a;}
+.avf-pols{display:flex; flex-direction:column; gap:5px; margin-bottom:.55rem;}
+.avf-pol{display:flex; flex-direction:column; gap:.15rem; text-align:left; padding:.5rem .7rem; border:1.5px solid #d9c9a3; border-radius:9px; background:#fff; cursor:pointer; transition:border-color .2s, box-shadow .2s;}
+.avf-slide.fresh .avf-pol{animation:avfIn .45s ease both;} .avf-slide.fresh .avf-pol:nth-child(2){animation-delay:.12s} .avf-slide.fresh .avf-pol:nth-child(3){animation-delay:.24s}
+.avf-pol b{font:900 .92rem 'Merriweather',serif; color:#1b2640;} .avf-pol span{font:400 .72rem/1.4 'Merriweather',serif; color:#4f5563;}
+.avf-pol:hover{border-color:var(--accent);} .avf-pol.on{border-color:var(--accent); box-shadow:0 0 0 2px var(--accent); background:#fffaf0;}
+.avf-ctl{display:flex; flex-direction:column; gap:.2rem; margin:.1rem 0 .55rem;}
+.avf-ctl label{font:700 .78rem 'Inter',sans-serif; color:#1b2640;} .avf-ctl label b{font:900 1.05rem 'Merriweather',serif; color:var(--accent);} .avf-ctl small{color:#6b7080;}
+.avf-ctl input{accent-color:var(--accent); width:100%;}
+.avf-mix{display:flex; height:.8rem; border-radius:4px; overflow:hidden; background:#eee;} .avf-mix i{display:block; height:100%; transition:width .4s;}
+.avf-mixk{display:flex; flex-wrap:wrap; gap:.2rem .7rem; margin:.25rem 0 .5rem; font:700 .62rem 'Inter',sans-serif; color:#4f5563;}
+.avf-mixk i{display:inline-block; width:.6rem; height:.6rem; border-radius:2px; margin-right:.25rem; vertical-align:middle;}
+.avf-cmp{width:100%; border-collapse:collapse; font:600 .66rem 'Inter',sans-serif; color:#262c3a;}
+.avf-cmp th{font:800 .54rem 'Inter',sans-serif; letter-spacing:.06em; text-transform:uppercase; color:#6b7080; text-align:left; padding:.2rem .25rem; border-bottom:1px solid #e2d5b6;}
+.avf-cmp td{padding:.3rem .25rem; border-bottom:1px dashed #eee5cf; vertical-align:middle; white-space:nowrap;}
+.avf-cmp td:first-child{white-space:normal; font-weight:800; max-width:9rem;}
+.avf-cmp tr.on td{background:#fffaf0;}
+.avf-cb{display:block; width:3.2rem; height:.3rem; background:#efe6d0; border-radius:2px; margin-bottom:.15rem; overflow:hidden;} .avf-cb i{display:block; height:100%; background:var(--accent);}
+.avf-q{left:50%; bottom:clamp(3.2rem,7.6vh,4rem); transform:translateX(-50%); display:flex; align-items:center; gap:1rem; padding:.6rem .8rem .6rem 1.2rem; background:#1b2640; color:#fcfaf5; border-radius:999px; box-shadow:0 12px 30px rgba(0,0,0,.35);
+  font:italic 900 clamp(1rem,1.7vw,1.35rem) 'Merriweather',serif; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .5s, transform .5s;}
+.avf-slide[data-phase="problem"] .avf-q, .avf-slide[data-phase="policies"] .avf-q{opacity:1; pointer-events:auto;}
+.avf-slide[data-phase="policies"] .avf-q button{display:none;}
+.avf-slide[data-phase="blur"] .avf-panel, .avf-slide[data-phase="blur"] .avf-hud, .avf-slide[data-phase="blur"] .avf-title{display:none;}
+.avf-b{font:800 .82rem 'Inter',sans-serif; color:#1b2640; background:#fcfaf5; border:1.5px solid rgba(27,38,64,.3); border-radius:999px; padding:.5rem 1rem; cursor:pointer;}
+.avf-b.go{background:#c9a24a; border-color:#c9a24a; color:#1b2640;} .avf-b.big{font-size:1rem; padding:.7rem 1.4rem;}
+.avf-gate{inset:0; display:grid; place-items:center; transition:opacity .9s ease;}
+.avf-slide:not([data-phase="blur"]) .avf-gate{opacity:0; pointer-events:none;}
+.avf-gcard{max-width:34rem; text-align:center; padding:1.6rem 2rem 1.7rem; background:rgba(251,248,240,.94); border:1px solid rgba(154,123,60,.6); outline:1px solid rgba(154,123,60,.45); outline-offset:-7px; border-radius:10px; box-shadow:0 20px 50px rgba(10,10,30,.45);}
+.avf-gcard h2{margin:.2rem 0 .5rem; font:italic 900 clamp(1.8rem,3.4vw,2.8rem) 'Merriweather',serif; color:#1b2640;}
+.avf-gcard p{margin:0 0 1.1rem; font:400 clamp(.9rem,1.2vw,1.05rem)/1.55 'Merriweather',serif; color:#353c4c;}
+.avf-srcb{right:clamp(1rem,2vw,1.6rem); bottom:clamp(3.2rem,7.6vh,4rem); font:700 .68rem 'Inter',sans-serif; color:#1b2640; background:rgba(251,248,240,.9); border:1px solid rgba(154,123,60,.5); border-radius:999px; padding:.3rem .8rem; cursor:pointer;}
+.avf-slide[data-phase="blur"] .avf-srcb{display:none;}
+.avf-load{left:35%; top:50%; transform:translate(-50%,-50%); font:italic 400 1rem 'Merriweather',serif; color:#fcfaf5;} .avf-load[hidden]{display:none;}
+.avf-mh{margin:.7rem 0 .2rem; font:800 .64rem 'Inter',sans-serif; letter-spacing:.16em; text-transform:uppercase; color:var(--accent);}
+.avf-ml{margin:0; padding-left:1.2rem; font:400 .8rem/1.5 'Merriweather',serif; color:#262c3a;} .avf-ml li{margin:.25rem 0;}
+@media(max-width:900px){ .avf-panel{left:1rem; width:auto; top:auto; bottom:5rem; max-height:55%;} .avf-q{white-space:normal; width:90%;} }
+
+
 /* ── title plate (ch20_title.py) ── */
 .title-slide .t20-svg{position:absolute; inset:0; width:100%; height:100%; display:block;}
 .title-slide.t20p .title-scrim{background:linear-gradient(90deg, rgba(8,12,26,.94) 0%, rgba(8,12,26,.7) 32%, rgba(8,12,26,.12) 58%, rgba(8,12,26,0) 100%);}
@@ -4107,6 +4178,644 @@ if(!window.C20S){ window.C20S=function(SEC,n,go,o){ o=o||{}; var st={i:-1,n:n};
   var S=C20S(SEC,5,go,{onActive:function(on){ if(!on){ clear(); auto=false; } else if(cur===3) glide(); }});
   qa('[data-iv-dot]').forEach(function(d){ d.addEventListener('click',function(){ S.go(+d.dataset.ivDot); }); });
   S.go(0);
+})();</script></section>
+<section class="slide avf-slide" data-type="content" data-phase="blur" style="--accent:#4a5a78"><div class="avf-stage" data-avf3></div><div class="avf-vig"></div><div class="avf-ui"><div class="avf-title avf-glass"><div class="eyebrow">Policy  ·  Looking to the Future</div><h2 class="heading">Looking to the Future</h2><p>Self-driving cars, and the empty miles they could drive</p></div><div class="avf-hud avf-glass" data-hud><span><i class="r"></i><b data-he>0</b> empty cars driving</span><span><i class="g"></i><b data-hp>0</b> parked in the lot</span></div><aside class="avf-panel avf-glass" data-panel></aside><div class="avf-q" data-q><span>What policy could solve this problem?</span><button type="button" class="avf-b go" data-showpol>Show possible policies &#9656;</button></div><button type="button" class="avf-srcb" data-srcb>Sources &amp; assumptions</button><div class="avf-gate" data-gate><div class="avf-gcard"><div class="eyebrow">Policy  ·  Looking to the Future</div><h2>Looking to the Future</h2><p>The city from Chapter 16, a generation from now. The cars drive themselves. Where do they go after they drop you off?</p><button type="button" class="avf-b go big" data-reveal>Reveal the city &#9656;</button></div></div><div class="avf-load" data-load hidden>Building the city&#8230;</div></div><div class="p20-modal" data-avm hidden><div class="p20-modal-card" role="dialog" aria-modal="true"><button type="button" class="p20-modal-x" data-avx>&#215;</button><div class="p20-modal-kicker">Sources &amp; assumptions</div><h3 class="p20-modal-title">Where these numbers come from</h3><h4 class="avf-mh">Measured</h4><ol class="avf-ml"><li><b>California Air Resources Board (2019).</b> <i>SB 1014 Clean Miles Standard: 2018 Base-year Emissions Inventory Report.</i> 38.5% of ride-hail miles had no passenger; 1.55 passengers per fare; 301 g CO&#8322; per passenger-mile against 203 for California&#8217;s average car.</li><li><b>Henao, A. &amp; Marshall, W. E. (2019).</b> The impact of ride-hailing on vehicle miles traveled. <i>Transportation</i> 46(6): 2173&#8211;2194. At least 40.8% of ride-hail miles in Denver were driven empty; ride-hailing led to about 83.5% more vehicle miles than if it had not existed.</li><li><b>Millard-Ball, A. (2019).</b> The autonomous vehicle parking problem. <i>Transport Policy</i> 75: 99&#8211;108. Self-driving cars that cruise rather than pay to park could more than double vehicle travel to, from and within dense urban cores.</li><li><b>U.S. Federal Highway Administration (2018).</b> <i>Summary of Travel Trends: 2017 National Household Travel Survey</i>, Table 16. 1.67 people per vehicle-mile for all trips; 1.18 for trips to and from work.</li><li><b>New York State Department of Taxation and Finance.</b> Congestion surcharge, Manhattan south of 96th Street: $2.75 a for-hire trip, $2.50 a taxi trip, $0.75 a shared (pool) trip.</li><li><b>Bureau of Public Roads (1964).</b> <i>Traffic Assignment Manual.</i> The speed-and-volume curve used by planners: travel time rises with (volume / capacity)<sup>4</sup>.</li></ol><h4 class="avf-mh">Assumed in the model</h4><ul class="avf-ml"><li>A mid-size downtown with 20,000 self-driving car trips a weekday, 3 miles each way inside the core.</li><li>Riders stay for an errand (1 hour, 40% of trips), an afternoon (3 hours, 25%) or a workday (8 hours, 35%).</li><li>An empty car can circle slowly (6 mph), park in a lot half a mile away ($3 an hour, at most $25 a day), or drive home (10 miles each way). It costs $0.12 a mile to run. Owners differ, so each picks the cheapest option most of the time, not every time.</li><li>A limit on empty miles rules out any choice that drives more empty miles than the limit; the car parks instead.</li><li>Without a subsidy 10% of travelers share rides; each $1 per shared ride makes sharing more popular (about 30% at $2.40).</li><li>Today, with people parking their own cars, the downtown streets run at 90% of capacity and 22.8 mph on average.</li><li>CO&#8322;: 287 g per car-mile, today&#8217;s California ride-hail fleet (from CARB&#8217;s 301 g per passenger-mile).</li></ul></div></div><script>/* ch20_avmodel.js (Nov 25 2026): the "Looking to the Future" policy model for self-driving cars in a downtown.
+   One weekday, one downtown core. Every number that comes from a study is marked [source]; every other number is a
+   stated assumption, shown on the slide. The model:
+     1. Travelers arrive in self-driving cars and are dropped off. While they are downtown (an errand, an afternoon or a
+        workday), each empty car does the cheapest of three things: CIRCLE nearby (Millard-Ball 2019: cruising can be cheaper
+        than paying to park), PARK in a lot, or drive HOME and come back. Owners differ, so choices follow a logit
+        (smooth) rule on cost rather than all-or-nothing.
+     2. Policies change those costs or rules: a tax on empty miles adds to every empty mile; a limit on empty miles rules
+        out any choice with more empty miles than the limit (the car must park); a subsidy for shared rides pulls some
+        travelers into shared self-driving cars, which carry more people per mile but still drive empty between riders
+        (38.5% of ride-hail miles are empty [CARB 2019]; 1.55 passengers per fare [CARB 2019]).
+     3. Traffic: downtown car miles, compared with what the streets carry today, set the average speed through the
+        Bureau of Public Roads curve, speed = free-flow / (1 + 0.15 (V/C)^4) (BPR 1964, still the standard planning curve).
+     4. CO2: car miles × 287 g per mile, the 2018 California ride-hail fleet [CARB 2019: 301 g per passenger-mile at
+        1.55 passengers and 61.5% of miles carrying a passenger]. */
+window.AVM = (function () {
+  var A = {
+    trips: 20000,      // self-driving car trips into the core on a weekday (assumption: a mid-size downtown)
+    L: 3,              // miles driven inside the core per one-way trip, with people in the car (assumption)
+    occ: 1.67,         // people per car [NHTS 2017: 1.67 person-miles per vehicle-mile, all trip purposes]
+    cruise: 6,         // mph an empty car circles at, slowly to save energy (assumption, after Millard-Ball 2019)
+    op: 0.12,          // $ per mile to run an electric self-driving car: power and wear (assumption)
+    home: 10,          // miles from downtown to home, each way (assumption); 1.5 of them inside the core
+    lotMi: 0.5,        // miles from the curb to a lot, each way (assumption)
+    fee: 3, cap: 25,   // parking: $3 an hour, at most $25 a day (assumption)
+    sigma: 1.0,        // how much owners differ, in dollars (logit scale; assumption)
+    ff: 25,            // free-flow downtown speed, mph (assumption)
+    vc0: 0.9,          // how full the streets are today, when drivers park (assumption)
+    gpm: 287,          // g CO2 per vehicle-mile [CARB 2019, derived as above]
+    dead: 0.385,       // share of ride-hail miles with no passenger [CARB 2019]
+    pax: 1.55,         // passengers per ride-hail fare [CARB 2019]
+  };
+  var WAITS = [{ h: 1, w: .4, n: 'an errand (1 hour)' }, { h: 3, w: .25, n: 'an afternoon (3 hours)' }, { h: 8, w: .35, n: 'a workday (8 hours)' }];
+  function sharedShare(sub) { return 1 / (1 + Math.exp(-(-2.2 + 0.55 * sub))); }   // 10% at $0; about 30% at $2.4 a ride (assumption)
+  function run(pol) {
+    pol = pol || { kind: 'none' };
+    var tax = pol.kind === 'tax' ? pol.v : 0, limit = pol.kind === 'limit' ? pol.v : Infinity, sub = pol.kind === 'share' ? pol.v : 0;
+    var sh = sharedShare(sub), cars = A.trips * (1 - sh), riders = A.trips * sh * A.occ;
+    var occMi = cars * 2 * A.L, emptyCore = 0, emptyAll = 0, parkHours = 0, mix = { circle: 0, park: 0, home: 0 }, ownerCost = 0;
+    WAITS.forEach(function (w) {
+      var n = cars * w.w;
+      var opts = [
+        { k: 'circle', mi: w.h * A.cruise, core: w.h * A.cruise, fee: 0 },
+        { k: 'park', mi: 2 * A.lotMi, core: 2 * A.lotMi, fee: Math.min(A.cap, A.fee * w.h) },
+        { k: 'home', mi: 2 * A.home, core: 2 * 1.5, fee: 0 }];
+      var ok = opts.filter(function (o) { return o.k === 'park' || o.mi <= limit; });
+      var cs = ok.map(function (o) { return o.fee + o.mi * (A.op + tax); }), mn = Math.min.apply(null, cs);
+      var ws = cs.map(function (c) { return Math.exp(-(c - mn) / A.sigma); }), sw = ws.reduce(function (a, b) { return a + b; }, 0);
+      ok.forEach(function (o, i) { var m = n * ws[i] / sw; mix[o.k] += m; emptyCore += m * o.core; emptyAll += m * o.mi; ownerCost += m * cs[i]; if (o.k === 'park') parkHours += m * w.h; });
+    });
+    var shVMT = riders * 2 * A.L / A.pax / (1 - A.dead), shEmpty = shVMT * A.dead;
+    var vmt = occMi + emptyCore + shVMT, vmtAll = occMi + emptyAll + shVMT;
+    var vmt0 = A.trips * 2 * A.L + A.trips * 2 * A.lotMi, cap = vmt0 / A.vc0, vc = vmt / cap;
+    var speed = A.ff / (1 + 0.15 * Math.pow(vc, 4)), speed0 = A.ff / (1 + 0.15 * Math.pow(A.vc0, 4));
+    var rides = riders * 2;
+    var tot = cars || 1;
+    return {
+      pol: pol, shared: sh, mix: { circle: mix.circle / tot * (1 - sh), park: mix.park / tot * (1 - sh), home: mix.home / tot * (1 - sh), shared: sh },
+      vmt: vmt, emptyMi: emptyCore + shEmpty, emptyShare: (emptyCore + shEmpty) / vmt, emptyAll: emptyAll + shEmpty,
+      speed: speed, speed0: speed0, delayMin: (A.L / speed - A.L / speed0) * 60, vc: vc,
+      co2t: vmtAll * A.gpm / 1e6, spaces: Math.round(parkHours / 10 * 1.3 / 10) * 10,
+      gov: tax * (emptyAll) - sub * rides, ownerCost: ownerCost / tot, cars: cars, riders: riders,
+    };
+  }
+  return { A: A, WAITS: WAITS, run: run, sharedShare: sharedShare };
+})();
+</script><script>/* ch20_avcity.js (Nov 25 2026): "Looking to the Future", Chapter 20. The 3D city is Chapter 16's "Possible Future"
+   (ch16_eras3d.js, patched by make_ch20_avcity.py: run it after changing ch16_eras3d.js) with one
+   apartment block turned into a parking lot. Self-driving cars circle, park in the lot, go home or share rides in the
+   proportions the policy model (ch20_avmodel.js) gives. Nothing renders unless the slide is showing. */
+window.AVCITY=function(sec,stage){
+  var era=3, mode="circle", meter=document.createElement("div");
+function createApp(){
+  var T=window.THREE;
+  var renderer=new T.WebGLRenderer({antialias:true, powerPreference:'high-performance'});
+  var DPR=Math.min(window.devicePixelRatio||1,2); renderer.setPixelRatio(DPR);
+  renderer.shadowMap.enabled=true; renderer.shadowMap.type=T.PCFSoftShadowMap;
+  var cv=renderer.domElement; cv.className='t3-cv'; stage.appendChild(cv);
+  var scene=new T.Scene(); scene.fog=new T.FogExp2(0xf3e2bf,.00028);
+  var cam=new T.PerspectiveCamera(32,16/9,20,14000);
+  var city=new T.Group(); city.position.set(-600,0,-300); scene.add(city);
+
+  function rng(s){ return function(){ s|=0; s=s+0x6D2B79F5|0; var t=Math.imul(s^s>>>15,1|s); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+  var _tc=new T.Color();
+  function shade(c,k){ _tc.set(c); return '#'+new T.Color(Math.min(1,_tc.r*k),Math.min(1,_tc.g*k),Math.min(1,_tc.b*k)).getHexString(); }
+  function pick(a,r){ return a[(r()*a.length)|0]; }
+
+  /* unit shapes, all flat-shaded; every model is merged into one or two meshes */
+  var BOX=new T.BoxGeometry(1,1,1); BOX.translate(0,.5,0); BOX=BOX.toNonIndexed();
+  var CYL=new T.CylinderGeometry(1,1,1,8); CYL.translate(0,.5,0); CYL=CYL.toNonIndexed();
+  var ICO=new T.IcosahedronGeometry(1,0); if(ICO.index) ICO=ICO.toNonIndexed();
+  var SPH=new T.IcosahedronGeometry(1,1); if(SPH.index) SPH=SPH.toNonIndexed();
+  var GAB=(function(){ var p=[-.5,0,.5, .5,0,.5, 0,1,.5,  .5,0,-.5, -.5,0,-.5, 0,1,-.5,
+      .5,0,.5, .5,0,-.5, 0,1,-.5,  .5,0,.5, 0,1,-.5, 0,1,.5,  -.5,0,-.5, -.5,0,.5, 0,1,.5,  -.5,0,-.5, 0,1,.5, 0,1,-.5];
+    var g=new T.BufferGeometry(); g.setAttribute('position',new T.Float32BufferAttribute(p,3)); return g; })();
+  var vcMat=new T.MeshLambertMaterial({vertexColors:true});
+  var litMat=new T.MeshLambertMaterial({color:0x8497a1, emissive:0xffc66e, emissiveIntensity:0});
+  var darkMat=new T.MeshLambertMaterial({color:0x5f7884});
+  var _m=new T.Matrix4(), _q=new T.Quaternion(), _e=new T.Euler(), _v=new T.Vector3(), _s=new T.Vector3(), _c=new T.Color();
+  function Builder(ox,oz){ this.ox=ox||0; this.oz=oz||0; this.P=[]; this.N=[]; this.C=[]; this.LP=[]; this.LN=[]; this.DP=[]; this.DN=[]; }
+  Builder.prototype.add=function(geo,x,y,z,sx,sy,sz,color,ry,bucket,rx,rz){
+    _e.set(rx||0,ry||0,rz||0); _q.setFromEuler(_e); _m.compose(_v.set(x-this.ox,y,z-this.oz),_q,_s.set(sx,sy,sz));
+    var a=geo.attributes.position.array, e=_m.elements, P, N, col=null;
+    if(bucket==='lit'){ P=this.LP; N=this.LN; } else if(bucket==='dark'){ P=this.DP; N=this.DN; } else { P=this.P; N=this.N; col=_c.set(color); }
+    for(var i=0;i<a.length;i+=9){ var p=[];
+      for(var k=0;k<3;k++){ var X=a[i+k*3], Y=a[i+k*3+1], Z=a[i+k*3+2]; p.push(e[0]*X+e[4]*Y+e[8]*Z+e[12], e[1]*X+e[5]*Y+e[9]*Z+e[13], e[2]*X+e[6]*Y+e[10]*Z+e[14]); }
+      var ux=p[3]-p[0], uy=p[4]-p[1], uz=p[5]-p[2], vx=p[6]-p[0], vy=p[7]-p[1], vz=p[8]-p[2];
+      var nx=uy*vz-uz*vy, ny=uz*vx-ux*vz, nz=ux*vy-uy*vx, l=Math.sqrt(nx*nx+ny*ny+nz*nz)||1; nx/=l; ny/=l; nz/=l;
+      for(k=0;k<9;k++) P.push(p[k]);
+      for(k=0;k<3;k++){ N.push(nx,ny,nz); if(col) this.C.push(col.r,col.g,col.b); } }
+    return this; };
+  Builder.prototype.box=function(x0,y0,z0,x1,y1,z1,color,bucket){ return this.add(BOX,(x0+x1)/2,y0,(z0+z1)/2,Math.abs(x1-x0),y1-y0,Math.abs(z1-z0),color,0,bucket); };
+  function geoOf(P,N,C){ var g=new T.BufferGeometry(); g.setAttribute('position',new T.Float32BufferAttribute(P,3)); g.setAttribute('normal',new T.Float32BufferAttribute(N,3)); if(C) g.setAttribute('color',new T.Float32BufferAttribute(C,3)); return g; }
+  Builder.prototype.build=function(shadow){ var g=new T.Group(); g.position.set(this.ox,0,this.oz);
+    var mk=function(P,N,C,mat,cast){ if(!P.length) return; var m=new T.Mesh(geoOf(P,N,C),mat); m.castShadow=cast; m.receiveShadow=true; g.add(m); };
+    mk(this.P,this.N,this.C,vcMat,shadow!==false); mk(this.LP,this.LN,null,litMat,false); mk(this.DP,this.DN,null,darkMat,false); return g; };
+
+  /* ── palette ── */
+  var GRASS='#a8b87e', ROAD='#96928a', WALK='#ddd5c3', BASE='#cbbd9a', LOT='#8a8780';
+  var BRICK=['#b86a50','#a85a45','#c98f6b','#b9806a','#a8735c','#c7a27c','#9c5f4c','#d1a77c'];
+  var AWN=['#2f6f5a','#a4373a','#2f5d8a','#c4973a','#6d597a','#e9e2d0'];
+  var HOUSE=['#efe6d2','#d9c9a8','#c9d3c0','#e6cfc0','#cfd8de','#e9dcb4','#d7b79a'];
+  var ROOF=['#7d5446','#6a5a52','#8a4f3e','#57606a','#7a6a55'];
+  var TREES=['#7f9a62','#6f8c58','#8fae6b','#5f8457'];
+  var CARS=['#a5482f','#4f7fae','#c4973a','#6d597a','#3f6f5a','#8d8b86','#e9e2d0','#2f4f6f','#b8b5ae','#2b2a2a'];
+  var FIFTY=['#7fb8b0','#d98a7a','#e2c36a','#8fb5d9','#c9534a','#e9e2d0','#6f9c7a'];
+  var AVC=['#f4f1ea','#e7edf0','#efe9dc','#e3ebe3'];
+  var MIX=['#c98f6b','#d1a77c','#d6b98f','#b76e58','#b9806a','#c7b08c','#d9c9a8','#a9b8c2'];
+
+  /* ── small models ── */
+  function tree(b,x,z,s,col,y){ y=y==null?.6:y; col=col||TREES[((x*7+z*3)|0)%TREES.length];
+    b.add(CYL,x,y,z,1.1*s,7*s,1.1*s,'#7a5a3c');
+    b.add(ICO,x,y+10.5*s,z,6.4*s,7*s,6.4*s,col,x*.7);
+    b.add(ICO,x+2.4*s,y+14.5*s,z-1.4*s,4.1*s,4.4*s,4.1*s,shade(col,1.12),z*.3); }
+  function winsX(b,x0,x1,z,face,ya,yb,r,lit,sx,sy,ww,wh){ var n=Math.max(1,Math.floor((x1-x0)/sx)), off=x0+((x1-x0)-n*sx)/2+(sx-ww)/2;
+    for(var y=ya;y+wh<=yb+.01;y+=sy) for(var i=0;i<n;i++){ var x=off+i*sx; b.box(x,y,face>0?z:z-.4,x+ww,y+wh,face>0?z+.4:z,null,r()<lit?'lit':'dark'); } }
+  function winsZ(b,z0,z1,x,face,ya,yb,r,lit,sz,sy,ww,wh){ var n=Math.max(1,Math.floor((z1-z0)/sz)), off=z0+((z1-z0)-n*sz)/2+(sz-ww)/2;
+    for(var y=ya;y+wh<=yb+.01;y+=sy) for(var i=0;i<n;i++){ var z=off+i*sz; b.box(face>0?x:x-.4,y,z,face>0?x+.4:x,y+wh,z+ww,null,r()<lit?'lit':'dark'); } }
+  function winsAll(b,x0,z0,x1,z1,ya,yb,r,lit,st,sy,ww,wh){ winsX(b,x0+1.5,x1-1.5,z1,1,ya,yb,r,lit,st,sy,ww,wh); winsX(b,x0+1.5,x1-1.5,z0,-1,ya,yb,r,lit,st,sy,ww,wh);
+    winsZ(b,z0+1.5,z1-1.5,x1,1,ya,yb,r,lit,st,sy,ww,wh); winsZ(b,z0+1.5,z1-1.5,x0,-1,ya,yb,r,lit,st,sy,ww,wh); }
+  /* a row of Main Street shops; face=+1 fronts +z (the north row), -1 fronts -z (the south row) */
+  function shopsRow(b,x0,x1,zf,face,seed,gaps){ var r=rng(seed), x=x0;
+    while(x<x1-12){ var w=Math.min(x1-x,24+r()*20); if(x1-(x+w)<16) w=x1-x;
+      var skip=false; (gaps||[]).forEach(function(g){ if(x<g[1]&&x+w>g[0]) skip=true; });
+      var h=15+((r()*3)|0)*7, d=30+r()*7, zb=zf-face*d, col=pick(BRICK,r), aw=pick(AWN,r);
+      if(!skip){ var za=Math.min(zf,zb), zc=Math.max(zf,zb);
+        b.box(x+.5,.6,za,x+w-.5,h,zc,col); b.box(x,h,za-.5,x+w,h+1.7,zc+.5,shade(col,.8)); b.box(x+2,h+1.7,za+2,x+w-2,h+2,zc-2,'#6b6258');
+        b.box(x+2.5,1.6,face>0?zf:zf-.5,x+w-2.5,7.4,face>0?zf+.5:zf,null,r()<.75?'lit':'dark');
+        b.box(x+w/2-1.6,.6,face>0?zf:zf-.7,x+w/2+1.6,7,face>0?zf+.7:zf,'#4a3a2e');
+        b.add(BOX,x+w/2,8.2,zf+face*2.3,w-2.5,.8,5.2,aw,0,null,face*.3);
+        winsX(b,x+2,x+w-2,zf,face,11.5,h-1.5,r,.55,6.2,7,3.2,4.2);
+        winsX(b,x+2,x+w-2,zb,-face,4,h-1.5,r,.35,7.5,7,3,4); }
+      x+=w; } }
+  function house(b,x,z,r,front){ var alongX=r()<.6, w=alongX?22+r()*6:16+r()*4, d=alongX?16+r()*4:22+r()*5, h=9+r()*3, col=pick(HOUSE,r), rf=pick(ROOF,r), rh=6+r()*2.5;
+    b.box(x-w/2,.6,z-d/2,x+w/2,h,z+d/2,col);
+    if(alongX) b.add(GAB,x,h,z,d+3,rh,w+3,rf,Math.PI/2); else b.add(GAB,x,h,z,w+3,rh,d+3,rf,0);
+    b.box(x+w*.2,h,z-1.4,x+w*.2+2.6,h+rh+1.5,z+1.4,'#8a6a5a');
+    var zf=z+front*d/2; b.box(x-1.5,.6,front>0?zf:zf-.5,x+1.5,6,front>0?zf+.5:zf,'#6a4a3a');
+    b.box(x-w/2+2.5,4,front>0?zf:zf-.4,x-w/2+6.5,7.4,front>0?zf+.4:zf,null,r()<.6?'lit':'dark');
+    b.box(x+w/2-6.5,4,front>0?zf:zf-.4,x+w/2-2.5,7.4,front>0?zf+.4:zf,null,r()<.6?'lit':'dark'); }
+  function housesArea(b,x0,x1,z0,z1,seed,front,rows){ var r=rng(seed), n=Math.max(1,Math.floor((x1-x0)/38)), sx=(x1-x0)/n;
+    rows=rows||[z0+(z1-z0)*.27,z0+(z1-z0)*.75];
+    rows.forEach(function(zz,ri){ for(var i=0;i<n;i++){ var x=x0+sx*(i+.5)+(r()-.5)*5;
+        if(r()<.88) house(b,x,zz+(r()-.5)*4,r,ri===0?-front:front); else tree(b,x,zz,1.1+r()*.3);
+        if(r()<.55) tree(b,x+sx*.45,zz+(r()-.5)*14,.75+r()*.35); } }); }
+  /* a parked or moving car, as boxes; +x is forward */
+  function carGeo(b,x,z,ry,style,col,y,wheels){ y=y||0; var c=Math.cos(ry), s=-Math.sin(ry);
+    function part(dx,dy,len,h,wid,color,bucket,dz){ dz=dz||0; b.add(BOX,x+dx*c+dz*s,y+dy,z+dx*s-dz*c,len,h,wid,color,ry,bucket); }
+    function wh(dx,wd){ if(wheels!==false){ part(dx,0,3.4,3,wd,'#1b1a19'); } }
+    if(style==='T'){ part(0,1.6,13,2.2,6,'#2b2826'); part(-1.6,3.8,7,3.4,6.1,null,'dark'); part(-1.6,7.2,7.6,.7,6.5,'#1f1d1c'); part(4.6,3.8,3.6,1.5,4.8,'#35302d'); wh(4,7.2); wh(-4.4,7.2); part(6.7,2.6,.5,1.2,1.4,null,'lit',2.2); part(6.7,2.6,.5,1.2,1.4,null,'lit',-2.2); }
+    else if(style==='50'){ part(0,1.4,19,3.2,7.6,col); part(-1,4.6,8.6,2.2,6.6,null,'dark'); part(-1,6.8,8.4,.6,6.7,'#f2ead8'); part(-8.3,4.6,2.6,1.3,7.6,shade(col,.85)); part(9.6,1.6,.7,1.3,7.8,'#dcdcd8'); part(-9.6,1.6,.7,1.3,7.8,'#dcdcd8'); wh(5.6,8); wh(-5.6,8); part(9.7,2.9,.5,1.1,1.5,null,'lit',2.6); part(9.7,2.9,.5,1.1,1.5,null,'lit',-2.6); }
+    else if(style==='av'){ part(0,1.2,15.5,2.7,7.6,col); part(0,3.9,14.6,2.4,7.2,null,'dark'); part(0,6.3,13.6,.9,7,col); wh(4.8,8); wh(-4.8,8); part(7.8,2.2,.4,.9,5.6,null,'lit'); }
+    else { var suv=style==='suv'; part(0,1.3,16,suv?4:3.2,7.4,col); part(-.8,suv?5.3:4.5,suv?10.5:8.6,suv?2.6:2.3,6.7,null,'dark'); part(-.8,suv?7.9:6.8,suv?10.2:8.2,.6,6.6,col); wh(5,7.9); wh(-5,7.9); part(8,2.6,.4,1,1.5,null,'lit',2.5); part(8,2.6,.4,1,1.5,null,'lit',-2.5); } }
+  /* a parking lot: asphalt, stall lines, rows of parked cars; returns how many cars */
+  function lot(b,x0,z0,x1,z1,fill,seed,y){ var r=rng(seed), n=0; y=y==null?.6:y; b.box(x0,y,z0,x1,y+.5,z1,LOT);
+    var rows=Math.max(1,Math.floor((z1-z0-6)/25)), gap=(z1-z0)/rows;
+    for(var j=0;j<rows;j++){ var zz=z0+gap*(j+.5), cols=Math.floor((x1-x0-8)/9.6), xs=x0+((x1-x0)-cols*9.6)/2;
+      b.box(xs,y+.5,zz-8.6,xs+cols*9.6,y+.62,zz-8.2,'#d9d4c6');
+      for(var i=0;i<cols;i++){ var x=xs+i*9.6+4.8; b.box(x-4.95,y+.5,zz-8.4,x-4.65,y+.62,zz+8.4,'#d9d4c6');
+        if(r()<fill){ carGeo(b,x,zz+(r()-.5)*1.5,(r()<.5?1:-1)*Math.PI/2,r()<.4?'suv':'sedan',pick(CARS,r),y+.5,false); n++; } } }
+    return n; }
+  function apartments(b,x0,z0,x1,z1,h,col,r,green){ b.box(x0,.6,z0,x1,h,z1,col); b.box(x0-.4,h,z0-.4,x1+.4,h+1.2,z1+.4,shade(col,.82));
+    b.box(x0+1.5,1.6,z1,x1-1.5,6.6,z1+.4,null,'lit'); b.box(x0+1.5,1.6,z0-.4,x1-1.5,6.6,z0,null,'dark');
+    winsAll(b,x0,z0,x1,z1,10,h-1.5,r,.62,6.4,7.2,3.4,4.4);
+    if(green!==false){ b.box(x0+2,h+1.2,z0+2,x1-2,h+2,z1-2,'#8fb573'); if(x1-x0>40) tree(b,x0+(x1-x0)*.3,z0+(z1-z0)*.5,.55,'#6f9c58',h+2); tree(b,x0+(x1-x0)*.72,z0+(z1-z0)*.45,.48,'#7fae66',h+2); }
+    b.box(x1-9,h+1.2,z0+3,x1-4,h+5,z0+8,'#b9b3a6'); }
+  function lamp(b,x,z,side){ b.add(CYL,x,1,z,.45,19,.45,'#4f4a44'); b.box(x-.4,19.4,side>0?z:z-5,x+.4,20.1,side>0?z+5:z,'#4f4a44'); b.box(x-1.2,18.6,z+side*4-1.2,x+1.2,19.4,z+side*4+1.2,null,'lit'); }
+
+  /* ── the ground: one slab of earth, streets and sidewalks ── */
+  var NB=[[40,262],[298,562],[598,862],[898,1160]];
+  var G=new Builder();
+  G.box(-24,-3.5,-24,1224,0,624,GRASS); G.box(-24,-15,-24,1224,-3.5,624,'#a98b62'); G.box(-18,-30,-18,1218,-15,618,'#8a6f4d'); G.box(-10,-44,-10,1210,-30,610,'#73593d');
+  G.box(-24,0,272,1224,.5,328,ROAD); G.box(-24,0,100,1224,.5,130,ROAD); G.box(-24,0,470,1224,.5,500,ROAD);
+  [280,880].forEach(function(x){ G.box(x-16,0,100,x+16,.5,500,ROAD); }); G.box(564,0,100,596,.5,272,ROAD);
+  [[-24,264],[296,564],[596,864],[896,1224]].forEach(function(s){ G.box(s[0],0,262,s[1],1,272,WALK); });
+  [[-24,264],[296,864],[896,1224]].forEach(function(s){ G.box(s[0],0,328,s[1],1,338,WALK); });
+  NB.forEach(function(B){ G.box(B[0]-2,0,134,B[1]+2,.6,262,BASE); });
+  G.box(38,0,338,264,.6,466,BASE); G.box(296,0,338,864,.6,466,BASE); G.box(896,0,338,1162,.6,466,BASE);
+  (function(){ var x; for(x=-10;x<1210;x+=26){ if((x>255&&x<300)||(x>855&&x<900)) continue; G.box(x,.5,114.6,x+12,.68,115.4,'#eee8d8'); G.box(x,.5,484.6,x+12,.68,485.4,'#eee8d8'); }
+    [280,880].forEach(function(ax){ for(var z=140;z<262;z+=22) G.box(ax-.4,.5,z,ax+.4,.68,z+11,'#eee8d8'); for(z=342;z<466;z+=22) G.box(ax-.4,.5,z,ax+.4,.68,z+11,'#eee8d8'); });
+    for(var z2=140;z2<262;z2+=22) G.box(579.6,.5,z2,580.4,.68,z2+11,'#eee8d8'); })();
+  /* the homes south of the back street stay through every era; so do the trees at the edges */
+  housesArea(G,10,1190,508,598,71,-1,[530,576]);
+  (function(){ var r=rng(5); for(var z=20;z<600;z+=34){ if(z>262&&z<338) continue; tree(G,-8+r()*14,z+r()*10,.9+r()*.5,null,0); tree(G,1196+r()*14,z+r()*10,.9+r()*.5,null,0); } })();
+  var ground=G.build(); city.add(ground);
+
+  /* ── things that come and go with the eras ── */
+  var EV=[], NPARK=0;
+  function E(e0,e1,kind,ox,oz,fn,shadow){ var b=new Builder(ox,oz), ret=fn(b), g=b.build(shadow); g.userData={e0:e0,e1:e1,kind:kind||'rise',v:0,on:false,wait:0,ox:ox}; g.visible=false; city.add(g); EV.push(g); return ret; }
+  function cx(B){ return (B[0]+B[1])/2; }
+
+  /* Main Street shops */
+  E(0,3,'rise',cx(NB[0]),244,function(b){ shopsRow(b,NB[0][0],NB[0][1],262,1,11); });
+  E(0,3,'rise',cx(NB[1]),244,function(b){ shopsRow(b,NB[1][0],NB[1][1],262,1,12); });
+  E(0,2,'rise',cx(NB[2]),244,function(b){ shopsRow(b,NB[2][0],NB[2][1],262,1,13); });
+  E(3,3,'rise',cx(NB[2]),244,function(b){ shopsRow(b,NB[2][0],NB[2][1],262,1,13,[[602,630],[830,858]]); });
+  E(0,3,'rise',cx(NB[3]),244,function(b){ shopsRow(b,NB[3][0],NB[3][1],262,1,14); });
+  E(0,0,'rise',cx(NB[0]),356,function(b){ shopsRow(b,NB[0][0],NB[0][1],338,-1,21); });
+  E(0,1,'rise',cx(NB[1]),356,function(b){ shopsRow(b,NB[1][0],NB[1][1],338,-1,22); });
+  E(0,1,'rise',cx(NB[2]),356,function(b){ shopsRow(b,NB[2][0],NB[2][1],338,-1,23); });
+  E(0,3,'rise',cx(NB[3]),356,function(b){ shopsRow(b,NB[3][0],NB[3][1],338,-1,24); });
+  /* homes behind Main Street (1910s), and what replaced them */
+  E(0,0,'rise',cx(NB[0]),180,function(b){ housesArea(b,44,258,138,222,31,1); });
+  E(0,0,'rise',cx(NB[1]),180,function(b){ housesArea(b,302,558,138,222,32,1); });
+  E(0,1,'rise',cx(NB[2]),180,function(b){ housesArea(b,602,858,138,222,33,1); });
+  E(0,1,'rise',cx(NB[3]),180,function(b){ housesArea(b,902,1156,138,222,34,1); });
+  E(0,0,'rise',cx(NB[0]),420,function(b){ housesArea(b,44,258,380,464,35,-1); });
+  E(0,0,'rise',cx(NB[1]),420,function(b){ housesArea(b,302,558,380,464,36,-1); });
+  E(0,0,'rise',cx(NB[2]),420,function(b){ housesArea(b,602,858,380,464,37,-1); });
+  E(0,3,'rise',cx(NB[3]),420,function(b){ housesArea(b,902,1156,380,464,38,-1); });
+  /* homes north of the back street: the freeway takes their place */
+  [[10,300,41],[300,600,42],[600,900,43],[900,1190,44]].forEach(function(s){ E(0,0,'rise',(s[0]+s[1])/2,50,function(b){ housesArea(b,s[0],s[1],8,94,s[2],1,[30,72]); }); });
+  /* the south stretch of the middle avenue (built over when the big-box store arrives) */
+  E(0,1,'flat',580,400,function(b){ b.box(564,.3,328,596,.75,500,ROAD); for(var z=342;z<466;z+=22) b.box(579.6,.75,z,580.4,.9,z+11,'#eee8d8'); },false);
+  /* 1950s: parking lots behind the shops */
+  E(1,1,'lot',cx(NB[0]),180,function(b){ lot(b,46,140,256,220,.5,51); });
+  E(1,1,'lot',cx(NB[1]),180,function(b){ lot(b,304,140,556,220,.55,52); });
+  E(1,1,'lot',cx(NB[1]),422,function(b){ lot(b,304,382,556,462,.5,53); });
+  E(1,1,'lot',cx(NB[2]),422,function(b){ lot(b,604,382,856,462,.5,54); });
+  /* the gas station (1950s to today) */
+  E(1,2,'rise',150,400,function(b){ b.box(44,.6,340,258,1,462,'#9a968e');
+    [[92,372],[92,412],[190,372],[190,412]].forEach(function(p){ b.add(CYL,p[0],1,p[1],1.3,14,1.3,'#e9e2d0'); });
+    b.box(78,15,358,204,17.6,426,'#f4efe2'); b.box(78,14.2,358,204,15,426,'#a4373a');
+    [[120,392],[162,392]].forEach(function(p){ b.box(p[0]-2,1,p[1]-5,p[0]+2,2,p[1]+5,'#cfc8b8'); b.box(p[0]-1.3,2,p[1]-3.6,p[0]+1.3,7.5,p[1]-1.2,'#a4373a'); b.box(p[0]-1.3,2,p[1]+1.2,p[0]+1.3,7.5,p[1]+3.6,'#a4373a'); });
+    b.box(206,1,430,254,12,460,'#f2ead8'); b.box(204,12,428,256,13.5,462,'#a4373a'); b.box(212,2.5,429.6,248,8.5,430,null,'lit');
+    b.add(CYL,62,1,346,.9,26,.9,'#5a5550'); b.box(54,22,344.6,70,30,347.4,'#a4373a'); b.box(55.5,23.5,347.4,68.5,28.5,347.8,null,'lit');
+    carGeo(b,120,376,0,'sedan','#4f7fae',1,false); });
+  /* the freeway: twelve spans that rise one after another */
+  for(var fi=0;fi<12;fi++){ (function(i){ var x0=i*100+(i===0?-24:0), x1=i*100+100+(i===11?24:0), xm=i*100+50;
+    E(1,3,'rise',xm,50,function(b){
+      [28,72].forEach(function(z){ b.add(CYL,xm,0,z,3.6,25,3.6,'#b9b3a6'); }); b.box(xm-4,23,22,xm+4,26,78,'#a9a399');
+      b.box(x0,26,14,x1,29.5,86,'#8d8982'); b.box(x0,29.5,14,x1,33,16,'#c9c3b6'); b.box(x0,29.5,84,x1,33,86,'#c9c3b6'); b.box(x0,29.5,49.2,x1,32,50.8,'#c9c3b6');
+      for(var x=x0+6;x<x1;x+=25){ b.box(x,29.5,36.7,x+11,29.7,37.3,'#f1ecde'); b.box(x,29.5,62.7,x+11,29.7,63.3,'#f1ecde'); } }); })(fi); }
+  /* today: lots fill up, a strip of parking behind every shop, a garage, an office tower, a big-box store */
+  NPARK+=E(2,2,'lot',cx(NB[0]),180,function(b){ return lot(b,46,140,256,220,.93,61); });
+  NPARK+=E(2,2,'lot',cx(NB[1]),180,function(b){ return lot(b,304,140,556,220,.9,62); });
+  NPARK+=E(2,2,'rise',730,181,function(b){ var x0=612,x1=848,z0=140,z1=222, n=0, y;
+    for(var L=0;L<3;L++){ y=.6+L*8.6; b.box(x0,y,z0,x1,y+2.9,z1,'#cfc8b8'); b.box(x0+1.2,y+2.9,z0+1.2,x1-1.2,y+8.6,z1-1.2,'#4b463f'); }
+    for(var x=x0;x<=x1-2;x+=(x1-x0-2.4)/8){ b.box(x,.6,z0-.3,x+2.4,26.4,z0+.9,'#d9d2c2'); b.box(x,.6,z1-.9,x+2.4,26.4,z1+.3,'#d9d2c2'); }
+    for(var z=z0;z<=z1-2;z+=(z1-z0-2.4)/3){ b.box(x0-.3,.6,z,x0+.9,26.4,z+2.4,'#d9d2c2'); b.box(x1-.9,.6,z,x1+.3,26.4,z+2.4,'#d9d2c2'); }
+    n=lot(b,x0+1,z0+1,x1-1,z1-1,.85,63,26.4); b.box(x0,26.4,z0,x1,29.6,z0+1.2,'#cfc8b8'); b.box(x0,26.4,z1-1.2,x1,29.6,z1,'#cfc8b8'); b.box(x0,26.4,z0,x0+1.2,29.6,z1,'#cfc8b8'); b.box(x1-1.2,26.4,z0,x1,29.6,z1,'#cfc8b8');
+    b.box(x1-20,26.4,z0+2,x1-3,36,z0+16,'#bdb7aa'); return n; });
+  E(2,3,'rise',1096,181,function(b){ var r=rng(64); b.box(1050,.6,146,1142,118,216,'#9db3c1'); b.box(1048,118,144,1144,121,218,'#7f97a6'); b.box(1076,121,166,1116,130,196,'#8ea4b1'); b.add(CYL,1096,130,181,.7,26,.7,'#6f7f88');
+    b.box(1052,1.6,216,1140,8,216.5,null,'lit'); winsAll(b,1050,146,1142,216,11,115,r,.5,6.6,7.4,4.6,5.2); });
+  NPARK+=E(2,2,'lot',972,181,function(b){ return lot(b,902,140,1044,220,.92,65); });
+  NPARK+=E(2,2,'lot',580,378,function(b){ return lot(b,302,341,858,417,.93,66); });
+  E(2,2,'rise',580,443,function(b){ b.box(330,.6,421,830,24,466,'#d6ccb8'); b.box(330,18,420.2,830,24.6,421,'#2f5d8a'); b.box(540,.6,419.4,620,15,421,'#e9e2d0'); b.box(548,1.6,418.9,612,12,419.4,null,'lit');
+    b.box(328,24,419,832,25.6,468,'#bfb5a1'); var r=rng(67); for(var i=0;i<7;i++){ var x=360+i*66+r()*10; b.box(x,25.6,432+r()*14,x+12,29.5,442+r()*14,'#aaa69c'); }
+    b.box(300,.6,422,328,1.1,466,LOT); b.box(832,.6,422,860,1.1,466,LOT); });
+  /* the possible future */
+  E(3,3,'rise',cx(NB[0]),180,function(b){ var r=rng(81); b.box(46,.6,138,256,1,222,'#b5c98f');
+    apartments(b,50,142,112,182,30,'#d6b98f',r); apartments(b,124,142,190,176,44,'#c98f6b',r); apartments(b,200,146,254,196,37,'#a9b8c2',r);
+    [[70,204],[100,210],[140,200],[170,208],[60,190],[188,214]].forEach(function(p,i){ tree(b,p[0],p[1],.8+r()*.4); }); b.box(120,1,188,196,1.3,192,'#e2d6bd'); });
+  E(3,3,'rise',cx(NB[1]),180,function(b){ var r=rng(82); b.box(302,.6,138,558,1.1,222,'#a9c48a');
+    for(var i=0;i<9;i++) b.add(BOX,320+i*27,1.1,150+i*8,30,.3,5,'#e6dcc4',-.29); b.add(CYL,470,1.1,170,22,.5,15,'#8fc0d2'); b.add(CYL,470,1.1,170,24,.3,17,'#e6dcc4');
+    [[316,200],[340,214],[372,206],[330,160],[392,150],[420,212],[452,206],[510,150],[536,166],[540,206],[500,214],[410,170],[360,176]].forEach(function(p){ tree(b,p[0],p[1],.85+r()*.6); });
+    b.box(380,1.1,190,392,5,193,'#c4973a'); b.box(383,5,188,389,6,195,'#a4373a'); });
+  E(3,3,'rise',730,170,function(b){ var r=rng(83); apartments(b,612,138,724,194,46,'#d6b98f',r); lot(b,738,140,848,194,.12,89); b.box(848,.6,160,870,1.1,172,LOT);
+    b.box(608,.6,202,852,1.15,218,'#a3a097'); b.box(608,.6,218,624,1.15,272,'#a3a097'); b.box(836,.6,218,852,1.15,272,'#a3a097');
+    b.box(640,1.15,200.6,820,1.5,202,'#2f8f8a'); [[650,197],[730,197],[810,197]].forEach(function(p){ b.add(CYL,p[0],1,p[1],.5,10,.5,'#e9e2d0'); }); b.box(644,11,194,816,11.7,203,'#bfe0d8'); });
+  E(3,3,'rise',972,181,function(b){ var r=rng(84); b.box(902,.6,140,1044,1.1,220,'#b5c98f'); b.box(902,1.1,176,1044,1.35,184,'#e2d6bd'); b.box(968,1.1,140,976,1.35,220,'#e2d6bd');
+    [[918,154],[944,160],[1000,152],[1028,162],[916,204],[950,206],[998,202],[1030,208]].forEach(function(p){ tree(b,p[0],p[1],.9+r()*.5); }); });
+  E(3,3,'rise',150,400,function(b){ var r=rng(85); b.box(44,.6,340,258,1.1,462,'#b5c98f'); b.box(110,.6,350,200,1.2,400,'#e2d6bd');
+    b.box(124,1.2,356,186,10,392,'#efe6d2'); b.box(125,2.2,392,185,8.6,392.5,null,'lit'); b.box(116,10,350,194,11.4,400,'#7d5446');
+    [[60,354],[66,400],[84,444],[130,440],[176,446],[226,432],[238,372],[230,404],[210,354]].forEach(function(p){ tree(b,p[0],p[1],.9+r()*.5); });
+    for(var i=0;i<6;i++){ b.box(98+i*4,1.1,412,99+i*4,3.6,418,'#2f8f8a'); } });
+  E(3,3,'rise',376,402,function(b){ var r=rng(86);
+    [[306,344,376,396,48,0],[384,344,444,396,34,1],[306,408,384,464,38,2],[392,408,444,464,58,3]].forEach(function(q){ apartments(b,q[0],q[1],q[2],q[3],q[4],MIX[q[5]],r); }); });
+  E(3,3,'rise',784,402,function(b){ var r=rng(87);
+    [[716,344,778,396,40,4],[786,344,854,396,56,5],[716,408,784,464,62,6],[792,408,854,464,34,7]].forEach(function(q){ apartments(b,q[0],q[1],q[2],q[3],q[4],MIX[q[5]],r); }); });
+  E(3,3,'rise',580,404,function(b){ var r=rng(88);
+    b.box(452,.6,354,708,1.15,370,'#a3a097'); b.box(452,.6,328,468,1.15,354,'#a3a097'); b.box(692,.6,328,708,1.15,354,'#a3a097');
+    b.box(470,.6,338,690,1.2,353,'#a9c48a'); for(var x=486;x<690;x+=34) tree(b,x,345.5,.6,'#7fae66',1.2);
+    b.box(486,1.15,370,674,1.5,371.4,'#2f8f8a'); [[500,375],[580,375],[660,375]].forEach(function(p){ b.add(CYL,p[0],1,p[1],.5,10,.5,'#e9e2d0'); }); b.box(490,11,369,670,11.7,379,'#bfe0d8');
+    b.box(452,.6,371.4,708,1.2,466,'#e6dcc4'); for(x=462;x<708;x+=20) b.box(x,1.2,382,x+.5,1.3,466,'#d3c7ab');
+    b.add(CYL,580,1.2,424,19,2.2,19,'#cfc5ae'); b.add(CYL,580,1.2,424,16.4,2.5,16.4,'#8fc0d2'); b.add(CYL,580,1.2,424,3,5,3,'#cfc5ae');
+    [[476,396],[474,446],[516,456],[644,456],[686,446],[684,396],[530,392],[630,392]].forEach(function(p){ tree(b,p[0],p[1],.9+r()*.5,null,1.2); });
+    [[540,410],[620,410],[540,446],[620,446]].forEach(function(p){ b.box(p[0]-5,1.2,p[1]-1,p[0]+5,2.6,p[1]+1,'#8a6a4a'); }); });
+  /* street trees and lamps along Main */
+  [[60,250],[310,560],[640,820],[910,1180]].forEach(function(s){ E(3,3,'rise',(s[0]+s[1])/2,300,function(b){ for(var x=s[0];x<=s[1];x+=44){ tree(b,x,265,.62,'#6f9c58',1); if(!(x>440&&x<480)&&!(x>680&&x<720)) tree(b,x+22,335,.62,'#7fae66',1); } }); });
+  var LAMPS=[]; (function(){ for(var x=70;x<1200;x+=118){ if(Math.abs(x-280)<24||Math.abs(x-580)<24||Math.abs(x-880)<24) continue; LAMPS.push([x,263.5,1],[x+59,336.5,-1]); } })();
+  [[0,400],[400,800],[800,1200]].forEach(function(s){ E(1,3,'rise',(s[0]+s[1])/2,300,function(b){ LAMPS.forEach(function(L){ if(L[0]>=s[0]&&L[0]<s[1]) lamp(b,L[0],L[1],L[2]); }); },false); });
+  /* paint on Main Street: rails and wires, then a center line, then four lanes */
+  E(0,0,'wipe',0,300,function(b){ [291,295,305,309].forEach(function(z){ b.box(-24,.5,z-.35,1224,.95,z+.35,'#5d5a55'); });
+    for(var x=-20;x<1224;x+=9){ b.box(x,.5,289.4,x+2.2,.7,296.6,'#6b5a45'); b.box(x,.5,303.4,x+2.2,.7,310.6,'#6b5a45'); } },false);
+  [[0,300],[300,600],[600,900],[900,1200]].forEach(function(s){ E(0,0,'rise',(s[0]+s[1])/2,300,function(b){ for(var x=s[0]+30;x<s[1];x+=100){ b.add(CYL,x,.5,300,.5,23,.5,'#4a4640'); b.box(x-.35,21,292,x+.35,21.7,308,'#4a4640'); }
+      b.box(s[0]-(s[0]===0?24:0),20.6,292.8,s[1]+(s[1]===1200?24:0),20.9,293.2,'#3a3632'); b.box(s[0]-(s[0]===0?24:0),20.6,306.8,s[1]+(s[1]===1200?24:0),20.9,307.2,'#3a3632'); },false); });
+  E(1,1,'wipe',0,300,function(b){ for(var x=-20;x<1224;x+=30) b.box(x,.5,299.5,x+14,.7,300.5,'#f1ecde'); },false);
+  E(2,3,'wipe',0,300,function(b){ b.box(-24,.5,298.4,1224,.7,299.2,'#e2bf52'); b.box(-24,.5,300.8,1224,.7,301.6,'#e2bf52');
+    for(var x=-20;x<1224;x+=30){ b.box(x,.5,285.1,x+13,.7,285.9,'#f1ecde'); b.box(x,.5,314.1,x+13,.7,314.9,'#f1ecde'); } },false);
+  E(1,3,'wipe',0,300,function(b){ [280,580,880].forEach(function(ax){ for(var k=0;k<7;k++){ var x=ax-14+k*4.2; b.box(x,.5,262.5,x+2.2,1.12,271.5,'#f1ecde'); if(ax!==580) b.box(x,.5,328.5,x+2.2,1.12,337.5,'#f1ecde'); } }); },false);
+
+  /* ── sky, light, night glow ── */
+  var skyU={top:{value:new T.Color()},mid:{value:new T.Color()},bot:{value:new T.Color()}};
+  var sky=new T.Mesh(new T.SphereGeometry(9000,24,14), new T.ShaderMaterial({uniforms:skyU, side:T.BackSide, depthWrite:false, fog:false,
+    vertexShader:'varying vec3 vP; void main(){ vP=position; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }',
+    fragmentShader:'uniform vec3 top; uniform vec3 mid; uniform vec3 bot; varying vec3 vP; void main(){ float h=normalize(vP).y; vec3 c=h>0.0? mix(mid,top,pow(clamp(h,0.0,1.0),0.55)) : mix(mid,bot,pow(clamp(-h*1.25,0.0,1.0),0.6)); gl_FragColor=vec4(c,1.0); }'}));
+  scene.add(sky);
+  var hemi=new T.HemisphereLight(0xffffff,0x999999,.6); scene.add(hemi);
+  var sun=new T.DirectionalLight(0xffffff,1); sun.castShadow=true; sun.shadow.mapSize.set(2048,2048);
+  var sc=sun.shadow.camera; sc.left=-860; sc.right=860; sc.top=620; sc.bottom=-620; sc.near=200; sc.far=3600; sun.shadow.bias=-.0006; sun.shadow.normalBias=1.2;
+  scene.add(sun); scene.add(sun.target);
+  var fill=new T.DirectionalLight(0xffffff,.18); fill.position.set(-300,400,700); scene.add(fill);
+  var LOOK=[
+    {top:'#e3bd86',mid:'#f7ead0',bot:'#ebe2d0',fog:'#f1e4c8',fd:.00013,sun:[.72,.44,.52],sc:'#ffe0ae',si:.98,hs:'#fff1d6',hg:'#b89f7c',hi:.62,night:0},
+    {top:'#6fb0e8',mid:'#d6ebfb',bot:'#f1f0e2',fog:'#dcebf5',fd:.0001,sun:[.36,.84,.42],sc:'#ffffff',si:1.06,hs:'#eaf4ff',hg:'#a9a58f',hi:.68,night:0},
+    {top:'#a9a898',mid:'#e2d4b4',bot:'#ebe1cb',fog:'#d8cbae',fd:.00030,sun:[-.42,.62,.5],sc:'#ffe6bf',si:.92,hs:'#f1e7d2',hg:'#a59a84',hi:.68,night:0},
+    {top:'#24346a',mid:'#f3a56b',bot:'#2c2f55',fog:'#8a7896',fd:.00014,sun:[-.8,.27,.46],sc:'#ffb884',si:.95,hs:'#aab4ea',hg:'#6a6182',hi:.82,night:1}];
+  var cur={top:new T.Color(LOOK[0].top),mid:new T.Color(LOOK[0].mid),bot:new T.Color(LOOK[0].bot),fog:new T.Color(LOOK[0].fog),fd:LOOK[0].fd,sun:new T.Vector3().fromArray(LOOK[0].sun),sc:new T.Color(LOOK[0].sc),si:LOOK[0].si,hs:new T.Color(LOOK[0].hs),hg:new T.Color(LOOK[0].hg),hi:LOOK[0].hi,night:0};
+  function applyLook(k){ var L=LOOK[era];
+    cur.top.lerp(_c.set(L.top),k); cur.mid.lerp(_c.set(L.mid),k); cur.bot.lerp(_c.set(L.bot),k); cur.fog.lerp(_c.set(L.fog),k); cur.sc.lerp(_c.set(L.sc),k); cur.hs.lerp(_c.set(L.hs),k); cur.hg.lerp(_c.set(L.hg),k);
+    cur.fd+=(L.fd-cur.fd)*k; cur.si+=(L.si-cur.si)*k; cur.hi+=(L.hi-cur.hi)*k; cur.night+=(L.night-cur.night)*k; cur.sun.lerp(_v.fromArray(L.sun),k);
+    skyU.top.value.copy(cur.top); skyU.mid.value.copy(cur.mid); skyU.bot.value.copy(cur.bot); scene.fog.color.copy(cur.fog); scene.fog.density=cur.fd;
+    sun.color.copy(cur.sc); sun.intensity=cur.si; hemi.color.copy(cur.hs); hemi.groundColor.copy(cur.hg); hemi.intensity=cur.hi;
+    _v.copy(cur.sun).normalize().multiplyScalar(1800); sun.position.copy(_v); sun.target.position.set(0,0,0);
+    litMat.emissiveIntensity=cur.night*1.05; glowMat.opacity=cur.night*.5; headMat.opacity=cur.night*.6; }
+  function radial(inner,ring){ var c=document.createElement('canvas'); c.width=c.height=128; var g=c.getContext('2d'), gr=g.createRadialGradient(64,64,0,64,64,64);
+    if(ring){ gr.addColorStop(0,'rgba(255,255,255,0)'); gr.addColorStop(.52,'rgba(255,255,255,0)'); gr.addColorStop(.7,'rgba(255,255,255,.9)'); gr.addColorStop(.82,'rgba(255,255,255,.25)'); gr.addColorStop(1,'rgba(255,255,255,0)'); }
+    else { gr.addColorStop(0,'rgba(255,255,255,'+inner+')'); gr.addColorStop(.45,'rgba(255,255,255,'+(inner*.35)+')'); gr.addColorStop(1,'rgba(255,255,255,0)'); }
+    g.fillStyle=gr; g.fillRect(0,0,128,128); return new T.CanvasTexture(c); }
+  var texGlow=radial(1), texRing=radial(1,true);
+  var glowMat=new T.MeshBasicMaterial({map:texGlow,color:0xffc878,transparent:true,blending:T.AdditiveBlending,depthWrite:false,opacity:0,fog:false});
+  var headMat=new T.MeshBasicMaterial({map:texGlow,color:0xfff0c8,transparent:true,blending:T.AdditiveBlending,depthWrite:false,opacity:0,fog:false});
+  var ringFull=new T.MeshBasicMaterial({map:texRing,color:0x35d0c4,transparent:true,blending:T.AdditiveBlending,depthWrite:false,opacity:.85,fog:false});
+  var ringEmpty=new T.MeshBasicMaterial({map:texRing,color:0xff4a3c,transparent:true,blending:T.AdditiveBlending,depthWrite:false,opacity:.95,fog:false});
+  var ghostMat=new T.MeshLambertMaterial({color:0xff6a5c,emissive:0xa4201c,emissiveIntensity:.55,transparent:true,opacity:.5,depthWrite:false});
+  var edgeMat=new T.LineBasicMaterial({color:0xff3b30});
+  var FLAT=new T.PlaneGeometry(1,1); FLAT.rotateX(-Math.PI/2);
+  (function(){ var P=[],U=[],I=[],n=0; function q(x,z,s){ P.push(x-s,1.35,z-s, x+s,1.35,z-s, x+s,1.35,z+s, x-s,1.35,z+s); U.push(0,0,1,0,1,1,0,1); I.push(n,n+2,n+1,n,n+3,n+2); n+=4; }
+    LAMPS.forEach(function(L){ q(L[0],L[1]+L[2]*5,26); }); [[520,424],[640,424],[580,372],[730,206],[150,380],[430,180],[972,180]].forEach(function(p){ q(p[0],p[1],34); });
+    var g=new T.BufferGeometry(); g.setAttribute('position',new T.Float32BufferAttribute(P,3)); g.setAttribute('uv',new T.Float32BufferAttribute(U,2)); g.setIndex(I); var m=new T.Mesh(g,glowMat); m.renderOrder=2; city.add(m); })();
+  /* the fountain's jet */
+  var jet=new T.Mesh(new T.CylinderGeometry(.5,2.2,1,7), new T.MeshBasicMaterial({color:0xd8f1f7,transparent:true,opacity:.75})); jet.geometry.translate(0,.5,0); jet.position.set(580,5,424); jet.visible=false; city.add(jet);
+
+  /* ── routes and moving things ── */
+  function route(pts,rad){ rad=rad==null?11:rad; var P=[pts[0]];
+    for(var i=1;i<pts.length-1;i++){ var a=pts[i-1], b=pts[i], c=pts[i+1], d1=Math.hypot(b[0]-a[0],b[1]-a[1]), d2=Math.hypot(c[0]-b[0],c[1]-b[1]);
+      var cr=(b[0]-a[0])*(c[1]-b[1])-(b[1]-a[1])*(c[0]-b[0]), r=Math.min(rad,d1/2,d2/2);
+      if(r<1||Math.abs(cr)<1e-6*d1*d2){ P.push(b); continue; }
+      var p0=[b[0]+(a[0]-b[0])*r/d1,b[1]+(a[1]-b[1])*r/d1], p2=[b[0]+(c[0]-b[0])*r/d2,b[1]+(c[1]-b[1])*r/d2];
+      for(var k=0;k<=6;k++){ var t=k/6, u=1-t; P.push([u*u*p0[0]+2*u*t*b[0]+t*t*p2[0], u*u*p0[1]+2*u*t*b[1]+t*t*p2[1]]); } }
+    P.push(pts[pts.length-1]);
+    var Q=[P[0]]; for(var j=1;j<P.length;j++){ var q=Q[Q.length-1]; if(Math.hypot(P[j][0]-q[0],P[j][1]-q[1])>.05) Q.push(P[j]); }
+    var L=[0]; for(j=1;j<Q.length;j++) L.push(L[j-1]+Math.hypot(Q[j][0]-Q[j-1][0],Q[j][1]-Q[j-1][1]));
+    return {p:Q,L:L,len:L[L.length-1]}; }
+  function at(r,d){ d=Math.max(0,Math.min(r.len,d)); var lo=1,hi=r.L.length-1; while(lo<hi){ var m=(lo+hi)>>1; if(r.L[m]<d) lo=m+1; else hi=m; }
+    var a=r.p[lo-1], b=r.p[lo], t=(d-r.L[lo-1])/Math.max(1e-6,r.L[lo]-r.L[lo-1]); return [a[0]+(b[0]-a[0])*t, a[1]+(b[1]-a[1])*t, Math.atan2(b[1]-a[1],b[0]-a[0])]; }
+  function distAfter(r,x,y,d0){ for(var i=1;i<r.p.length;i++){ if(r.L[i]<d0) continue; var a=r.p[i-1], b=r.p[i], dx=b[0]-a[0], dy=b[1]-a[1], l2=dx*dx+dy*dy; if(!l2) continue;
+      var t=Math.max(0,Math.min(1,((x-a[0])*dx+(y-a[1])*dy)/l2)); if(Math.hypot(a[0]+dx*t-x,a[1]+dy*t-y)<2){ var d=r.L[i-1]+Math.sqrt(l2)*t; if(d>=d0) return d; } } return r.len; }
+
+  var V=[], vid=0, vehicles=new T.Group(); city.add(vehicles);
+  function tramGeo(b){ b.box(-23,1.2,-4.4,23,5,4.4,'#3f6f5a'); b.box(-22.4,5,-4.2,22.4,8.6,4.2,null,'lit'); for(var x=-22.4;x<=22.5;x+=5.6) b.box(x-.45,5,-4.4,x+.45,8.6,4.4,'#efe6d2');
+    b.box(-23,8.6,-4.4,23,9.6,4.4,'#efe6d2'); b.box(-23.6,9.6,-4.7,23.6,10.5,4.7,'#6a4a3a'); b.box(-16,10.5,-2.4,16,11.8,2.4,'#7d5a48'); b.add(BOX,-4,11.6,0,.5,10.5,.5,'#2b2826',0,null,0,.62);
+    b.box(-24.4,1.6,-3.6,-23,3.2,3.6,'#2b2826'); b.box(23,1.6,-3.6,24.4,3.2,3.6,'#2b2826'); b.box(-17,0,-4,-10,2.2,4,'#1b1a19'); b.box(10,0,-4,17,2.2,4,'#1b1a19'); }
+  function addV(o){ var b=new Builder(), len=16;
+    if(o.style==='tram'){ tramGeo(b); len=48; } else { carGeo(b,0,0,0,o.style,o.col); len=o.style==='50'?19:o.style==='T'?13:16; }
+    var g=b.build(); g.scale.setScalar(.001);
+    var v={id:vid++,g:g,r:o.r,d:o.d||0,sp:o.sp,cur:o.sp,y:o.y==null?.5:o.y,len:len,wrap:!!o.wrap,closed:!!o.closed,stops:o.stops||[],si:0,wait:0,hold:o.hold||0,s:0,dying:false,av:o.style==='av',empty:false,stuck:0,ghost:0,site:o.site,x:0,z:0,hx:1,hz:0,s1:o.s1,s2:o.s2};
+    var hl=new T.Mesh(FLAT,headMat); hl.scale.set(30,1,15); hl.position.set(len/2+13,.35,0); hl.renderOrder=3; g.add(hl);
+    if(v.av){ var ring=new T.Mesh(FLAT,ringFull); ring.scale.set(30,1,30); ring.position.y=.3; ring.renderOrder=3; g.add(ring); v.ring=ring;
+      var gh=new T.Group(); g.children.forEach(function(ch){ if(ch.isMesh&&ch.material!==headMat&&ch.material!==ringFull){ var m=new T.Mesh(ch.geometry,ghostMat); gh.add(m); } });
+      gh.add(new T.LineSegments(new T.EdgesGeometry(g.children[0].geometry,25),edgeMat)); gh.visible=false; g.add(gh); v.ghostG=gh; v.solid=g.children.filter(function(ch){ return ch.isMesh&&(ch.material===vcMat||ch.material===litMat||ch.material===darkMat); }); }
+    while(v.si<v.stops.length&&v.stops[v.si].d<v.d) v.si++;
+    vehicles.add(g); V.push(v); place(v); if(v.av&&v.si>0&&v.stops[v.si-1].t!=='pick'&&v.stops[v.si-1].t!=='swap') setEmpty(v,true); return v; }
+  function place(v){ var p=at(v.r,v.d); v.x=p[0]; v.z=p[1]; v.hx=Math.cos(p[2]); v.hz=Math.sin(p[2]); v.g.position.set(p[0],v.y,p[1]); v.g.rotation.y=-p[2]; }
+  function setEmpty(v,e){ if(v.empty===e||!v.av) return; v.empty=e; v.ghostG.visible=e; v.solid.forEach(function(m){ m.visible=!e; }); v.ring.material=e?ringEmpty:ringFull; }
+  function setParked(v,p){ v.parked=p; if(v.ring) v.ring.visible=!p; }
+  function through(z,dir,n,sp,styles,cols,y,ph){ var r=route(dir>0?[[-44,z],[1244,z]]:[[1244,z],[-44,z]],0), R=rng((z*13+n)|0);
+    for(var i=0;i<n;i++) addV({r:r,d:((i+(ph||0)+R()*.5)/n)*r.len,sp:sp*(.9+R()*.2),style:pick(styles,R),col:pick(cols,R),y:y,wrap:true}); }
+  function loopS(zMain,n,sp,styles,cols){ var r=route([[580,zMain],[870,zMain],[870,478],[290,478],[290,zMain],[580,zMain]]), R=rng(zMain+n);
+    for(var i=0;i<n;i++) addV({r:r,d:((i+R()*.4)/n)*r.len,sp:sp,style:pick(styles,R),col:pick(cols,R),wrap:true,closed:true}); }
+  function loopN(zMain,n,sp,styles,cols){ var r=route([[730,zMain],[590,zMain],[590,122],[870,122],[870,zMain],[730,zMain]]), R=rng(zMain+n+3);
+    for(var i=0;i<n;i++) addV({r:r,d:((i+R()*.4)/n)*r.len,sp:sp,style:pick(styles,R),col:pick(cols,R),wrap:true,closed:true}); }
+  function avSite(site,n,shared){ var R=rng(site==='S'?301:302);
+    for(var i=0;i<n;i++){ var laps=1+(i%2), p, bx, r, s1, s2=null;
+      if(site==='S'){ p=[[-44,321],[460,321],[460,362],[700,362],[700,321]]; if(!shared){ for(var k=0;k<laps;k++) p.push([870,321],[870,478],[290,478],[290,321]); p.push([460,321],[460,362],[700,362],[700,321]); } p.push([1244,321]); bx=512+(i%4)*34; r=route(p); s1=distAfter(r,bx,362,0); if(!shared) s2=distAfter(r,bx,362,s1+300); }
+      else { p=[[1244,279],[844,279],[844,210],[616,210],[616,279]]; if(!shared){ for(var k2=0;k2<laps;k2++) p.push([590,279],[590,122],[870,122],[870,279]); p.push([844,279],[844,210],[616,210],[616,279]); } p.push([-44,279]); bx=796-(i%4)*34; r=route(p); s1=distAfter(r,bx,210,0); if(!shared) s2=distAfter(r,bx,210,s1+300); }
+      var stops=[{d:s1,wait:shared?3.4:2.4,t:shared?'swap':'drop',bx:bx}]; if(s2!=null) stops.push({d:s2,wait:2.6,t:'pick',bx:bx});
+      addV({r:r,d:((i+R()*.3)/n)*r.len*(shared?.82:.96),sp:58+R()*10,style:'av',col:pick(AVC,R),stops:stops,site:site,wrap:true,s1:s1,s2:s2}); } }
+  var NAV=0, MIX=null;
+  /* private self-driving cars at a drop-off site, each doing what the policy makes cheapest: circle the blocks, park in
+     the lot, or drive home empty (and leave the map) */
+  function avSite2(site,n,pm){ var R=rng(site==='S'?311:312), keys=['circle','lot','home'];
+    for(var i=0;i<n;i++){ var u=(i+.5)/n, beh='home', acc=0; for(var k=0;k<3;k++){ acc+=pm[keys[k]]||0; if(u<=acc+1e-9){ beh=keys[k]; break; } }
+      var p, bx, r, s1, s2=null, sp=null, laps=1+(i%2), slot=[748+((i*3+(site==='S'?1:0))%8)*12.4, 150+(((i*3+(site==='S'?1:0))/8)|0)%3*14];
+      if(site==='S'){ bx=512+(i%4)*34; p=[[-44,321],[460,321],[460,362],[700,362],[700,321]];
+        if(beh==='circle'){ for(var k1=0;k1<laps;k1++) p.push([870,321],[870,478],[290,478],[290,321]); p.push([460,321],[460,362],[700,362],[700,321],[1244,321]); }
+        else if(beh==='lot'){ p.push([870,321],[870,166],[852,166],[slot[0],166],[slot[0],slot[1]],[slot[0],166],[852,166],[870,166],[870,321],[870,478],[290,478],[290,321],[460,321],[460,362],[700,362],[700,321],[1244,321]); }
+        else p.push([1244,321]);
+        r=route(p); s1=distAfter(r,bx,362,0); if(beh==='lot') sp=distAfter(r,slot[0],slot[1],s1); if(beh!=='home') s2=distAfter(r,bx,362,(sp||s1)+200); }
+      else { bx=796-(i%4)*34; p=[[1244,279],[844,279],[844,210],[616,210],[616,279]];
+        if(beh==='circle'){ for(var k2=0;k2<laps;k2++) p.push([590,279],[590,122],[870,122],[870,279]); p.push([844,279],[844,210],[616,210],[616,279],[-44,279]); }
+        else if(beh==='lot'){ p.push([590,279],[590,122],[870,122],[870,166],[852,166],[slot[0],166],[slot[0],slot[1]],[slot[0],166],[852,166],[870,166],[870,279],[844,279],[844,210],[616,210],[616,279],[-44,279]); }
+        else p.push([-44,279]);
+        r=route(p); s1=distAfter(r,bx,210,0); if(beh==='lot') sp=distAfter(r,slot[0],slot[1],s1); if(beh!=='home') s2=distAfter(r,bx,210,(sp||s1)+200); }
+      var stops=[{d:s1,wait:2.4,t:'drop',bx:bx}]; if(sp!=null) stops.push({d:sp,wait:7+R()*4,t:'park'}); if(s2!=null) stops.push({d:s2,wait:2.6,t:'pick',bx:bx});
+      addV({r:r,d:((i+R()*.3)/n)*r.len*.5,sp:58+R()*10,style:'av',col:pick(AVC,R),stops:stops,site:site,wrap:true,s1:s1,s2:s2}); } }
+  function populate(){ var now=['sedan','suv','sedan'];
+    if(era===0){ through(307,1,2,34,['tram'],['#3f6f5a']); through(293,-1,2,34,['tram'],['#3f6f5a'],null,.5); through(319.5,1,2,30,['T'],['#222']); through(280.5,-1,2,30,['T'],['#222'],null,.4); }
+    else if(era===1){ through(314,1,6,60,['50'],FIFTY); through(286,-1,6,60,['50'],FIFTY); loopS(314,2,52,['50'],FIFTY); loopN(286,2,52,['50'],FIFTY);
+      [[30.5,-1],[43.5,-1],[56.5,1],[69.5,1]].forEach(function(l,i){ through(l[0],l[1],3,150+(i%2)*26,['50'],FIFTY,30,i*.3); }); }
+    else if(era===2){ [[308,1],[321,1],[292,-1],[279,-1]].forEach(function(l,i){ through(l[0],l[1],5,48,now,CARS,null,i*.37); }); loopS(321,3,44,now,CARS); loopN(279,2,44,now,CARS);
+      [[30.5,-1],[43.5,-1],[56.5,1],[69.5,1]].forEach(function(l,i){ through(l[0],l[1],6,84+(i%2)*14,now,CARS,30,i*.3); }); }
+    else { var M=MIX||{circle:1,park:0,home:0,shared:0}, priv=Math.max(2,Math.round(7*(1-M.shared))), ns=M.shared>.12?Math.max(1,Math.round(4*M.shared*1.8)):0;
+      var pm={circle:M.circle/(1-M.shared||1),lot:M.park/(1-M.shared||1),home:M.home/(1-M.shared||1)};
+      avSite2('S',priv,pm); avSite2('N',priv,pm); if(ns){ avSite('S',ns,true); avSite('N',ns,true); }
+      var thru=Math.max(1,Math.round(3*(.4+.6*(M.circle+.4*M.home)))); through(308,1,thru,60,['av'],AVC); through(292,-1,thru,60,['av'],AVC,null,.4);
+      [[30.5,-1],[43.5,-1],[56.5,1],[69.5,1]].forEach(function(l,i){ through(l[0],l[1],2,140+(i%2)*20,['av'],AVC,30,i*.3); }); }
+    NAV=V.filter(function(v){ return !v.dying&&v.site; }).length; meterSig=''; paintMeter(); }
+  var repop=-1;
+  function clearV(fast){ V.forEach(function(v){ v.dying=true; }); if(fast){ V.forEach(function(v){ kill(v); }); V=[]; } }
+  function kill(v){ vehicles.remove(v.g); v.g.traverse(function(o){ if(o.geometry&&o.geometry!==FLAT) o.geometry.dispose(); }); }
+
+  /* people: one instanced figure */
+  var PN=110, people=[], pmesh, dummy=new T.Object3D();
+  (function(){ var b=new Builder(); b.add(CYL,0,0,0,1.25,4.6,1.25,'#fff'); b.add(SPH,0,5.9,0,1.45,1.45,1.45,'#fff'); var g=geoOf(b.P,b.N,null);
+    pmesh=new T.InstancedMesh(g,new T.MeshLambertMaterial({color:0xffffff}),PN); pmesh.castShadow=true; pmesh.frustumCulled=false; city.add(pmesh);
+    var R=rng(9), CL=['#a5482f','#4f7fae','#c4973a','#6d597a','#3f6f5a','#e9e2d0','#2f4f6f','#8a6a4a','#d98a7a','#3a3632'];
+    var walks=[[[-20,265.5],[1220,265.5]],[[1220,268.5],[-20,268.5]],[[-20,331.5],[1220,331.5]],[[1220,334.5],[-20,334.5]]].map(function(p){ return route(p,0); });
+    var plaza=[route([[470,380],[690,380],[690,460],[470,460],[470,380]],6), route([[690,384],[470,384],[470,456],[690,456],[690,384]],6), route([[520,400],[640,400],[640,448],[520,448],[520,400]],10),
+               route([[320,150],[540,150],[540,214],[320,214],[320,150]],8), route([[906,180],[1040,180],[906,180]],0), route([[120,404],[200,404],[200,350],[112,350],[120,404]],4)];
+    for(var i=0;i<PN;i++){ var r=i<50?walks[i%4]:plaza[i%plaza.length]; people.push({r:r,d:R()*r.len,sp:8+R()*6,s:0,on:false,ph:R()*6.28,k:i<50?'walk':i<78?'plaza':'rider'}); pmesh.setColorAt(i,_c.set(pick(CL,R))); }
+    pmesh.instanceColor.needsUpdate=true; })();
+  var riders=[];   /* {i, pts, t, durs} */
+  function rider(from,to,dur,pop){ var i=-1; for(var k=78;k<PN;k++){ if(!people[k].busy){ i=k; break; } } if(i<0) return; people[i].busy=true; riders.push({i:i,a:from,b:to,t:0,dur:dur,pop:pop}); }
+  function setPeople(instant){ var nw=[50,22,9,30][era], k=0, j=0; people.forEach(function(p,i){ if(p.k==='walk'){ p.on=k++<nw; } else if(p.k==='plaza'){ p.on=era===3; } if(instant) p.s=p.on?1:0; }); }
+
+  /* ── camera ── */
+  var VIEW=[{az:-33,el:20,t:[0,14,0]},{az:27,el:28,t:[0,10,0]},{az:5,el:53,t:[0,0,0]},{az:-6,el:40,t:[10,10,-20]},{az:-6,el:32,t:[0,10,0]}];
+  var C={az:-78,el:64,r:3000,t:new T.Vector3(0,0,0),sx:0,sy:0}, user={az:0,el:0,zoom:1}, time=0;
+  /* the model's corners (plus the office tower once it is built); the camera backs off until all of them sit inside the
+     part of the slide the panels leave clear, and the picture is shifted so the model is centered in that part */
+  var BB=[], BBT=[[450,134,-154],[544,134,-154],[450,134,-84],[544,134,-84]], SAFE={l:-.97,r:.2,t:.58,b:-.86};
+  [-626,626].forEach(function(x){ [-326,326].forEach(function(z){ [-34,44].forEach(function(y){ BB.push([x,y,z]); }); }); });
+  function frameBox(a,e,r,t,out){ var ce=Math.cos(e), se=Math.sin(e), sa=Math.sin(a), ca=Math.cos(a), tv=Math.tan(cam.fov*Math.PI/360), th=tv*cam.aspect;
+    var x0=1e9,x1=-1e9,y0=1e9,y1=-1e9, pts=era>=2?BB.concat(BBT):BB;
+    for(var i=0;i<pts.length;i++){ var px=pts[i][0]-t[0], py=pts[i][1]-t[1], pz=pts[i][2]-t[2];
+      var d=r-(px*ce*sa+py*se+pz*ce*ca); if(d<1){ out.ok=false; return out; }
+      var X=(px*ca-pz*sa)/(d*th), Y=(-px*sa*se+py*ce-pz*ca*se)/(d*tv); if(X<x0)x0=X; if(X>x1)x1=X; if(Y<y0)y0=Y; if(Y>y1)y1=Y; }
+    out.ok=true; out.w=x1-x0; out.h=y1-y0; out.cx=(x0+x1)/2; out.cy=(y0+y1)/2; return out; }
+  var _fb={};
+  function fitR(a,e,t){ var lo=300, hi=9000; for(var i=0;i<16;i++){ var m=(lo+hi)/2; frameBox(a,e,m,t,_fb); if(_fb.ok&&_fb.w<=SAFE.r-SAFE.l&&_fb.h<=SAFE.t-SAFE.b) hi=m; else lo=m; } return hi; }
+  function viewNow(){ return VIEW[era===3&&mode==='shared'?4:era]; }
+  function camStep(dt,snap){ var P=viewNow(), k=snap?1:1-Math.exp(-dt*1.25);
+    var az=P.az+user.az+Math.sin(time*.11)*8, el=Math.max(9,Math.min(86,P.el+user.el+Math.sin(time*.07+1)*1.2));
+    var r=fitR(az*Math.PI/180,el*Math.PI/180,P.t)*user.zoom*.68;
+    C.az+=(az-C.az)*k; C.el+=(el-C.el)*k; C.r+=(r-C.r)*k; C.t.lerp(_v.fromArray(P.t),k);
+    var a=C.az*Math.PI/180, e=C.el*Math.PI/180; cam.position.set(C.t.x+C.r*Math.cos(e)*Math.sin(a), C.t.y+C.r*Math.sin(e), C.t.z+C.r*Math.cos(e)*Math.cos(a)); cam.lookAt(C.t);
+    frameBox(a,e,C.r,[C.t.x,C.t.y,C.t.z],_fb);
+    if(_fb.ok){ var k2=snap?1:1-Math.exp(-dt*2.2), z=Math.min(1,user.zoom); C.sx+=(((SAFE.l+SAFE.r)/2-_fb.cx)*z-C.sx)*k2; C.sy+=(((SAFE.t+SAFE.b)/2-_fb.cy)*z-C.sy)*k2; }
+    var W=stage.clientWidth||1280, H=stage.clientHeight||720; cam.setViewOffset(W,H,-C.sx*W/2,C.sy*H/2,W,H); }
+  (function(){ var drag=null;
+    cv.addEventListener('pointerdown',function(e){ drag={x:e.clientX,y:e.clientY,az:user.az,el:user.el}; try{ cv.setPointerCapture(e.pointerId); }catch(_e){} sec.classList.add('grab'); e.stopPropagation(); });
+    cv.addEventListener('pointermove',function(e){ if(!drag) return; user.az=drag.az-(e.clientX-drag.x)*.28; user.el=Math.max(-40,Math.min(60,drag.el+(e.clientY-drag.y)*.2)); sec.classList.add('moved'); });
+    var up=function(){ drag=null; sec.classList.remove('grab'); }; cv.addEventListener('pointerup',up); cv.addEventListener('pointercancel',up);
+    cv.addEventListener('wheel',function(e){ e.preventDefault(); user.zoom=Math.max(.45,Math.min(1.5,user.zoom*(1+e.deltaY*.0012))); sec.classList.add('moved'); },{passive:false});
+    cv.addEventListener('dblclick',function(){ user.az=0; user.el=0; user.zoom=1; }); })();
+
+  /* ── the meter ── */
+  var emptyMiles=0, meterSig='';
+  function paintMeter(){ return; var sig=era+mode; if(era<2){ meter.hidden=true; meterSig=sig; return; }
+    if(sig===meterSig&&meter.innerHTML) return; meterSig=sig; meter.hidden=false;
+    if(era===2){ var mv=V.filter(function(v){ return !v.dying; }).length; meter.innerHTML='<div class="t3-mrow"><b>'+NPARK+'</b><span>cars parked</span></div><div class="t3-mrow"><b>'+mv+'</b><span>cars moving</span></div><div class="t3-mbar"><i style="width:'+(NPARK/(NPARK+mv)*100).toFixed(0)+'%"></i></div>'; }
+    else if(mode==='shared'){ meter.innerHTML='<div class="t3-mrow"><b>'+NAV+'</b><span>shared cars serve these riders</span></div><div class="t3-mrow"><b>14</b><span>private cars did it before</span></div><div class="t3-mrow s"><span>no circling, but some extra miles between riders</span></div>'; }
+    else { meter.innerHTML='<div class="t3-mrow"><b data-me>0</b><span>cars driving with no one inside</span></div><div class="t3-mrow"><b data-mm>0.0</b><span>empty miles on these blocks</span></div><div class="t3-mrow s"><i class="t3-dot"></i><span>red and see-through = empty car</span></div>'; } }
+
+  /* ── one frame ── */
+  function backOut(t){ var c=1.55; t-=1; return 1+(c+1)*t*t*t+c*t*t; }
+  function cubicOut(t){ t-=1; return 1+t*t*t; }
+  function applyEV(g){ var u=g.userData, v=u.v; g.visible=v>.001; if(!g.visible) return;
+    if(u.kind==='rise'){ g.scale.y=Math.max(.001,u.on?backOut(v):v*v); }
+    else if(u.kind==='lot'){ var s=cubicOut(Math.min(1,v*1.6)); g.scale.set(Math.max(.001,s),Math.max(.001,u.on?backOut(v):v*v),Math.max(.001,s)); }
+    else if(u.kind==='flat'){ var f=Math.max(.001,cubicOut(v)); g.scale.set(1,1,f); }
+    else if(u.kind==='wipe'){ g.scale.x=Math.max(.001,v<.5?4*v*v*v:1-Math.pow(-2*v+2,3)/2); } }
+  function update(dt){
+    time+=dt; applyLook(1-Math.exp(-dt*1.5)); camStep(dt);
+    var i, j;
+    for(i=0;i<EV.length;i++){ var g=EV[i], u=g.userData, tg=u.on?1:0; if(u.v===tg) continue; if(u.wait>0){ u.wait-=dt; continue; } u.v=Math.max(0,Math.min(1,u.v+(u.on?dt/1.05:-dt/.55))); applyEV(g); }
+    if(repop>=0){ repop-=dt; if(repop<0){ repop=-1; populate(); } }
+    /* vehicles: follow the car ahead, wait at the drop-off, wrap at the map edge */
+    var nEmpty=0, nParked=0;
+    for(i=0;i<V.length;i++){ var a=V[i];
+      if(a.dying){ a.s-=dt*3; if(a.s<=0){ kill(a); V.splice(i,1); i--; continue; } a.g.scale.setScalar(Math.max(.001,a.s)); continue; }
+      if(a.hold>0){ a.hold-=dt; a.g.visible=false; continue; } a.g.visible=true;
+      var lim=1e9; if(a.ghost>0) a.ghost-=dt; else for(j=0;j<V.length;j++){ if(j===i) continue; var b=V[j]; if(b.dying||b.hold>0||Math.abs(b.y-a.y)>4) continue;
+          var dx=b.x-a.x, dz=b.z-a.z, f=dx*a.hx+dz*a.hz; if(f<=0||f>70) continue; if(Math.abs(-dx*a.hz+dz*a.hx)>5.4) continue;
+          var f2=-(dx*b.hx+dz*b.hz); if(f2>0&&f2<70&&Math.abs(dx*b.hz-dz*b.hx)<5.4&&a.id<b.id) continue;
+          f-=(a.len+b.len)/2; if(f<lim) lim=f; }
+      var tgt=a.sp*Math.max(0,Math.min(1,(lim-5)/24));
+      var st=a.stops[a.si]; if(st&&a.wait<=0){ var ds=st.d-a.d; if(ds<60) tgt=Math.min(tgt,Math.max(9,a.sp*ds/60)); }
+      if(a.wait>0){ a.wait-=dt; tgt=0; a.cur=0; if(a.wait<=0){ if(st.t==='drop') setEmpty(a,true); else if(st.t==='pick') setEmpty(a,false); else if(st.t==='park') setParked(a,false); a.si++; } }
+      else { a.cur+=(tgt-a.cur)*Math.min(1,dt*(tgt<a.cur?7:2.2)); if(a.cur<2&&lim<1e8){ a.stuck+=dt; if(a.stuck>3.2){ a.ghost=1.6; a.stuck=0; } } else a.stuck=0;
+        var nd=a.d+a.cur*dt;
+        if(st&&nd>=st.d){ nd=st.d; a.wait=st.wait; a.cur=0; var side=a.site==='S'?1:-1, door=a.site==='S'?[st.bx+(a.id%3-1)*9,394]:[st.bx+(a.id%3-1)*9,196], curb=[st.bx,a.site==='S'?368:204];
+          if(st.t==='park') setParked(a,true); else { if(st.t==='drop'||st.t==='swap') rider(curb,door,2.6,false); if(st.t==='pick'||st.t==='swap') rider(door,curb,st.wait-.3,true); } }
+        a.d=nd;
+        if(a.d>=a.r.len){ if(a.closed){ a.d-=a.r.len; } else { a.d=0; a.si=0; a.hold=a.av&&a.site?1+((a.id*7)%5)*.8:0; setEmpty(a,false); } } }
+      place(a);
+      var sc=1; if(!a.closed){ sc=Math.min(1,a.d/34,(a.r.len-a.d)/34); } a.s=Math.min(1,a.s+dt*2.2); a.g.scale.setScalar(Math.max(.001,Math.min(a.s,sc)));
+      if(a.empty&&a.parked) nParked++;
+      else if(a.empty){ nEmpty++; emptyMiles+=a.cur*dt/5280; a.ring.scale.setScalar(30+Math.sin(time*5+a.id)*3); } }
+    if(sec.__hud) sec.__hud(nEmpty,nParked);
+    /* people */
+    for(i=0;i<PN;i++){ var p=people[i]; if(p.k==='rider') continue; p.s+=((p.on?1:0)-p.s)*Math.min(1,dt*2.5); if(p.s<.01){ dummy.scale.setScalar(.0001); dummy.position.set(0,-50,0); }
+      else { p.d+=p.sp*dt; if(p.d>p.r.len) p.d-=p.r.len; var q=at(p.r,p.d); dummy.position.set(q[0],1.1+Math.abs(Math.sin(time*7+p.ph))*.55,q[1]); dummy.scale.setScalar(p.s); }
+      dummy.updateMatrix(); pmesh.setMatrixAt(i,dummy.matrix); }
+    for(i=78;i<PN;i++){ if(!people[i].busy){ dummy.scale.setScalar(.0001); dummy.position.set(0,-50,0); dummy.updateMatrix(); pmesh.setMatrixAt(i,dummy.matrix); } }
+    for(i=0;i<riders.length;i++){ var R=riders[i]; R.t+=dt; var t=Math.min(1,R.t/R.dur), sca=R.pop?Math.min(1,t*5,(1-t)*6+.0001):Math.min(1,t*6,(1-t)*4+.0001);
+      dummy.position.set(R.a[0]+(R.b[0]-R.a[0])*t,1.3+Math.abs(Math.sin(R.t*8))*.5,R.a[1]+(R.b[1]-R.a[1])*t); dummy.scale.setScalar(Math.max(.0001,sca)); dummy.updateMatrix(); pmesh.setMatrixAt(R.i,dummy.matrix);
+      if(R.t>=R.dur){ people[R.i].busy=false; riders.splice(i,1); i--; } }
+    pmesh.instanceMatrix.needsUpdate=true;
+    jet.visible=EV_PLAZA.userData.v>.9; if(jet.visible) jet.scale.set(1,13+Math.sin(time*2.3)*4+Math.sin(time*7.1)*1.2,1);
+  }
+  var EV_PLAZA=EV.filter(function(g){ return g.userData.e0===3&&g.userData.ox===580; })[0];
+
+  var raf=0, last=0, running=false, slow=0, frames=0;
+  function frame(now){ if(!running) return; raf=requestAnimationFrame(frame); var ms=now-last; last=now; var dt=Math.min(.05,Math.max(.001,ms/1000)); update(dt); renderer.render(scene,cam);
+    frames++; if(frames>40&&DPR>1){ if(ms>30) slow++; else slow=Math.max(0,slow-1); if(slow>45){ DPR=1; renderer.setPixelRatio(1); size(); slow=0; } } }
+  function size(){ var w=stage.clientWidth, h=stage.clientHeight; if(!w||!h) return; renderer.setSize(w,h,false); cam.aspect=w/h; cam.updateProjectionMatrix(); }
+  if(window.ResizeObserver) new ResizeObserver(size).observe(stage); else window.addEventListener('resize',size);
+  size();
+
+  return {
+    setEra:function(e,m,instant){ user.az=0; user.el=0; user.zoom=1; sec.classList.remove('moved');
+      EV.forEach(function(g){ var u=g.userData, on=e>=u.e0&&e<=u.e1; if(instant){ u.on=on; u.v=on?1:0; u.wait=0; g.scale.set(1,1,1); applyEV(g); return; }
+        if(on===u.on) return; u.on=on; var sweep=(u.ox/1200)*1.15+Math.random()*.2; u.wait=on?sweep+.5:sweep; });
+      setPeople(instant); emptyMiles=0; meterSig='';
+      if(instant){ clearV(true); populate(); applyLook(1); } else { clearV(false); repop=e===3&&V.some(function(v){ return v.av; })?.45:1.5; paintMeter(); } },
+    intro:function(){ C.az=-78; C.el=64; C.r=3000; C.sx=0; C.sy=0; },
+    setMix:function(m,instant){ MIX=m; if(instant){ clearV(true); populate(); } else { clearV(false); repop=.5; } },
+    start:function(){ if(running) return; running=true; size(); last=performance.now(); raf=requestAnimationFrame(frame); },
+    stop:function(){ running=false; cancelAnimationFrame(raf); },
+    dbg:{VIEW:VIEW,user:user,C:C},
+    tick:function(dt,n){ for(var i=0;i<(n||1);i++) update(dt); renderer.render(scene,cam); return {draws:renderer.info.render.calls,tris:renderer.info.render.triangles,cars:V.length}; }
+  };
+}
+  return createApp();
+};
+</script><script>(function(){
+'use strict';
+var sec=document.currentScript.closest('.avf-slide'); if(!sec||sec.dataset.wired) return; sec.dataset.wired='1';
+var stage=sec.querySelector('[data-avf3]'), panel=sec.querySelector('[data-panel]'), loadEl=sec.querySelector('[data-load]');
+var M=window.AVM, app=null, booting=false, no3d=false, wasOn=false, CDN='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+var base=M.run({kind:'none'}), cur=null, runs={none:base}, order=['none'];
+var POL={
+  tax:{t:'A tax on unoccupied miles', d:'Every mile a car drives with no one inside costs its owner more. Circling gets expensive; parking or going home looks better.', unit:'per empty mile', min:.1, max:2, step:.05, v:.5, fmt:function(v){ return '$'+v.toFixed(2); },
+    real:'Closest real example: New York State charges for-hire trips in Manhattan below 96th Street a surcharge of $2.75 a trip, and $0.75 for a shared (pool) trip.'},
+  limit:{t:'A limit on unoccupied miles', d:'No car may drive more than a set number of empty miles per trip. Cars that would go over head to the parking lot.', unit:'empty miles per trip', min:1, max:10, step:.5, v:2, fmt:function(v){ return v+' mi'; },
+    real:'Watch the parking lot fill, and the number of spaces the city would need.'},
+  share:{t:'A subsidy for shared rides', d:'Pay riders to share a self-driving car instead of sending their own. Fewer cars wait downtown, but shared cars still drive empty between riders.', unit:'per shared ride', min:0, max:5, step:.25, v:2, fmt:function(v){ return '$'+v.toFixed(2); },
+    real:'California&#8217;s Clean Miles Standard (SB 1014) judges ride-hail companies on CO&#8322; per passenger-mile, so filling seats counts.'}};
+var fmt={ pct:function(x){ return Math.round(x*100)+'%'; }, n:function(x){ return Math.round(x).toLocaleString('en-US'); }, mph:function(x){ return x.toFixed(1)+' mph'; },
+  usd:function(x){ return (x<0?'&#8722;$':'+$')+Math.abs(Math.round(x/100)*100).toLocaleString('en-US'); } };
+function hud(e,p){ var a=sec.querySelector('[data-he]'), b=sec.querySelector('[data-hp]'); if(a) a.textContent=e; if(b) b.textContent=p; }
+sec.__hud=hud;
+function label(k){ return k==='none'?'No policy':POL[k].t.replace('A ','').replace(/^./,function(c){ return c.toUpperCase(); })+' ('+POL[k].fmt(runs[k].pol.v)+')'; }
+/* ── the 3D city ── */
+function boot(){ if(app||booting||no3d) return; booting=true; loadEl.hidden=false;
+  var go=function(){ try{ app=window.AVCITY(sec,stage); sec.__avapp=app; app.setEra(3,'circle',true); app.setMix((cur||base).mix,true); app.intro(); loadEl.hidden=true; booting=false; if(isOn()) app.start(); }catch(e){ if(window.console) console.warn(e); fail(); } };
+  if(window.THREE) go(); else { var s=document.createElement('script'); s.src=CDN; s.onload=go; s.onerror=fail; document.head.appendChild(s); } }
+function fail(){ booting=false; no3d=true; loadEl.hidden=true; sec.classList.add('no3d'); }
+function isOn(){ return sec.classList.contains('active'); }
+function onShow(){ var on=isOn(); if(on&&!wasOn){ boot(); if(app) app.start(); } if(!on&&wasOn&&app) app.stop(); wasOn=on; }
+new MutationObserver(onShow).observe(sec,{attributes:true,attributeFilter:['class']}); onShow();
+/* ── panels ── */
+function metric(lbl,v,ref,good,f,sub){ var d=ref==null?null:v-ref, cls=d==null||Math.abs(d)<1e-9?'':((good>0?d>0:d<0)?'gd':'bd');
+  return '<div class="avf-met"><small>'+lbl+'</small><b>'+f(v)+'</b>'+(d==null||Math.abs(d)<1e-9?'':'<em class="'+cls+'">'+(d>0?'&#9650; ':'&#9660; ')+f(Math.abs(d)).replace('+','').replace('&#8722;','')+'</em>')+(sub?'<span>'+sub+'</span>':'')+'</div>'; }
+function mixBar(r){ var m=r.mix, segs=[['circle','#c4675d','circling'],['park','#3d6b4f','parked'],['home','#9a7b3c','driven home'],['shared','#2c4a7a','shared rides']];
+  return '<div class="avf-mix">'+segs.map(function(s){ return m[s[0]]>.005?'<i style="width:'+(m[s[0]]*100).toFixed(1)+'%;background:'+s[1]+'" title="'+s[2]+'"></i>':''; }).join('')+'</div><div class="avf-mixk">'+segs.map(function(s){ return '<span><i style="background:'+s[1]+'"></i>'+s[2]+' '+Math.round(m[s[0]]*100)+'%</span>'; }).join('')+'</div>'; }
+function paintProblem(){
+  panel.innerHTML='<div class="avf-pk">THE EMPTY-CAR PROBLEM</div><h3>After the drop-off, the car keeps driving</h3>'+
+    '<div class="avf-facts">'+
+    '<div><b>38.5%</b><span>of ride-hail miles in California had no passenger in the car (2018)</span><em>CARB 2019</em></div>'+
+    '<div><b>+83.5%</b><span>more driving from ride-hailing in Denver; at least 40.8% of its miles were empty</span><em>Henao &amp; Marshall 2019</em></div>'+
+    '<div><b>&#215;2</b><span>self-driving cars that circle instead of paying to park could more than double driving in dense downtowns</span><em>Millard-Ball 2019</em></div>'+
+    '<div><b>301 g</b><span>CO&#8322; per passenger-mile for ride-hail trips, against 203 g for the average California car</span><em>CARB 2019</em></div></div>'+
+    '<div class="avf-pk" style="margin-top:.6rem">IN THIS CITY, WITH NO POLICY</div><div class="avf-mets two">'+
+      metric('Downtown miles driven empty',base.emptyShare,null,-1,fmt.pct)+metric('Average downtown speed',base.speed,null,1,fmt.mph,'today: '+base.speed0.toFixed(1)+' mph')+
+      metric('CO&#8322; a day',base.co2t,null,-1,function(x){ return Math.round(x)+' t'; })+metric('Extra minutes per 3-mile trip',base.delayMin,null,-1,function(x){ return x.toFixed(1); })+'</div>'+
+    '<p class="avf-note">Red, see-through cars in the city are driving with no one inside.</p>';
+}
+function paintPolicies(){
+  var k=cur&&cur.pol.kind!=='none'?cur.pol.kind:null;
+  var cards=Object.keys(POL).map(function(id){ return '<button type="button" class="avf-pol'+(k===id?' on':'')+'" data-pol="'+id+'"><b>'+POL[id].t+'</b><span>'+POL[id].d+'</span></button>'; }).join('');
+  var body='';
+  if(k){ var P=POL[k], r=cur;
+    body='<div class="avf-ctl"><label>'+P.t+' <b data-vv>'+P.fmt(P.v)+'</b> <small>'+P.unit+'</small></label><input type="range" min="'+P.min+'" max="'+P.max+'" step="'+P.step+'" value="'+P.v+'" data-slider></div>'+
+      '<div class="avf-pk">WHAT THE EMPTY CARS DO</div>'+mixBar(r)+
+      '<div class="avf-mets">'+metric('Downtown miles driven empty',r.emptyShare,base.emptyShare,-1,fmt.pct)+metric('Average downtown speed',r.speed,base.speed,1,fmt.mph,'today: '+base.speed0.toFixed(1)+' mph')+
+        metric('CO&#8322; a day',r.co2t,base.co2t,-1,function(x){ return Math.round(x)+' t'; })+metric('Parking spaces needed',r.spaces,base.spaces,-1,fmt.n)+
+        metric('Government budget a day',r.gov,null,1,fmt.usd,r.gov>0?'raised by the tax':r.gov<0?'spent on the subsidy':'no money changes hands')+metric('Cost to an owner a day',r.ownerCost,base.ownerCost,-1,function(x){ return '$'+x.toFixed(2); },'to deal with the empty car')+'</div>'+
+      '<p class="avf-real">'+P.real+'</p>';
+  } else body='<p class="avf-note">Pick a policy. Each one runs the model and changes what the cars in the city do.</p>';
+  panel.innerHTML='<div class="avf-pk">POSSIBLE POLICIES</div><div class="avf-pols">'+cards+'</div>'+body+compare();
+  panel.querySelectorAll('[data-pol]').forEach(function(b){ b.onclick=function(){ choose(b.dataset.pol); }; });
+  var s=panel.querySelector('[data-slider]');
+  if(s){ s.oninput=function(){ POL[k].v=+s.value; run(k,false); panel.querySelector('[data-vv]').textContent=POL[k].fmt(POL[k].v); refresh(); };
+    s.onchange=function(){ if(app) app.setMix(cur.mix,false); s.blur(); }; }
+}
+/* refresh the numbers without rebuilding the slider (so dragging stays smooth) */
+function refresh(){ var keep=panel.querySelector('[data-slider]'); var v=keep?keep.value:null; paintPolicies(); var s=panel.querySelector('[data-slider]'); if(s&&v!=null){ s.value=v; s.focus(); } }
+function compare(){ if(order.length<2) return '';
+  var rows=order.map(function(k){ return runs[k]; }), mx=function(f){ return Math.max.apply(null,rows.map(f))||1; };
+  var cols=[['Empty miles',function(r){ return r.emptyShare; },fmt.pct,-1],['Speed',function(r){ return r.speed; },fmt.mph,1],['CO&#8322; a day',function(r){ return r.co2t; },function(x){ return Math.round(x)+' t'; },-1],
+    ['Parking spaces',function(r){ return r.spaces; },fmt.n,-1],['Budget a day',function(r){ return r.gov; },fmt.usd,1]];
+  return '<div class="avf-pk" style="margin-top:.6rem">COMPARE</div><table class="avf-cmp"><thead><tr><th></th>'+cols.map(function(c){ return '<th>'+c[0]+'</th>'; }).join('')+'</tr></thead><tbody>'+
+    order.map(function(k){ var r=runs[k]; return '<tr class="'+(cur&&cur.pol.kind===k?'on':'')+'"><td>'+label(k)+'</td>'+cols.map(function(c){ var v=c[1](r), m=mx(function(x){ return Math.abs(c[1](x)); });
+      return '<td><span class="avf-cb"><i style="width:'+(Math.abs(v)/m*100).toFixed(0)+'%"></i></span>'+c[2](v)+'</td>'; }).join('')+'</tr>'; }).join('')+'</tbody></table>';
+}
+function run(k,toCity){ var r=k==='none'?base:M.run({kind:k,v:POL[k].v}); runs[k]=r; if(order.indexOf(k)<0) order.push(k); cur=r; if(toCity!==false&&app) app.setMix(r.mix,false); return r; }
+function choose(k){ run(k,true); paintPolicies(); }
+/* ── the steps (on-screen buttons only) ── */
+function phase(p){ sec.dataset.phase=p; if(p==='problem'){ paintProblem(); } else if(p==='policies'){ sec.classList.add('fresh'); paintPolicies(); setTimeout(function(){ sec.classList.remove('fresh'); },900); } }
+sec.querySelector('[data-reveal]').onclick=function(){ phase('problem'); };
+sec.querySelector('[data-showpol]').onclick=function(){ phase('policies'); };
+var modal=sec.querySelector('[data-avm]'); sec.querySelector('[data-srcb]').onclick=function(){ modal.hidden=false; };
+sec.querySelector('[data-avx]').onclick=function(){ modal.hidden=true; }; modal.addEventListener('click',function(e){ if(e.target===modal) modal.hidden=true; });
 })();</script></section>
 <section class="slide c56-slide" data-type="game" data-game-id="ch20-2056" style="--accent:#8a6a2f">
   <div class="c56" data-c56>
@@ -10161,7 +10870,7 @@ window.FIN56 = function (K) {
 
 <div class="hud">
   <button onclick="prev()" title="Previous (left arrow)">&#8249;</button>
-  <span class="counter" id="counter">1 / 26</span>
+  <span class="counter" id="counter">1 / 27</span>
   <button onclick="next()" title="Next (right arrow)">&#8250;</button>
   <button onclick="toggleMenu()" title="Slide menu (O)">&#9776;</button>
   <button onclick="toggleFs()" title="Fullscreen (F)">&#9974;</button>
@@ -10170,7 +10879,7 @@ window.FIN56 = function (K) {
 <div class="menu" id="menu">
   <button class="menu-close" onclick="toggleMenu(false)" aria-label="Close menu">&times;</button>
   <h3>Chapter 20 &middot; Jump to a slide</h3>
-  <div class="menu-grid"><button class="menu-item" data-go="0"><span class="menu-num">1</span>Title</button><button class="menu-item" data-go="1"><span class="menu-num">2</span>Outline</button><button class="menu-item" data-go="2"><span class="menu-num">3</span>Announcements</button><button class="menu-item" data-go="3"><span class="menu-num">4</span>Intro ▶ First Impressions (live)</button><button class="menu-item" data-go="4"><span class="menu-num">5</span>20.1 ▶ Why Do We Follow the Rules?</button><button class="menu-item" data-go="5"><span class="menu-num">6</span>20.2 ▶ Who Decides, and Where?</button><button class="menu-item" data-go="6"><span class="menu-num">7</span>20.2 ▶ The Participation Continuum</button><button class="menu-item" data-go="7"><span class="menu-num">8</span>20.3 ▶ Did Your Generation Vote? (live)</button><button class="menu-item" data-go="8"><span class="menu-num">9</span>20.3 ▶ Election Night in Verdania</button><button class="menu-item" data-go="9"><span class="menu-num">10</span>20.4 ▶ How Policies Are Made</button><button class="menu-item" data-go="10"><span class="menu-num">11</span>20.4 ▶ The Long Loop (ANWR)</button><button class="menu-item" data-go="11"><span class="menu-num">12</span>20.5 ▶ Control Room: Willow Creek</button><button class="menu-item" data-go="12"><span class="menu-num">13</span>20.6 ▶ Headlines That Built the EPA</button><button class="menu-item" data-go="13"><span class="menu-num">14</span>20.6 ▶ What Does the EPA Cost You? (live)</button><button class="menu-item" data-go="14"><span class="menu-num">15</span>20.6 ▶ Follow the Pollution</button><button class="menu-item" data-go="15"><span class="menu-num">16</span>20.6 ▶ Since 1970 (live)</button><button class="menu-item" data-go="16"><span class="menu-num">17</span>20.6 ▶ One Year, Two Americas</button><button class="menu-item" data-go="17"><span class="menu-num">18</span>20.7 ▶ Pollution Without Passports</button><button class="menu-item" data-go="18"><span class="menu-num">19</span>20.7 ▶ Two-Thirds of the Senate</button><button class="menu-item" data-go="19"><span class="menu-num">20</span>20.7 ▶ How Many Skin Cancers? (live)</button><button class="menu-item" data-go="20"><span class="menu-num">21</span>20.7 ▶ The Montreal Protocol</button><button class="menu-item" data-go="21"><span class="menu-num">22</span>Policy ▶ Reasons for Optimism</button><button class="menu-item" data-go="22"><span class="menu-num">23</span>Policy ▶ The Statistician’s Lens</button><button class="menu-item" data-go="23"><span class="menu-num">24</span>20.8 ▶ Live Game: 2056</button><button class="menu-item" data-go="24"><span class="menu-num">25</span>Key Concepts</button><button class="menu-item" data-go="25"><span class="menu-num">26</span>20.5 ▶ Cap-and-Trade Sim</button></div>
+  <div class="menu-grid"><button class="menu-item" data-go="0"><span class="menu-num">1</span>Title</button><button class="menu-item" data-go="1"><span class="menu-num">2</span>Outline</button><button class="menu-item" data-go="2"><span class="menu-num">3</span>Announcements</button><button class="menu-item" data-go="3"><span class="menu-num">4</span>Intro ▶ First Impressions (live)</button><button class="menu-item" data-go="4"><span class="menu-num">5</span>20.1 ▶ Why Do We Follow the Rules?</button><button class="menu-item" data-go="5"><span class="menu-num">6</span>20.2 ▶ Who Decides, and Where?</button><button class="menu-item" data-go="6"><span class="menu-num">7</span>20.2 ▶ The Participation Continuum</button><button class="menu-item" data-go="7"><span class="menu-num">8</span>20.3 ▶ Did Your Generation Vote? (live)</button><button class="menu-item" data-go="8"><span class="menu-num">9</span>20.3 ▶ Election Night in Verdania</button><button class="menu-item" data-go="9"><span class="menu-num">10</span>20.4 ▶ How Policies Are Made</button><button class="menu-item" data-go="10"><span class="menu-num">11</span>20.4 ▶ The Long Loop (ANWR)</button><button class="menu-item" data-go="11"><span class="menu-num">12</span>20.5 ▶ Control Room: Willow Creek</button><button class="menu-item" data-go="12"><span class="menu-num">13</span>20.6 ▶ Headlines That Built the EPA</button><button class="menu-item" data-go="13"><span class="menu-num">14</span>20.6 ▶ What Does the EPA Cost You? (live)</button><button class="menu-item" data-go="14"><span class="menu-num">15</span>20.6 ▶ Follow the Pollution</button><button class="menu-item" data-go="15"><span class="menu-num">16</span>20.6 ▶ Since 1970 (live)</button><button class="menu-item" data-go="16"><span class="menu-num">17</span>20.6 ▶ One Year, Two Americas</button><button class="menu-item" data-go="17"><span class="menu-num">18</span>20.7 ▶ Pollution Without Passports</button><button class="menu-item" data-go="18"><span class="menu-num">19</span>20.7 ▶ Two-Thirds of the Senate</button><button class="menu-item" data-go="19"><span class="menu-num">20</span>20.7 ▶ How Many Skin Cancers? (live)</button><button class="menu-item" data-go="20"><span class="menu-num">21</span>20.7 ▶ The Montreal Protocol</button><button class="menu-item" data-go="21"><span class="menu-num">22</span>Policy ▶ Reasons for Optimism</button><button class="menu-item" data-go="22"><span class="menu-num">23</span>Policy ▶ The Statistician’s Lens</button><button class="menu-item" data-go="23"><span class="menu-num">24</span>Policy ▶ Looking to the Future</button><button class="menu-item" data-go="24"><span class="menu-num">25</span>20.8 ▶ Live Game: 2056</button><button class="menu-item" data-go="25"><span class="menu-num">26</span>Key Concepts</button><button class="menu-item" data-go="26"><span class="menu-num">27</span>20.5 ▶ Cap-and-Trade Sim</button></div>
 </div>
 
 <script>
