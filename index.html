@@ -1724,22 +1724,25 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 
 
 /* ═══ Ch20: Looking to the Future (avf-) ═══ */
-.avf-slide{background:#2a2c45; overflow:hidden;}
+.avf-slide{background:#2a2c45; overflow:hidden; --pw:min(38%,35rem);}
+/* the city fills the left; the column on the right holds the words, so nothing covers the model */
+.avf-city{position:absolute; left:0; top:0; bottom:0; right:var(--pw);}
 .avf-stage{position:absolute; inset:0; transition:filter 1.1s ease;}
 .avf-stage .t3-cv{display:block; width:100%; height:100%; cursor:grab; touch-action:none;}
 .avf-slide.no3d .avf-stage{background:radial-gradient(ellipse at 40% 60%, #f3a56b 0%, #8a7896 45%, #24346a 100%);}
 .avf-slide[data-phase="blur"] .avf-stage{filter:blur(16px) saturate(.85) brightness(.85);}
-.avf-vig{position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse at 35% 50%, transparent 55%, rgba(20,20,40,.35) 100%);}
+.avf-vig{position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse at 50% 50%, transparent 60%, rgba(20,20,40,.3) 100%);}
 .avf-ui{position:absolute; inset:0; pointer-events:none;}
 .avf-ui > *{pointer-events:auto; position:absolute;}
-.avf-glass{background:rgba(251,248,240,.92); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border:1px solid rgba(154,123,60,.45); border-radius:12px; box-shadow:0 10px 30px rgba(10,10,30,.3);}
-.avf-title{top:clamp(.8rem,2vh,1.3rem); left:clamp(1rem,2vw,1.6rem); padding:.55rem 1rem .6rem;}
-.avf-title .heading{margin:0; font-size:clamp(1.2rem,2.1vw,1.7rem);}
+.avf-hud{position:absolute; left:clamp(.8rem,1.6vw,1.3rem); top:clamp(.8rem,2vh,1.2rem); display:flex; gap:.9rem; padding:.35rem .75rem; font:700 .72rem 'Inter',sans-serif; color:#1b2640;
+  background:rgba(251,248,240,.9); border:1px solid rgba(154,123,60,.45); border-radius:999px; box-shadow:0 6px 18px rgba(10,10,30,.25);}
+.avf-hud b{font:900 1rem 'Merriweather',serif; margin-right:.3rem;}
+.avf-hud i{display:inline-block; width:.65rem; height:.65rem; border-radius:50%; margin-right:.35rem; vertical-align:middle;} .avf-hud i.r{background:#e0392e;} .avf-hud i.g{background:#3d6b4f;}
+.avf-side{top:0; right:0; bottom:0; width:var(--pw); display:flex; flex-direction:column; gap:.55rem; padding:clamp(.8rem,2vh,1.2rem) clamp(.9rem,1.4vw,1.2rem) clamp(2.9rem,6.4vh,3.4rem);
+  background:#f6f1e3; border-left:1px solid rgba(154,123,60,.55); box-shadow:-10px 0 30px rgba(10,10,30,.25);}
+.avf-title .heading{margin:0; font-size:clamp(1.2rem,2vw,1.65rem);}
 .avf-title p{margin:.1rem 0 0; font:italic 400 clamp(.74rem,1vw,.88rem) 'Merriweather',serif; color:#4f5563;}
-.avf-hud{top:clamp(6rem,15vh,7.6rem); left:clamp(1rem,2vw,1.6rem); display:flex; flex-direction:column; gap:.2rem; padding:.45rem .8rem; font:700 .74rem 'Inter',sans-serif; color:#1b2640;}
-.avf-hud b{font:900 1.05rem 'Merriweather',serif; margin-right:.3rem;}
-.avf-hud i{display:inline-block; width:.7rem; height:.7rem; border-radius:50%; margin-right:.4rem; vertical-align:middle;} .avf-hud i.r{background:#e0392e;} .avf-hud i.g{background:#3d6b4f;}
-.avf-panel{top:clamp(.8rem,2vh,1.3rem); right:clamp(1rem,2vw,1.6rem); bottom:clamp(5rem,12vh,6.4rem); width:min(37%,34rem); padding:.85rem 1rem; overflow:auto;}
+.avf-panel{flex:1; min-height:0; overflow:auto; padding:.1rem .15rem .2rem 0;}
 .avf-pk{font:800 .6rem 'Inter',sans-serif; letter-spacing:.18em; color:var(--accent); margin-bottom:.35rem;}
 .avf-panel h3{margin:0 0 .5rem; font:italic 900 clamp(1.05rem,1.6vw,1.35rem) 'Merriweather',serif; color:#1b2640;}
 .avf-facts{display:grid; grid-template-columns:1fr 1fr; gap:6px;}
@@ -1761,6 +1764,7 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .avf-pol{display:flex; flex-direction:column; gap:.15rem; text-align:left; padding:.5rem .7rem; border:1.5px solid #d9c9a3; border-radius:9px; background:#fff; cursor:pointer; transition:border-color .2s, box-shadow .2s;}
 .avf-slide.fresh .avf-pol{animation:avfIn .45s ease both;} .avf-slide.fresh .avf-pol:nth-child(2){animation-delay:.12s} .avf-slide.fresh .avf-pol:nth-child(3){animation-delay:.24s}
 .avf-pol b{font:900 .92rem 'Merriweather',serif; color:#1b2640;} .avf-pol span{font:400 .72rem/1.4 'Merriweather',serif; color:#4f5563;}
+.avf-pol.none{border-style:dashed;} .avf-pol.none.on{border-style:solid;}
 .avf-pol:hover{border-color:var(--accent);} .avf-pol.on{border-color:var(--accent); box-shadow:0 0 0 2px var(--accent); background:#fffaf0;}
 .avf-ctl{display:flex; flex-direction:column; gap:.2rem; margin:.1rem 0 .55rem;}
 .avf-ctl label{font:700 .78rem 'Inter',sans-serif; color:#1b2640;} .avf-ctl label b{font:900 1.05rem 'Merriweather',serif; color:var(--accent);} .avf-ctl small{color:#6b7080;}
@@ -1774,11 +1778,13 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .avf-cmp td:first-child{white-space:normal; font-weight:800; max-width:9rem;}
 .avf-cmp tr.on td{background:#fffaf0;}
 .avf-cb{display:block; width:3.2rem; height:.3rem; background:#efe6d0; border-radius:2px; margin-bottom:.15rem; overflow:hidden;} .avf-cb i{display:block; height:100%; background:var(--accent);}
-.avf-q{left:50%; bottom:clamp(3.2rem,7.6vh,4rem); transform:translateX(-50%); display:flex; align-items:center; gap:1rem; padding:.6rem .8rem .6rem 1.2rem; background:#1b2640; color:#fcfaf5; border-radius:999px; box-shadow:0 12px 30px rgba(0,0,0,.35);
-  font:italic 900 clamp(1rem,1.7vw,1.35rem) 'Merriweather',serif; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .5s, transform .5s;}
-.avf-slide[data-phase="problem"] .avf-q, .avf-slide[data-phase="policies"] .avf-q{opacity:1; pointer-events:auto;}
+.avf-q{display:none; flex-direction:column; align-items:stretch; gap:.45rem; padding:.65rem .8rem; background:#1b2640; color:#fcfaf5; border-radius:10px;
+  font:italic 900 clamp(1rem,1.5vw,1.25rem)/1.25 'Merriweather',serif; text-align:center; animation:avfIn .5s ease both;}
+.avf-q span{display:block;}
+.avf-slide[data-phase="problem"] .avf-q, .avf-slide[data-phase="policies"] .avf-q{display:flex;}
 .avf-slide[data-phase="policies"] .avf-q button{display:none;}
-.avf-slide[data-phase="blur"] .avf-panel, .avf-slide[data-phase="blur"] .avf-hud, .avf-slide[data-phase="blur"] .avf-title{display:none;}
+.avf-slide[data-phase="blur"] .avf-side, .avf-slide[data-phase="blur"] .avf-hud{display:none;}
+.avf-slide[data-phase="policies"] .avf-q{font-size:clamp(.85rem,1.2vw,1rem); padding:.45rem .7rem;}
 .avf-b{font:800 .82rem 'Inter',sans-serif; color:#1b2640; background:#fcfaf5; border:1.5px solid rgba(27,38,64,.3); border-radius:999px; padding:.5rem 1rem; cursor:pointer;}
 .avf-b.go{background:#c9a24a; border-color:#c9a24a; color:#1b2640;} .avf-b.big{font-size:1rem; padding:.7rem 1.4rem;}
 .avf-gate{inset:0; display:grid; place-items:center; transition:opacity .9s ease;}
@@ -1786,12 +1792,12 @@ img.bleed{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
 .avf-gcard{max-width:34rem; text-align:center; padding:1.6rem 2rem 1.7rem; background:rgba(251,248,240,.94); border:1px solid rgba(154,123,60,.6); outline:1px solid rgba(154,123,60,.45); outline-offset:-7px; border-radius:10px; box-shadow:0 20px 50px rgba(10,10,30,.45);}
 .avf-gcard h2{margin:.2rem 0 .5rem; font:italic 900 clamp(1.8rem,3.4vw,2.8rem) 'Merriweather',serif; color:#1b2640;}
 .avf-gcard p{margin:0 0 1.1rem; font:400 clamp(.9rem,1.2vw,1.05rem)/1.55 'Merriweather',serif; color:#353c4c;}
-.avf-srcb{right:clamp(1rem,2vw,1.6rem); bottom:clamp(3.2rem,7.6vh,4rem); font:700 .68rem 'Inter',sans-serif; color:#1b2640; background:rgba(251,248,240,.9); border:1px solid rgba(154,123,60,.5); border-radius:999px; padding:.3rem .8rem; cursor:pointer;}
-.avf-slide[data-phase="blur"] .avf-srcb{display:none;}
+.avf-srcb{align-self:flex-end; position:static !important; font:700 .68rem 'Inter',sans-serif; color:#1b2640; background:rgba(251,248,240,.9); border:1px solid rgba(154,123,60,.5); border-radius:999px; padding:.3rem .8rem; cursor:pointer;}
+
 .avf-load{left:35%; top:50%; transform:translate(-50%,-50%); font:italic 400 1rem 'Merriweather',serif; color:#fcfaf5;} .avf-load[hidden]{display:none;}
 .avf-mh{margin:.7rem 0 .2rem; font:800 .64rem 'Inter',sans-serif; letter-spacing:.16em; text-transform:uppercase; color:var(--accent);}
 .avf-ml{margin:0; padding-left:1.2rem; font:400 .8rem/1.5 'Merriweather',serif; color:#262c3a;} .avf-ml li{margin:.25rem 0;}
-@media(max-width:900px){ .avf-panel{left:1rem; width:auto; top:auto; bottom:5rem; max-height:55%;} .avf-q{white-space:normal; width:90%;} }
+@media(max-width:900px){ .avf-slide{--pw:100%;} .avf-city{right:0; bottom:55%;} .avf-side{top:45%; width:100%;} }
 
 
 /* ── title plate (ch20_title.py) ── */
@@ -4179,7 +4185,7 @@ if(!window.C20S){ window.C20S=function(SEC,n,go,o){ o=o||{}; var st={i:-1,n:n};
   qa('[data-iv-dot]').forEach(function(d){ d.addEventListener('click',function(){ S.go(+d.dataset.ivDot); }); });
   S.go(0);
 })();</script></section>
-<section class="slide avf-slide" data-type="content" data-phase="blur" style="--accent:#4a5a78"><div class="avf-stage" data-avf3></div><div class="avf-vig"></div><div class="avf-ui"><div class="avf-title avf-glass"><div class="eyebrow">Policy  ·  Looking to the Future</div><h2 class="heading">Looking to the Future</h2><p>Self-driving cars, and the empty miles they could drive</p></div><div class="avf-hud avf-glass" data-hud><span><i class="r"></i><b data-he>0</b> empty cars driving</span><span><i class="g"></i><b data-hp>0</b> parked in the lot</span></div><aside class="avf-panel avf-glass" data-panel></aside><div class="avf-q" data-q><span>What policy could solve this problem?</span><button type="button" class="avf-b go" data-showpol>Show possible policies &#9656;</button></div><button type="button" class="avf-srcb" data-srcb>Sources &amp; assumptions</button><div class="avf-gate" data-gate><div class="avf-gcard"><div class="eyebrow">Policy  ·  Looking to the Future</div><h2>Looking to the Future</h2><p>The city from Chapter 16, a generation from now. The cars drive themselves. Where do they go after they drop you off?</p><button type="button" class="avf-b go big" data-reveal>Reveal the city &#9656;</button></div></div><div class="avf-load" data-load hidden>Building the city&#8230;</div></div><div class="p20-modal" data-avm hidden><div class="p20-modal-card" role="dialog" aria-modal="true"><button type="button" class="p20-modal-x" data-avx>&#215;</button><div class="p20-modal-kicker">Sources &amp; assumptions</div><h3 class="p20-modal-title">Where these numbers come from</h3><h4 class="avf-mh">Measured</h4><ol class="avf-ml"><li><b>California Air Resources Board (2019).</b> <i>SB 1014 Clean Miles Standard: 2018 Base-year Emissions Inventory Report.</i> 38.5% of ride-hail miles had no passenger; 1.55 passengers per fare; 301 g CO&#8322; per passenger-mile against 203 for California&#8217;s average car.</li><li><b>Henao, A. &amp; Marshall, W. E. (2019).</b> The impact of ride-hailing on vehicle miles traveled. <i>Transportation</i> 46(6): 2173&#8211;2194. At least 40.8% of ride-hail miles in Denver were driven empty; ride-hailing led to about 83.5% more vehicle miles than if it had not existed.</li><li><b>Millard-Ball, A. (2019).</b> The autonomous vehicle parking problem. <i>Transport Policy</i> 75: 99&#8211;108. Self-driving cars that cruise rather than pay to park could more than double vehicle travel to, from and within dense urban cores.</li><li><b>U.S. Federal Highway Administration (2018).</b> <i>Summary of Travel Trends: 2017 National Household Travel Survey</i>, Table 16. 1.67 people per vehicle-mile for all trips; 1.18 for trips to and from work.</li><li><b>New York State Department of Taxation and Finance.</b> Congestion surcharge, Manhattan south of 96th Street: $2.75 a for-hire trip, $2.50 a taxi trip, $0.75 a shared (pool) trip.</li><li><b>Bureau of Public Roads (1964).</b> <i>Traffic Assignment Manual.</i> The speed-and-volume curve used by planners: travel time rises with (volume / capacity)<sup>4</sup>.</li></ol><h4 class="avf-mh">Assumed in the model</h4><ul class="avf-ml"><li>A mid-size downtown with 20,000 self-driving car trips a weekday, 3 miles each way inside the core.</li><li>Riders stay for an errand (1 hour, 40% of trips), an afternoon (3 hours, 25%) or a workday (8 hours, 35%).</li><li>An empty car can circle slowly (6 mph), park in a lot half a mile away ($3 an hour, at most $25 a day), or drive home (10 miles each way). It costs $0.12 a mile to run. Owners differ, so each picks the cheapest option most of the time, not every time.</li><li>A limit on empty miles rules out any choice that drives more empty miles than the limit; the car parks instead.</li><li>Without a subsidy 10% of travelers share rides; each $1 per shared ride makes sharing more popular (about 30% at $2.40).</li><li>Today, with people parking their own cars, the downtown streets run at 90% of capacity and 22.8 mph on average.</li><li>CO&#8322;: 287 g per car-mile, today&#8217;s California ride-hail fleet (from CARB&#8217;s 301 g per passenger-mile).</li></ul></div></div><script>/* ch20_avmodel.js (Nov 25 2026): the "Looking to the Future" policy model for self-driving cars in a downtown.
+<section class="slide avf-slide" data-type="content" data-phase="blur" style="--accent:#4a5a78"><div class="avf-city"><div class="avf-stage" data-avf3></div><div class="avf-vig"></div><div class="avf-hud" data-hud><span><i class="r"></i><b data-he>0</b> empty cars driving</span><span><i class="g"></i><b data-hp>0</b> parked in the lot</span></div></div><div class="avf-ui"><aside class="avf-side"><div class="avf-title"><div class="eyebrow">Policy  ·  Looking to the Future</div><h2 class="heading">Looking to the Future</h2><p>Self-driving cars, and the empty miles they could drive</p></div><div class="avf-panel" data-panel></div><div class="avf-q" data-q><span>What policy could solve this problem?</span><button type="button" class="avf-b go" data-showpol>Show possible policies &#9656;</button></div><button type="button" class="avf-srcb" data-srcb>Sources &amp; assumptions</button></aside><div class="avf-gate" data-gate><div class="avf-gcard"><div class="eyebrow">Policy  ·  Looking to the Future</div><h2>Looking to the Future</h2><p>The city from Chapter 16, a generation from now. The cars drive themselves. Where do they go after they drop you off?</p><button type="button" class="avf-b go big" data-reveal>Reveal the city &#9656;</button></div></div><div class="avf-load" data-load hidden>Building the city&#8230;</div></div><div class="p20-modal" data-avm hidden><div class="p20-modal-card" role="dialog" aria-modal="true"><button type="button" class="p20-modal-x" data-avx>&#215;</button><div class="p20-modal-kicker">Sources &amp; assumptions</div><h3 class="p20-modal-title">Where these numbers come from</h3><h4 class="avf-mh">Measured</h4><ol class="avf-ml"><li><b>California Air Resources Board (2019).</b> <i>SB 1014 Clean Miles Standard: 2018 Base-year Emissions Inventory Report.</i> 38.5% of ride-hail miles had no passenger; 1.55 passengers per fare; 301 g CO&#8322; per passenger-mile against 203 for California&#8217;s average car.</li><li><b>Henao, A. &amp; Marshall, W. E. (2019).</b> The impact of ride-hailing on vehicle miles traveled. <i>Transportation</i> 46(6): 2173&#8211;2194. At least 40.8% of ride-hail miles in Denver were driven empty; ride-hailing led to about 83.5% more vehicle miles than if it had not existed.</li><li><b>Millard-Ball, A. (2019).</b> The autonomous vehicle parking problem. <i>Transport Policy</i> 75: 99&#8211;108. Self-driving cars that cruise rather than pay to park could more than double vehicle travel to, from and within dense urban cores.</li><li><b>U.S. Federal Highway Administration (2018).</b> <i>Summary of Travel Trends: 2017 National Household Travel Survey</i>, Table 16. 1.67 people per vehicle-mile for all trips; 1.18 for trips to and from work.</li><li><b>New York State Department of Taxation and Finance.</b> Congestion surcharge, Manhattan south of 96th Street: $2.75 a for-hire trip, $2.50 a taxi trip, $0.75 a shared (pool) trip.</li><li><b>Bureau of Public Roads (1964).</b> <i>Traffic Assignment Manual.</i> The speed-and-volume curve used by planners: travel time rises with (volume / capacity)<sup>4</sup>.</li></ol><h4 class="avf-mh">Assumed in the model</h4><ul class="avf-ml"><li>A mid-size downtown with 20,000 self-driving car trips a weekday, 3 miles each way inside the core.</li><li>Riders stay for an errand (1 hour, 40% of trips), an afternoon (3 hours, 25%) or a workday (8 hours, 35%).</li><li>An empty car can circle slowly (6 mph), park in a lot half a mile away ($3 an hour, at most $25 a day), or drive home (10 miles each way). It costs $0.12 a mile to run. Owners differ, so each picks the cheapest option most of the time, not every time.</li><li>A limit on empty miles rules out any choice that drives more empty miles than the limit; the car parks instead.</li><li>Without a subsidy 10% of travelers share rides; each $1 per shared ride makes sharing more popular (about 30% at $2.40).</li><li>Today, with people parking their own cars, the downtown streets run at 90% of capacity and 22.8 mph on average.</li><li>CO&#8322;: 287 g per car-mile, today&#8217;s California ride-hail fleet (from CARB&#8217;s 301 g per passenger-mile).</li></ul></div></div><script>/* ch20_avmodel.js (Nov 25 2026): the "Looking to the Future" policy model for self-driving cars in a downtown.
    One weekday, one downtown core. Every number that comes from a study is marked [source]; every other number is a
    stated assumption, shown on the slide. The model:
      1. Travelers arrive in self-driving cars and are dropped off. While they are downtown (an errand, an afternoon or a
@@ -4456,7 +4462,7 @@ function createApp(){
     for(var i=0;i<9;i++) b.add(BOX,320+i*27,1.1,150+i*8,30,.3,5,'#e6dcc4',-.29); b.add(CYL,470,1.1,170,22,.5,15,'#8fc0d2'); b.add(CYL,470,1.1,170,24,.3,17,'#e6dcc4');
     [[316,200],[340,214],[372,206],[330,160],[392,150],[420,212],[452,206],[510,150],[536,166],[540,206],[500,214],[410,170],[360,176]].forEach(function(p){ tree(b,p[0],p[1],.85+r()*.6); });
     b.box(380,1.1,190,392,5,193,'#c4973a'); b.box(383,5,188,389,6,195,'#a4373a'); });
-  E(3,3,'rise',730,170,function(b){ var r=rng(83); apartments(b,612,138,724,194,46,'#d6b98f',r); lot(b,738,140,848,194,.12,89); b.box(848,.6,160,870,1.1,172,LOT);
+  E(3,3,'rise',730,170,function(b){ var r=rng(83); lot(b,612,140,848,198,0,89); b.box(848,.6,160,870,1.1,172,LOT); b.box(608,.6,136,852,1.4,140,'#9a968e'); b.box(608,.6,198,852,1.4,200,'#9a968e');
     b.box(608,.6,202,852,1.15,218,'#a3a097'); b.box(608,.6,218,624,1.15,272,'#a3a097'); b.box(836,.6,218,852,1.15,272,'#a3a097');
     b.box(640,1.15,200.6,820,1.5,202,'#2f8f8a'); [[650,197],[730,197],[810,197]].forEach(function(p){ b.add(CYL,p[0],1,p[1],.5,10,.5,'#e9e2d0'); }); b.box(644,11,194,816,11.7,203,'#bfe0d8'); });
   E(3,3,'rise',972,181,function(b){ var r=rng(84); b.box(902,.6,140,1044,1.1,220,'#b5c98f'); b.box(902,1.1,176,1044,1.35,184,'#e2d6bd'); b.box(968,1.1,140,976,1.35,220,'#e2d6bd');
@@ -4579,11 +4585,17 @@ function createApp(){
       var stops=[{d:s1,wait:shared?3.4:2.4,t:shared?'swap':'drop',bx:bx}]; if(s2!=null) stops.push({d:s2,wait:2.6,t:'pick',bx:bx});
       addV({r:r,d:((i+R()*.3)/n)*r.len*(shared?.82:.96),sp:58+R()*10,style:'av',col:pick(AVC,R),stops:stops,site:site,wrap:true,s1:s1,s2:s2}); } }
   var NAV=0, MIX=null;
+  /* the lot's back row: few, some or many parked cars, shown to match how many owners park under the policy */
+  var LOTFILL=[.12,.5,.95].map(function(f,k){ var b=new Builder(); var r=rng(91+k), xs=616, n=Math.floor((848-616-8)/9.6);
+    for(var i=0;i<n;i++){ var x=xs+i*9.6+4.8; if(r()<f) carGeo(b,x,183.5+(r()-.5)*1.5,(r()<.5?1:-1)*Math.PI/2,r()<.4?'suv':'sedan',pick(CARS,r),1.1,false); }
+    for(i=0;i<n;i++){ var x2=xs+i*9.6+4.8; if(r()<f*.7) carGeo(b,x2,168+(r()-.5)*1.5,(r()<.5?1:-1)*Math.PI/2,r()<.4?'suv':'sedan',pick(CARS,r),1.1,false); }
+    var g=b.build(); g.visible=k===0; city.add(g); return g; });
+  function showFill(park){ var k=park<.1?0:park<.45?1:2; LOTFILL.forEach(function(g,j){ g.visible=j===k; }); }
   /* private self-driving cars at a drop-off site, each doing what the policy makes cheapest: circle the blocks, park in
      the lot, or drive home empty (and leave the map) */
   function avSite2(site,n,pm){ var R=rng(site==='S'?311:312), keys=['circle','lot','home'];
     for(var i=0;i<n;i++){ var u=(i+.5)/n, beh='home', acc=0; for(var k=0;k<3;k++){ acc+=pm[keys[k]]||0; if(u<=acc+1e-9){ beh=keys[k]; break; } }
-      var p, bx, r, s1, s2=null, sp=null, laps=1+(i%2), slot=[748+((i*3+(site==='S'?1:0))%8)*12.4, 150+(((i*3+(site==='S'?1:0))/8)|0)%3*14];
+      var p, bx, r, s1, s2=null, sp=null, laps=1+(i%2), slot=[622+((i*3+(site==='S'?1:0))%18)*12.4, 154];
       if(site==='S'){ bx=512+(i%4)*34; p=[[-44,321],[460,321],[460,362],[700,362],[700,321]];
         if(beh==='circle'){ for(var k1=0;k1<laps;k1++) p.push([870,321],[870,478],[290,478],[290,321]); p.push([460,321],[460,362],[700,362],[700,321],[1244,321]); }
         else if(beh==='lot'){ p.push([870,321],[870,166],[852,166],[slot[0],166],[slot[0],slot[1]],[slot[0],166],[852,166],[870,166],[870,321],[870,478],[290,478],[290,321],[460,321],[460,362],[700,362],[700,321],[1244,321]); }
@@ -4627,11 +4639,11 @@ function createApp(){
   function setPeople(instant){ var nw=[50,22,9,30][era], k=0, j=0; people.forEach(function(p,i){ if(p.k==='walk'){ p.on=k++<nw; } else if(p.k==='plaza'){ p.on=era===3; } if(instant) p.s=p.on?1:0; }); }
 
   /* ── camera ── */
-  var VIEW=[{az:-33,el:20,t:[0,14,0]},{az:27,el:28,t:[0,10,0]},{az:5,el:53,t:[0,0,0]},{az:-6,el:40,t:[10,10,-20]},{az:-6,el:32,t:[0,10,0]}];
+  var VIEW=[{az:-33,el:20,t:[0,14,0]},{az:27,el:28,t:[0,10,0]},{az:5,el:53,t:[0,0,0]},{az:-4,el:56,t:[10,10,-10]},{az:-6,el:32,t:[0,10,0]}];
   var C={az:-78,el:64,r:3000,t:new T.Vector3(0,0,0),sx:0,sy:0}, user={az:0,el:0,zoom:1}, time=0;
   /* the model's corners (plus the office tower once it is built); the camera backs off until all of them sit inside the
      part of the slide the panels leave clear, and the picture is shifted so the model is centered in that part */
-  var BB=[], BBT=[[450,134,-154],[544,134,-154],[450,134,-84],[544,134,-84]], SAFE={l:-.97,r:.2,t:.58,b:-.86};
+  var BB=[], BBT=[[450,134,-154],[544,134,-154],[450,134,-84],[544,134,-84]], SAFE={l:-.96,r:.96,t:.84,b:-.78};
   [-626,626].forEach(function(x){ [-326,326].forEach(function(z){ [-34,44].forEach(function(y){ BB.push([x,y,z]); }); }); });
   function frameBox(a,e,r,t,out){ var ce=Math.cos(e), se=Math.sin(e), sa=Math.sin(a), ca=Math.cos(a), tv=Math.tan(cam.fov*Math.PI/360), th=tv*cam.aspect;
     var x0=1e9,x1=-1e9,y0=1e9,y1=-1e9, pts=era>=2?BB.concat(BBT):BB;
@@ -4644,7 +4656,7 @@ function createApp(){
   function viewNow(){ return VIEW[era===3&&mode==='shared'?4:era]; }
   function camStep(dt,snap){ var P=viewNow(), k=snap?1:1-Math.exp(-dt*1.25);
     var az=P.az+user.az+Math.sin(time*.11)*8, el=Math.max(9,Math.min(86,P.el+user.el+Math.sin(time*.07+1)*1.2));
-    var r=fitR(az*Math.PI/180,el*Math.PI/180,P.t)*user.zoom*.68;
+    var r=fitR(az*Math.PI/180,el*Math.PI/180,P.t)*user.zoom*.97;
     C.az+=(az-C.az)*k; C.el+=(el-C.el)*k; C.r+=(r-C.r)*k; C.t.lerp(_v.fromArray(P.t),k);
     var a=C.az*Math.PI/180, e=C.el*Math.PI/180; cam.position.set(C.t.x+C.r*Math.cos(e)*Math.sin(a), C.t.y+C.r*Math.sin(e), C.t.z+C.r*Math.cos(e)*Math.cos(a)); cam.lookAt(C.t);
     frameBox(a,e,C.r,[C.t.x,C.t.y,C.t.z],_fb);
@@ -4728,7 +4740,7 @@ function createApp(){
       setPeople(instant); emptyMiles=0; meterSig='';
       if(instant){ clearV(true); populate(); applyLook(1); } else { clearV(false); repop=e===3&&V.some(function(v){ return v.av; })?.45:1.5; paintMeter(); } },
     intro:function(){ C.az=-78; C.el=64; C.r=3000; C.sx=0; C.sy=0; },
-    setMix:function(m,instant){ MIX=m; if(instant){ clearV(true); populate(); } else { clearV(false); repop=.5; } },
+    setMix:function(m,instant){ MIX=m; showFill(m.park||0); if(instant){ clearV(true); populate(); } else { clearV(false); repop=.5; } },
     start:function(){ if(running) return; running=true; size(); last=performance.now(); raf=requestAnimationFrame(frame); },
     stop:function(){ running=false; cancelAnimationFrame(raf); },
     dbg:{VIEW:VIEW,user:user,C:C},
@@ -4782,7 +4794,8 @@ function paintProblem(){
 }
 function paintPolicies(){
   var k=cur&&cur.pol.kind!=='none'?cur.pol.kind:null;
-  var cards=Object.keys(POL).map(function(id){ return '<button type="button" class="avf-pol'+(k===id?' on':'')+'" data-pol="'+id+'"><b>'+POL[id].t+'</b><span>'+POL[id].d+'</span></button>'; }).join('');
+  var cards='<button type="button" class="avf-pol none'+(cur===base?' on':'')+'" data-pol="none"><b>No policy</b><span>Back to the start: empty cars circle, park or go home, whichever is cheapest.</span></button>'+
+    Object.keys(POL).map(function(id){ return '<button type="button" class="avf-pol'+(k===id?' on':'')+'" data-pol="'+id+'"><b>'+POL[id].t+'</b><span>'+POL[id].d+'</span></button>'; }).join('');
   var body='';
   if(k){ var P=POL[k], r=cur;
     body='<div class="avf-ctl"><label>'+P.t+' <b data-vv>'+P.fmt(P.v)+'</b> <small>'+P.unit+'</small></label><input type="range" min="'+P.min+'" max="'+P.max+'" step="'+P.step+'" value="'+P.v+'" data-slider></div>'+
@@ -4791,7 +4804,9 @@ function paintPolicies(){
         metric('CO&#8322; a day',r.co2t,base.co2t,-1,function(x){ return Math.round(x)+' t'; })+metric('Parking spaces needed',r.spaces,base.spaces,-1,fmt.n)+
         metric('Government budget a day',r.gov,null,1,fmt.usd,r.gov>0?'raised by the tax':r.gov<0?'spent on the subsidy':'no money changes hands')+metric('Cost to an owner a day',r.ownerCost,base.ownerCost,-1,function(x){ return '$'+x.toFixed(2); },'to deal with the empty car')+'</div>'+
       '<p class="avf-real">'+P.real+'</p>';
-  } else body='<p class="avf-note">Pick a policy. Each one runs the model and changes what the cars in the city do.</p>';
+  } else body='<div class="avf-pk">WHAT THE EMPTY CARS DO, WITH NO POLICY</div>'+mixBar(base)+'<div class="avf-mets">'+metric('Downtown miles driven empty',base.emptyShare,null,-1,fmt.pct)+metric('Average downtown speed',base.speed,null,1,fmt.mph,'today: '+base.speed0.toFixed(1)+' mph')+
+      metric('CO&#8322; a day',base.co2t,null,-1,function(x){ return Math.round(x)+' t'; })+metric('Parking spaces needed',base.spaces,null,-1,fmt.n)+metric('Government budget a day',0,null,1,fmt.usd,'no money changes hands')+metric('Cost to an owner a day',base.ownerCost,null,-1,function(x){ return '$'+x.toFixed(2); },'to deal with the empty car')+'</div>'+
+      '<p class="avf-note">Pick a policy. Each one runs the model and changes what the cars in the city do.</p>';
   panel.innerHTML='<div class="avf-pk">POSSIBLE POLICIES</div><div class="avf-pols">'+cards+'</div>'+body+compare();
   panel.querySelectorAll('[data-pol]').forEach(function(b){ b.onclick=function(){ choose(b.dataset.pol); }; });
   var s=panel.querySelector('[data-slider]');
@@ -4808,7 +4823,7 @@ function compare(){ if(order.length<2) return '';
     order.map(function(k){ var r=runs[k]; return '<tr class="'+(cur&&cur.pol.kind===k?'on':'')+'"><td>'+label(k)+'</td>'+cols.map(function(c){ var v=c[1](r), m=mx(function(x){ return Math.abs(c[1](x)); });
       return '<td><span class="avf-cb"><i style="width:'+(Math.abs(v)/m*100).toFixed(0)+'%"></i></span>'+c[2](v)+'</td>'; }).join('')+'</tr>'; }).join('')+'</tbody></table>';
 }
-function run(k,toCity){ var r=k==='none'?base:M.run({kind:k,v:POL[k].v}); runs[k]=r; if(order.indexOf(k)<0) order.push(k); cur=r; if(toCity!==false&&app) app.setMix(r.mix,false); return r; }
+function run(k,toCity){ var r=k==='none'?base:M.run({kind:k,v:POL[k].v}); if(k==='none'){ cur=base; if(toCity!==false&&app) app.setMix(base.mix,false); return base; } runs[k]=r; if(order.indexOf(k)<0) order.push(k); cur=r; if(toCity!==false&&app) app.setMix(r.mix,false); return r; }
 function choose(k){ run(k,true); paintPolicies(); }
 /* ── the steps (on-screen buttons only) ── */
 function phase(p){ sec.dataset.phase=p; if(p==='problem'){ paintProblem(); } else if(p==='policies'){ sec.classList.add('fresh'); paintPolicies(); setTimeout(function(){ sec.classList.remove('fresh'); },900); } }
